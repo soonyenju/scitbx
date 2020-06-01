@@ -51,7 +51,16 @@ class Painter():
 
         title_name = name
         ax.set_title(title_name, fontsize = 24, color='k')
-        # plt.show()
-        # exit(0)
-        plt.savefig(save_folder.joinpath(name + ".pdf"), dpi = 600, format = "pdf")        
-    
+        plt.savefig(save_folder.joinpath(name + ".pdf"), dpi = 600, format = "pdf")
+
+    def lineplot(self, save_folder, name, df, key1, key2):
+        fig, ax = plt.subplots()
+        ax.plot(df.index, df[key1], "g*-", lw = 2, label = key1)
+        ax.plot(df.index, df[key2], "bo-", lw = 2, label = key2)
+        # ax.set_xticks(ax.get_xticks()[::40])
+        ax.tick_params(axis='x', rotation=20)
+        ax.legend()
+        title_name = name
+        ax.set_title(name, fontsize = 24, color='k')
+        plt.savefig(save_folder.joinpath(name + ".pdf"), dpi = 600, format = "pdf")
+        
