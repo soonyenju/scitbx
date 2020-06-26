@@ -13,13 +13,13 @@ from setuptools import setup, find_packages
 
 setup(
 	name = "scitbx",
-	version = "0.0.2",
+	version = "0.0.3",
 	keywords = ("atmos/geo science assitance"),
 	description = "draw and basic calculations/conversions",
 	long_description = "coming soon",
 	license = "MIT Licence",
 
-	url="https://github.com/soonyenju/scigeo",
+	url="https://github.com/soonyenju/scitbx",
 	author = "Songyan Zhu",
 	author_email = "zhusy93@gmail.com",
 
