@@ -2,9 +2,63 @@
 path_time = [pd.to_datetime("".join(p.stem.split("_")[-4::]), format = "%Y%m%d%H%M") for p in paths]
 # [x for _, x in sorted(zip(Y, X))] # sort X by Y values
 paths = [p for _, p in sorted(zip(path_time, paths))]
-
+# ========================================================================
 
 if float(lat) >= 0:
     dfc["seasons"] = (dfc.index.month%12 + 3)//3
 else:
     dfc["seasons"] = ((dfc.index.month + 6)%12 + 3)//3
+# ========================================================================
+x = 3.4136
+print(f"{x}: .2f")
+
+# ========================================================================
+# boxplot
+
+import seaborn as sns
+
+air_poll_names = ['$AOD_{550}$', '$O_3$', '$NO_2$', '$HCHO$']
+shap_names = [name + " (SHAP)" for name in air_poll_names]
+print(shap_values[:, '$O_3$'].shape, X.shape)
+# print(shap_values[:, '$O_3$'].data, X['$O_3$'])
+df_analysis = X[air_poll_names].copy()
+df_analysis["Season"] = seasons
+df_analysis["IGBP"] = igbp_series
+df_analysis["ID"] = site_series
+for name in air_poll_names:
+    df_analysis[name + " (SHAP)"] = shap_values[:, name].values
+# print(df_analysis.columns)
+dfp = df_analysis.copy()
+
+# site average
+dfp = df_analysis.groupby(['ID']).median()
+meta = df_analysis[["ID", "IGBP"]].copy()
+meta = meta.drop_duplicates(subset='ID', keep="last")
+meta = meta.set_index("ID", drop = True)
+dfp = pd.concat([dfp, meta], axis = 1)
+dfp = dfp.sort_values(by = "IGBP")
+
+# # use pandas to plot manually
+# dfp = dfp[[air_poll_names[0], "IGBP"]]
+# dfp = pd.pivot_table(dfp, values = air_poll_names[0], index = dfp.index, columns=['IGBP']).reset_index()
+# dfp.boxplot()
+
+# use seaborn
+dfp = pd.melt(dfp, id_vars=['IGBP'], value_vars=shap_names,
+        var_name='Pollutant', value_name="$SHAP \; (gC \; m^{-2} \; d^{-1})$"
+        )
+
+# sns.set_style("white")
+sns.set(rc={'figure.figsize':(12, 10)}, style = "white", font_scale = 1.5)
+sns.set_style("ticks", {"xtick.major.size": 8, "ytick.major.size": 8})
+ax = sns.boxplot(x="IGBP", y="$SHAP \; (gC \; m^{-2} \; d^{-1})$", hue="Pollutant",
+                 data=dfp, palette="Set3")
+ax.axhline(y=0.0, color='k', linestyle='--', alpha = 0.5)
+ax.set_ylim(-0.3, 0.3)
+plt.tick_params(direction = "in", which = "both")
+fig = ax.get_figure()
+
+# Python > 3.7
+handles, labels = ax.get_legend_handles_labels()
+by_label = dict(zip(labels, handles))
+ax.legend(by_label.values(), by_label.keys(), loc = "upper center", framealpha = 0.1, frameon = True , bbox_to_anchor=(0.5, 1.1), ncol = 4)
