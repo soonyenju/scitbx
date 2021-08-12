@@ -122,3 +122,7 @@ for i in range(len(df)):
     
 
 f.savefig(f"3drivers/site_r2_compare_sort_dif_{time_type}_b.pdf", dpi = 600, format = "pdf", bbox_inches = "tight")
+
+# ========================================================================================================================
+# drop rows with duplicated index
+df3 = df3[~df3.index.duplicated(keep='first')]
