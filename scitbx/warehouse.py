@@ -128,3 +128,8 @@ f.savefig(f"3drivers/site_r2_compare_sort_dif_{time_type}_b.pdf", dpi = 600, for
 df3 = df3[~df3.index.duplicated(keep='first')]
 
 # ========================================================================================================================
+# x-axis datetime format
+import matplotlib.dates as mdates
+dtfmt = mdates.DateFormatter('%d/%m/%y %H:%m')
+for ax in axes:
+    ax.xaxis.set_major_formatter(dtfmt)
