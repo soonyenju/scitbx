@@ -133,3 +133,84 @@ import matplotlib.dates as mdates
 dtfmt = mdates.DateFormatter('%d/%m/%y %H:%m')
 for ax in axes:
     ax.xaxis.set_major_formatter(dtfmt)
+# =========================================================================================================================
+# Diurnal plots
+
+for df_orig, site_name in zip([seb, sab], ["Sebungan", "Sabaju"]):
+    df_orig = df_orig.replace(-9999., np.nan)
+    for method in df_orig.columns:
+
+        df = df_orig[[method]].copy()
+        df['Time'] = df.index.map(lambda x: x.strftime("%H:%M"))
+        df['Month'] = df.index.map(lambda x: x.strftime("%m"))
+        df['Year'] = df.index.map(lambda x: x.strftime("%Y"))
+        
+        plot_diurnal(df, method, site_name)
+        
+print("done")
+
+import matplotlib.pyplot as plt
+
+def plot_diurnal(df, method, site_name):
+    df_diurnal = df.pivot_table(method, ['Year', 'Month', 'Time'], aggfunc='mean').reset_index()
+    months = list(df_diurnal["Month"].unique())
+    months.sort(key=float)
+
+    fig, axs = plt.subplots(figsize=(16, 12), 
+                            nrows = 4, ncols = 3,
+                            sharex = True,
+                            sharey = True
+                           )
+
+    for mt, ax in zip(months, axs.flatten()):
+        ax.tick_params(direction = "in")
+        mt_label = datetime.strptime(mt, "%m").strftime("%B")
+        dft = df_diurnal.query("Month == @mt")
+        # years = dft["Year"].unique()
+        dft = dft.drop("Month", axis = 1)
+        dft = dft.set_index("Time")
+        # print(dft)
+        # # ==================================================================
+        # # method 1: plot lines in one subfigure automatedly but has issues with legend
+        # dft.groupby("Year")[method].plot(legend=True, ax=ax, title=mt_label)
+        
+        # # ==================================================================
+        # # method 2: plot lines and legend manually
+        years = [2016, 2017, 2018, 2019, 2020]
+        colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd']
+        legends = [str(lg) for lg in years]
+        for yr, c in zip(years, colors):
+            if dft[dft["Year"] == str(yr)].empty: continue
+            dft[dft["Year"] == str(yr)].plot(color = c, ax = ax, legend = None, title=mt_label)
+            # lgds.append(str(yr))
+        # ax.legend(lgds)
+        ax.set_ylabel("NEE $(\mu mol \; m^{-2} \; d^{-1})$")
+        ax.set_xlabel("Hour", fontsize = 12)
+    #     break
+    
+    # =========================================================================================================
+    # extract common legends
+    lines = []
+    labels = []
+
+    ax_colors = []
+    for ax in fig.axes:
+        axLine, axLabel = ax.get_legend_handles_labels()
+        for line2D in axLine:
+            if line2D.get_color() in ax_colors:
+                continue
+            else:
+                ax_colors.append(line2D.get_color())
+                line2D.set_label(
+                    dict(zip(colors, legends))[line2D.get_color()]
+                )
+                lines.append(line2D)
+    lines = sorted(lines, key=lambda x: int(x.get_label()), reverse=False)
+    axs.flatten()[-2].legend(handles = lines, loc='upper center', bbox_to_anchor=(0.5, -0.2), ncol=len(lines))
+    # =========================================================================================================
+    plt.suptitle(method.upper(), fontsize = 16, x = 0.15, y = 0.93)
+
+    plt.savefig(f"{site_name}-{method}-diurnal.png", bbox_inches = "tight", dpi = 300)
+    
+    plt.close(fig)
+# =========================================================================================================================
