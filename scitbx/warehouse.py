@@ -214,3 +214,8 @@ def plot_diurnal(df, method, site_name):
     
     plt.close(fig)
 # =========================================================================================================================
+# increase marker size in legend
+legend = ax.legend(loc = "lower left")
+for handle in legend.legendHandles:
+    handle.set_sizes([20])
+# =========================================================================================================================
