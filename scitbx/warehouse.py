@@ -222,3 +222,7 @@ for handle in legend.legendHandles:
 # tick rotation
 ax.tick_params(axis='x', rotation=45)
 # =========================================================================================================================
+# Efficient way to group indices of the same elements in a list
+data = [1, 2, 2, 5, 8, 3, 3, 9, 0, 1]
+pd.Series(range(len(data))).groupby(data, sort=False).apply(list).tolist()
+# [[0, 9], [1, 2], [3], [4], [5, 6], [7], [8]]
