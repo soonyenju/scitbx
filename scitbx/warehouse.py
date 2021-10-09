@@ -226,3 +226,13 @@ ax.tick_params(axis='x', rotation=45)
 data = [1, 2, 2, 5, 8, 3, 3, 9, 0, 1]
 pd.Series(range(len(data))).groupby(data, sort=False).apply(list).tolist()
 # [[0, 9], [1, 2], [3], [4], [5, 6], [7], [8]]
+
+# =========================================================================================================================
+# Intersection of multiple lists
+from functools import reduce
+# d = [list1, list2, ...]
+# solution1:
+set.intersection(*map(set,d))
+# solution2:
+# apply intersect1d to (a list of) multiple lists:
+reduce(np.intersect1d, d)
