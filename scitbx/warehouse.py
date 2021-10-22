@@ -236,10 +236,3 @@ set.intersection(*map(set,d))
 # solution2:
 # apply intersect1d to (a list of) multiple lists:
 reduce(np.intersect1d, d)
-
-
-# test 1
-
-print('hello world')
-import pandas as pd
-
