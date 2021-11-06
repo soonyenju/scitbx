@@ -363,3 +363,9 @@ for group, size in zip(["A", "B", "C", "D"], GROUPS_SIZE):
     ax.plot(x2, [80] * 50, color="#bebebe", lw=0.8)
     
     offset += size + PAD
+
+
+# =========================================================================================================================
+# Transform data to axis coordinates:
+
+ax.transData.transform((2, 15))
