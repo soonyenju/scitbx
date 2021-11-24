@@ -375,3 +375,8 @@ ax.transData.transform((2, 15))
 # element-wise add two arrays ignoring NaNs
 # https://stackoverflow.com/questions/33269369/adding-two-2d-numpy-arrays-ignoring-nans-in-them
 np.nansum(np.dstack((A,B)),2)
+
+
+# =========================================================================================================================
+# Offset time
+df02.index = df02.index + pd.tseries.offsets.Minute(1)
