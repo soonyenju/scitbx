@@ -24,7 +24,7 @@ def download_file(src, filename, **kwargs):
         df.to_csv(filename)
     # xlsx
     elif filename.split(".")[-1] == "xlsx":
-        df = scr
+        df = src
         df.to_excel(filename)
     # pickle
     else:
