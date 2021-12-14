@@ -11,6 +11,23 @@ def pprint(values, p = 2):
     except:
         print(np.round(values, p))
 
+def roundit(ipt, precision = 2):
+    if isinstance(ipt, list):
+        return [i if isinstance(i, str) else np.round(i, precision) for i in ipt]
+    elif isinstance(ipt, dict):
+        values = [i if isinstance(i, str) else np.round(i, precision) for i in ipt.values()]
+        return dict(zip(ipt.keys(), values))
+    elif isinstance(ipt, str):
+        if ipt.isnumeric():
+            return np.round(float(ipt), precision)
+        else:
+            return ipt
+    else:
+        try: 
+            return np.round(ipt, precision)
+        except:
+            return ipt
+
 def stats_summary(df):
     min_ = df.min().to_frame().T
     Q1 = df.quantile(0.25).to_frame().T
@@ -21,7 +38,6 @@ def stats_summary(df):
     df_stats = pd.concat([min_, Q1, median_, mean_, Q3, max_])
     df_stats.index = ["Min", "Q1", "Median", "Mean", "Q3", "Max"]
     return df_stats
-
 
 def stats_measures(x, y, return_dict = False):
     slope, intercept, rvalue, pvalue, stderr = stats.linregress(x, y)
