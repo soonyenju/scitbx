@@ -126,6 +126,7 @@ f.savefig(f"3drivers/site_r2_compare_sort_dif_{time_type}_b.pdf", dpi = 600, for
 # ========================================================================================================================
 # drop rows with duplicated index
 df3 = df3[~df3.index.duplicated(keep='first')]
+df = df.loc[:,~df.columns.duplicated()]
 
 # ========================================================================================================================
 # x-axis datetime format
@@ -380,7 +381,31 @@ np.nansum(np.dstack((A,B)),2)
 # =========================================================================================================================
 # Offset time
 df02.index = df02.index + pd.tseries.offsets.Minute(1)
+pd.DateOffset(months=1)
 
 # ==========================================================================================================================
 # list comprehension if else
 [x+1 if x >= 45 else x+5 for x in l]
+
+# ========================================================================================================================================================
+# matplotlib default colors
+['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+
+# ===============================================================================================================================
+# overlapping subplots tick labels
+# https://stackoverflow.com/questions/15773049/remove-overlapping-tick-marks-on-subplot-in-matplotlib
+from matplotlib.ticker import MaxNLocator # added
+nbins = len(ax1.get_xticklabels()) # added 
+ax2.yaxis.set_major_locator(MaxNLocator(nbins=nbins, prune='upper')) # added 
+# or
+ax.xaxis.set_major_locator(plt.MaxNLocator(3))
+
+
+axes[2].yaxis.set_label_coords(-0.12, -0.05)
+
+axes[7].set_axis_off()
+
+axes[5].xaxis.set_tick_params(labelbottom=True)
+
+# ===================================================================================================================
+ax.tick_params(axis='x', rotation=45)
