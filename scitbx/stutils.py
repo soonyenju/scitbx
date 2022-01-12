@@ -1,5 +1,7 @@
+import pickle
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 from scipy import stats
 from sklearn.metrics import mean_squared_error
 
@@ -109,3 +111,67 @@ def stats_measures_df(df, name1, name2, return_dict = False):
         }
     else:
         return [r2, slope, rmse, mbe]
+
+def load_csv(p, fmt = 'yearfirst', index_col = 0, strip_cols = True, duplicated_time = 'True'):
+    df = pd.read_csv(p, index_col = index_col)
+    if strip_cols:
+        df.columns = [c.strip() for c in df.columns]
+    if fmt: 
+        if fmt == 'dayfirst': fmt = '%d/%m/%y %H:%M:%S'
+        if fmt == 'yearfirst': fmt = '%Y-%m-%d %H:%M:%S'
+        df.index = pd.to_datetime(df.index, format = fmt)
+    if duplicated_time:
+        df = df[~df.index.duplicated(keep='first')]
+    return df
+
+def load_pickle(p):
+    with open(p, "rb") as f:
+        ds = pickle.load(f)
+    return ds
+
+def dump_pickle(ds, p, large = False):
+    with open(p, "wb") as f:
+        if large:
+            pickle.dump(ds, f, protocol=pickle.HIGHEST_PROTOCOL)
+        else:
+            pickle.dump(ds, f)
+
+def setup_canvas(nx, ny, figsize = (10, 6), sharex = True, sharey = True, markersize = 2, fontsize = 16, wspace = 0, hspace = 0, panels = False):
+    plt.rcParams.update({'lines.markersize': markersize, 'font.size': fontsize})
+    fig, axes = plt.subplots(nx, ny, figsize = figsize, sharex = sharex, sharey = sharey)
+    if nx * ny > 1: axes = axes.flatten()
+
+    plt.subplots_adjust(wspace = wspace, hspace = hspace)
+
+    if (nx * ny > 1) & panels:
+        for i in range(len(axes)):
+            axes[i].text(0.05, 0.8, f'({chr(97 + i)})', transform = axes[i].transAxes)
+
+    return fig, axes
+
+def nticks_prune(ax, which = 'x', nbins = None, prune = None):
+    # prune: can be upper
+    if which == 'x':
+        if not nbins:
+            nbins = len(ax.get_xticklabels()) # added 
+        ax.xaxis.set_major_locator(plt.MaxNLocator(nbins = nbins, prune = prune))
+    else:
+        if not nbins:
+            nbins = len(ax.get_yticklabels()) # added 
+        ax.yaxis.set_major_locator(plt.MaxNLocator(nbins = nbins, prune = prune)) 
+    return ax
+
+def upper_legend(ax, yloc = 1.1, ncols = None):
+    # Python > 3.7
+    handles, labels = ax.get_legend_handles_labels()
+    by_label = dict(zip(labels, handles))
+    if not ncols: ncols = len(labels)
+    ax.legend(by_label.values(), by_label.keys(), loc = "upper center", framealpha = 0.1, frameon = True , bbox_to_anchor=(0.5, yloc), ncol = ncols)
+    return ax
+
+def rotate_ticks(ax, which, degree):
+    ax.tick_params(axis=which, rotation=degree)
+
+def sort_list_by(lista, listb):
+    lista = [i for _, i in sorted(zip(listb, lista))]
+    return lista
