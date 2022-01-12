@@ -409,3 +409,10 @@ axes[5].xaxis.set_tick_params(labelbottom=True)
 
 # ===================================================================================================================
 ax.tick_params(axis='x', rotation=45)
+
+# ===================================================================================================================================================
+lgnd = ax.legend(loc = "lower left", framealpha = 0.1, frameon = True, bbox_to_anchor=(1.01, 0.3))
+# lgnd = ax.legend(loc = "lower right", framealpha = 0.1, frameon = True)
+
+#change the marker size manually for both lines
+lgnd.legendHandles[0]._sizes = [30]
