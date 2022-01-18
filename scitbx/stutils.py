@@ -183,3 +183,12 @@ def sort_list_by(lista, listb):
 
 def add_text(ax, x, y, text):
     ax.text(x, y, text, transform = ax.transAxes)
+
+def init_sci_env():
+    # plt.rcParams["figure.figsize"] = (10, 6)
+    plt.rcParams.update({"font.size": 14, "lines.markersize": 2, "figure.figsize": (10, 6)})
+    colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+    return colors
+
+def savefig(fig, savefile, dpi = 600, bbox_inches = "tight", transparent = False, **kwargs):
+    fig.savefig(savefile, dpi = dpi, bbox_inches = bbox_inches, transparent = transparent, **kwargs)
