@@ -112,7 +112,7 @@ def stats_measures_df(df, name1, name2, return_dict = False):
     else:
         return [r2, slope, rmse, mbe]
 
-def load_csv(p, fmt = 'yearfirst', index_col = 0, strip_cols = True, duplicated_time = 'True'):
+def load_csv(p, fmt = 'yearfirst', index_col = 0, strip_cols = True, duplicated_time = True, missing = -9999., columns = None):
     df = pd.read_csv(p, index_col = index_col)
     if strip_cols:
         df.columns = [c.strip() for c in df.columns]
@@ -122,6 +122,10 @@ def load_csv(p, fmt = 'yearfirst', index_col = 0, strip_cols = True, duplicated_
         df.index = pd.to_datetime(df.index, format = fmt)
     if duplicated_time:
         df = df[~df.index.duplicated(keep='first')]
+    if missing:
+        df = df.replace(missing, np.nan)
+    if columns:
+        df = df[columns]
     return df
 
 def load_pickle(p):
