@@ -1,8 +1,10 @@
+import imp
 import pickle
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
+from datetime import datetime
 from sklearn.metrics import mean_squared_error
 
 
@@ -29,6 +31,37 @@ def roundit(ipt, precision = 2):
             return np.round(ipt, precision)
         except:
             return ipt
+
+def timeit(cur_iter, whole_counts, begin_time, ratio = 10, time_unit = 'seconds'):
+    time_unit_map = {
+        'seconds': 's',
+        'minutes': 'm',
+        'hours': 'h',
+        'days': 'd'
+    }
+    cur_iter += 1
+    progress = cur_iter / whole_counts * 100
+    if (np.round(progress, 2) % ratio == 0) or (np.round(progress, 2) >= 100):
+        now = datetime.now()
+        time_dif = now - begin_time
+        time_dif = time_dif.total_seconds()
+        time_dif = time_dif / (cur_iter / whole_counts) * (100 - progress)
+        if time_unit == 'seconds':
+            pass
+        elif time_unit == 'minutes':
+            time_dif = time_dif / 60
+        elif time_unit == 'hours':
+            time_dif = time_dif / 3600
+        elif time_unit == 'days':
+            time_dif = time_dif / 3600 / 24
+        else:
+            raise Exception('time unit must be seconds, minutes, hours, or days!')
+        
+        time_dif = np.round(time_dif, 2)
+        progress = np.round(progress, 2)
+        print(f'{progress} %, {time_dif} {time_unit_map[time_unit]}', end = '|')
+    if cur_iter >= whole_counts:
+        print('', end = '\n')
 
 def stats_summary(df):
     min_ = df.min().to_frame().T
