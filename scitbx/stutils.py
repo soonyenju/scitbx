@@ -203,12 +203,12 @@ def nticks_prune(ax, which = 'x', nbins = None, prune = None):
         ax.yaxis.set_major_locator(plt.MaxNLocator(nbins = nbins, prune = prune)) 
     return ax
 
-def upper_legend(ax, yloc = 1.1, ncols = None):
+def upper_legend(ax, xloc = 0.5, yloc = 1.1, ncols = None):
     # Python > 3.7
     handles, labels = ax.get_legend_handles_labels()
     by_label = dict(zip(labels, handles))
     if not ncols: ncols = len(labels)
-    ax.legend(by_label.values(), by_label.keys(), loc = "upper center", framealpha = 0.1, frameon = True , bbox_to_anchor=(0.5, yloc), ncol = ncols)
+    ax.legend(by_label.values(), by_label.keys(), loc = "upper center", framealpha = 0.1, frameon = True, bbox_to_anchor=(xloc, yloc), ncol = ncols)
     return ax
 
 def rotate_ticks(ax, which, degree):
@@ -221,11 +221,29 @@ def sort_list_by(lista, listb):
 def add_text(ax, x, y, text):
     ax.text(x, y, text, transform = ax.transAxes)
 
-def init_sci_env():
+def shift_axis_label(ax, which, x_shift, y_shift):
+    if which == 'x':
+        ax.xaxis.set_label_coords(x_shift, y_shift)
+    elif which == 'y':
+        ax.yaxis.set_label_coords(x_shift, y_shift)
+    else:
+        raise Exception('wrong axis')
+
+def init_sci_env(fontsize = 14, linemarkersize = 2, legendtitle_fontsize = 14, figuresize = (10, 6), pandas_max_columns = None):
     # plt.rcParams["figure.figsize"] = (10, 6)
-    plt.rcParams.update({"font.size": 14, "lines.markersize": 2, "figure.figsize": (10, 6)})
+    pd.set_option('display.max_columns', pandas_max_columns)
+    plt.rcParams.update({
+        "font.size": fontsize, 
+        "lines.markersize": linemarkersize, 
+        'legend.title_fontsize': legendtitle_fontsize, 
+        "figure.figsize": figuresize
+    })
     colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
     return colors
+
+def reset_sci_env():
+    pd.reset_option('all')
+    plt.rcParams.update(plt.rcParamsDefault)
 
 def savefig(fig, savefile, dpi = 600, bbox_inches = "tight", transparent = False, **kwargs):
     fig.savefig(savefile, dpi = dpi, bbox_inches = bbox_inches, transparent = transparent, **kwargs)
