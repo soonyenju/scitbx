@@ -173,10 +173,12 @@ def dump_pickle(ds, p, large = False):
         else:
             pickle.dump(ds, f)
 
-def setup_canvas(nx, ny, figsize = (10, 6), sharex = True, sharey = True, markersize = 2, fontsize = 16, labelsize= 15, wspace = 0, hspace = 0, panels = False):
+def setup_canvas(nx, ny, figsize = (10, 6), sharex = True, sharey = True, markersize = 2, fontsize = 16, flatten = True, labelsize= 15, wspace = 0, hspace = 0, panels = False):
     plt.rcParams.update({'lines.markersize': markersize, 'font.size': fontsize})
     fig, axes = plt.subplots(nx, ny, figsize = figsize, sharex = sharex, sharey = sharey)
-    if nx * ny > 1: axes = axes.flatten()
+    if flatten:
+        if nx * ny > 1: 
+            axes = axes.flatten()
     if nx * ny > 1:
         for ax in axes:
             ax.tick_params(direction = "in", which = "both", labelsize = labelsize)
