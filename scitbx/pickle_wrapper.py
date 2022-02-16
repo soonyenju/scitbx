@@ -1,10 +1,10 @@
 import pickle
 
-def load_pickle(path, mode = "rb"):
+def load_pickle_obsolete(path, mode = "rb"):
     with open(path, mode) as f:
         data = pickle.load(f)
     return data
 
-def dump_pickle(path, data, mode = "wb"):
+def dump_pickle_obsolete(path, data, mode = "wb"):
     with open(path, mode):
         pickle.dump(data, path)
