@@ -462,3 +462,9 @@ for g in gps.groups:
     print(g)
     gp = gps.get_group(g)
     print(gp)
+
+# ======================================================================================================================================================
+# Set matplotlib axis datetime format
+import matplotlib.dates as mdates
+myFmt = mdates.DateFormatter('%d %H:%M')
+axes[0].xaxis.set_major_formatter(myFmt)
