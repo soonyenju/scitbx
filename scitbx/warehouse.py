@@ -401,7 +401,8 @@ ax2.yaxis.set_major_locator(MaxNLocator(nbins=nbins, prune='upper')) # added
 ax.xaxis.set_major_locator(plt.MaxNLocator(3))
 
 
-axes[2].yaxis.set_label_coords(-0.12, -0.05)
+axes[2].yaxis.set_label_coords(-0.12, -0.05) # , transform = axes[2].transAxes
+axes[1].yaxis.set_label_coords(-0.05, -0.05, transform = axes[1].transAxes)
 
 axes[7].set_axis_off()
 
@@ -416,3 +417,48 @@ lgnd = ax.legend(loc = "lower left", framealpha = 0.1, frameon = True, bbox_to_a
 
 #change the marker size manually for both lines
 lgnd.legendHandles[0]._sizes = [30]
+
+# ======================================================================================================================================================
+# Replace columns values by dict
+d = {1: 'winter', 2: 'spring', 3: 'summer', 4: 'autumn'}
+df["seasons"] = df["seasons"].map(d)
+
+# ======================================================================================================================================================
+# Drop rows all equal zero
+df.loc[~(df==0).all(axis=1)]
+
+# ======================================================================================================================================================
+# First order derivative to time (seconds)
+recv.diff() / recv.index.to_series().diff().dt.total_seconds()
+
+# ======================================================================================================================================================
+# Long to wide, change multiindex order and  sort by level
+dft = dfo.pivot(index='Flux',columns='Tower')
+dft.columns.names = ['Info', 'Tower']
+dft = dft.T.swaplevel() # or reorder_levels('Info', 'Tower')
+
+idx, iidx = dft.index.sortlevel(0)
+
+# ======================================================================================================================================================
+# add legend by scatter size
+import numpy as np
+import matplotlib.pyplot as plt
+
+N = 50
+x = np.random.rand(N)
+y = np.random.rand(N)
+a2 = 400*np.random.rand(N)
+
+sc = plt.scatter(x, y, s=a2, alpha=0.5)
+plt.legend(*sc.legend_elements("sizes", num=6))
+plt.show()
+
+
+# ======================================================================================================================================================
+# Group by every 3 minutes
+gps = df.groupby(pd.Grouper(freq = '3T'))
+
+for g in gps.groups:
+    print(g)
+    gp = gps.get_group(g)
+    print(gp)
