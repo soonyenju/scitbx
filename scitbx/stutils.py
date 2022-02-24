@@ -4,9 +4,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
-from datetime import datetime
+from datetime import datetime, timedelta
 from sklearn.metrics import mean_squared_error
-
 
 def pprint(values, p = 2):
     try:
@@ -176,22 +175,21 @@ def dump_pickle(ds, p, large = False):
 def setup_canvas(nx, ny, figsize = (10, 6), sharex = True, sharey = True, markersize = 2, fontsize = 16, flatten = True, labelsize= 15, wspace = 0, hspace = 0, panels = False):
     plt.rcParams.update({'lines.markersize': markersize, 'font.size': fontsize})
     fig, axes = plt.subplots(nx, ny, figsize = figsize, sharex = sharex, sharey = sharey)
-    if flatten:
-        if nx * ny > 1: 
-            axes = axes.flatten()
-    if nx * ny > 1:
-        for ax in axes:
-            ax.tick_params(direction = "in", which = "both", labelsize = labelsize)
-    else:
-        axes.tick_params(direction = "in", which = "both", labelsize = labelsize)
+    if nx * ny == 1: axes = np.array([axes])
+    if flatten: axes = axes.flatten()
+    for ax in axes.flatten():
+        ax.tick_params(direction = "in", which = "both", labelsize = labelsize)
 
-    plt.subplots_adjust(wspace = wspace, hspace = hspace)
-
-    if (nx * ny > 1) & panels:
+    if panels:
         for i in range(len(axes)):
             axes[i].text(0.05, 0.8, f'({chr(97 + i)})', transform = axes[i].transAxes)
 
-    return fig, axes
+    plt.subplots_adjust(wspace = wspace, hspace = hspace)
+
+    if len(axes) == 1:
+        return fig, axes[0]
+    else:
+        return fig, axes
 
 def nticks_prune(ax, which = 'x', nbins = None, prune = None):
     # prune: can be upper
@@ -217,17 +215,26 @@ def rotate_ticks(ax, which, degree):
     ax.tick_params(axis=which, rotation=degree)
 
 def sort_list_by(lista, listb):
+    # sort lista by listb
     lista = [i for _, i in sorted(zip(listb, lista))]
     return lista
 
 def add_text(ax, x, y, text):
     ax.text(x, y, text, transform = ax.transAxes)
 
+def add_line(ax, loc, linestyle = '--', color = 'k', alpha = 0.5, direction = 'h', bmin = 0, bmax = 1):
+    if direction.lower() in ['h', 'horizontal']:
+        ax.axhline(loc, linestyle = linestyle, color = color, alpha = alpha, xmin = bmin, xmax = bmax)
+    elif direction.lower() in ['v', 'vertical']:
+        ax.axvline(loc, linestyle = linestyle, color = color, alpha = alpha, ymin = bmin, ymax = bmax)
+    else:
+        raise Exception('Options: h, horizontal, v, and vertical!')
+
 def shift_axis_label(ax, which, x_shift, y_shift):
     if which == 'x':
-        ax.xaxis.set_label_coords(x_shift, y_shift)
+        ax.xaxis.set_label_coords(x_shift, y_shift, transform = ax.transAxes)
     elif which == 'y':
-        ax.yaxis.set_label_coords(x_shift, y_shift)
+        ax.yaxis.set_label_coords(x_shift, y_shift, transform = ax.transAxes)
     else:
         raise Exception('wrong axis')
 
@@ -249,3 +256,26 @@ def reset_sci_env():
 
 def savefig(fig, savefile, dpi = 600, bbox_inches = "tight", transparent = False, **kwargs):
     fig.savefig(savefile, dpi = dpi, bbox_inches = bbox_inches, transparent = transparent, **kwargs)
+
+def str2date(str_, format):
+    return datetime.strptime(str_, format)
+
+def date2str(date, format):
+    return date.strftime(format)
+
+def timedif(dt1, dt2, mode = 'None'):
+    dif = dt2 - dt1
+    if mode.lower in ['s', 'sec', 'second']:
+        return dif.total_seconds()
+    elif mode.lower in ['min', 'minute']:
+        return dif.total_seconds() / 60
+    elif mode.lower in ['h', 'hour']:
+        return dif.total_seconds() / 60 / 60
+    elif mode.lower in ['d', 'day']:
+        return dif.total_seconds() / 60 / 60 / 24
+    elif mode.lower in ['mon', 'month']:
+        return dif.total_seconds() / 60 / 60 / 24 / 30
+    elif mode.lower in ['y', 'yr', 'year']:
+        return dif.total_seconds() / 60 / 60 / 24 / 365
+    else:
+        return dif

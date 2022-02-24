@@ -468,3 +468,33 @@ for g in gps.groups:
 import matplotlib.dates as mdates
 myFmt = mdates.DateFormatter('%d %H:%M')
 axes[0].xaxis.set_major_formatter(myFmt)
+
+# ======================================================================================================================================================
+# count values
+geolocations['Countrycode'].value_counts()
+
+
+
+# ======================================================================================================================================================
+#  blended transformation
+import matplotlib.transforms as transforms
+trans = transforms.blended_transform_factory(ax.transData, ax.transAxes)
+
+# ======================================================================================================================================================
+# convert axes / data transform  
+# https://stackoverflow.com/questions/62004022/convert-from-data-coordinates-to-axes-coordinates-in-matplotlib
+
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+# this is in data coordinates
+point = (1000, 1000)
+trans = ax.transData.transform(point)
+trans = ax.transAxes.inverted().transform(trans)
+print(ax.get_xlim(), trans)  
+
+ax.set_xlim(0, 2000)
+ax.set_ylim(0, 2000)
+trans = ax.transData.transform(point)
+trans = ax.transAxes.inverted().transform(trans)
+print(ax.get_xlim(), trans)
