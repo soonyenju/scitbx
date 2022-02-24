@@ -8,6 +8,7 @@ from . import meteo
 from . import easy_import
 # from .pickle_wrapper import load_pickle, dump_pickle
 from .regress2 import regress2
+from .lins_ccc_1989 import concordance_correlation_coefficient
 
 __all__ = [
     "Yaml", 
@@ -15,6 +16,6 @@ __all__ = [
     "create_all_parents", "searching_all_files", "unzip", "pbar",
     "load_google_drive", "google",
     # "load_pickle", "dump_pickle",
-    "stutils", "regress2",
+    "stutils", "regress2", 'concordance_correlation_coefficient',
     "easy_import"
     ]
