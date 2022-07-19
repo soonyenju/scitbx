@@ -279,3 +279,12 @@ def timedif(dt1, dt2, mode = 'None'):
         return dif.total_seconds() / 60 / 60 / 24 / 365
     else:
         return dif
+
+def create_folder(des):
+    # exist_ok = False: DO NOT make if the directory exists!
+    try:
+        des.mkdir(mode = 0o777, parents = True, exist_ok = False)
+        print(f'Directory made: {des} ')
+    except FileExistsError as e:
+        print('Not creating, target directory exists!')
+        # FileExistsError

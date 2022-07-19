@@ -498,3 +498,14 @@ ax.set_ylim(0, 2000)
 trans = ax.transData.transform(point)
 trans = ax.transAxes.inverted().transform(trans)
 print(ax.get_xlim(), trans)
+
+# =======================================================================================================================
+# auto nrows and ncols
+acnt = len(df.columns) - 1
+nc = int(np.ceil(np.sqrt(acnt)))
+if nc*(nc-1) >= acnt:
+    nr = nc - 1
+else:
+    nr = nc
+
+fig, axes = setup_canvas(nr,nc, figsize = (5 * nc, 3 * nr))#, wspace = 0.2, hspace = 0.2)
