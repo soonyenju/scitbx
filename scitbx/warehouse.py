@@ -125,7 +125,7 @@ f.savefig(f"3drivers/site_r2_compare_sort_dif_{time_type}_b.pdf", dpi = 600, for
 
 # ========================================================================================================================
 # drop rows with duplicated index
-df3 = df3[~df3.index.duplicated(keep='first')]
+df = df[~df.index.duplicated(keep='first')]
 df = df.loc[:,~df.columns.duplicated()]
 
 # ========================================================================================================================
