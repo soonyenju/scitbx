@@ -288,3 +288,11 @@ def create_folder(des):
     except FileExistsError as e:
         print('Not creating, target directory exists!')
         # FileExistsError
+
+def format_axis_datetime(ax, fmt = '%m/%Y', which = 'x'):
+    import matplotlib.dates as mdates
+    myFmt = mdates.DateFormatter(fmt)
+    if which == 'x':
+        ax.xaxis.set_major_formatter(myFmt)
+    else:
+        ax.yaxis.set_major_formatter(myFmt)
