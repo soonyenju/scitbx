@@ -343,3 +343,10 @@ def drop_all_vals(df, val = 0, axis = 1):
     return df.loc[~(df==val).all(axis=axis)]
 
 
+def df_replace_dict(df, column, dict_):
+    # Replace columns values by dict
+    # example: dict_ = {1: 'winter', 2: 'spring', 3: 'summer', 4: 'autumn'}
+    # df["seasons"] = df["seasons"].map(dict_)
+    df = df.copy()
+    df[column] = df[column].map(dict_)
+    return df
