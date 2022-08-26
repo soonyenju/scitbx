@@ -336,3 +336,10 @@ def intersect_lists(d, method = 1):
         # apply intersect1d to (a list of) multiple lists:
         d = list(reduce(np.intersect1d, d))
     return d
+
+def drop_all_vals(df, val = 0, axis = 1):
+    # default: drop rows all equal zero
+    df = df.copy()
+    return df.loc[~(df==val).all(axis=axis)]
+
+
