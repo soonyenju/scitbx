@@ -323,3 +323,16 @@ def drop_duplicated_row_cols(df, axis):
     else:
         df = df.loc[:,~df.columns.duplicated()]
     return df
+
+def intersect_lists(d, method = 1):
+    if method == 1:
+        # Intersection of multiple lists
+        # d = [list1, list2, ...]
+        # solution1:
+        d = list(set.intersection(*map(set,d)))
+    else:
+        # solution2:
+        from functools import reduce
+        # apply intersect1d to (a list of) multiple lists:
+        d = list(reduce(np.intersect1d, d))
+    return d
