@@ -1,9 +1,9 @@
 # mount the drive
-def mount_drive():
+def mount_drive(force_remount = False):
     from google.colab import drive
     from pathlib import Path
   
-    drive.mount('/content/drive')
+    drive.mount('/content/drive', force_remount = force_remount)
     return Path.cwd().joinpath('drive/My Drive')
 
 # download from colab
