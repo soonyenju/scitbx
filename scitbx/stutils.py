@@ -350,3 +350,31 @@ def df_replace_dict(df, column, dict_):
     df = df.copy()
     df[column] = df[column].map(dict_)
     return df
+
+def get_handles_labels(ax):
+    handles, labels = ax.get_legend_handles_labels()
+    # by_label = dict(zip(labels, handles))
+    return handles, labels
+
+def reorder_labels(handles, labels, ncol):
+    leng = len(labels)
+    nrow = np.ceil(len(labels) / ncol).astype(int)
+    labels_new = labels + [0 for i in range(nrow * ncol - leng)]
+    labels_new[0: len(labels)] = labels
+    labels_new = np.array(labels_new).reshape(nrow, ncol).T.ravel()
+    idx = np.where(labels_new != '0')
+    labels_new = labels_new[idx]
+    
+    handles_new = handles + [0 for i in range(nrow * ncol - leng)]
+    handles_new[0: len(handles)] = handles
+    handles_new = np.array(handles_new).reshape(nrow, ncol).T.ravel()
+    
+    idx = np.where(handles_new != 0)
+    handles_new = handles_new[idx]
+    
+    # labels_new = np.resize(np.array(labels), (nrow, ncol)).T
+    # handles_new = np.resize(np.array(handles), (nrow, ncol)).T
+    # labels_new = np.unique(labels_new.ravel())
+    # # handles_new = np.unique(handles_new.ravel())
+    
+    return handles_new, labels_new
