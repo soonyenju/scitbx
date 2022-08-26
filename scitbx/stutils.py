@@ -296,3 +296,30 @@ def format_axis_datetime(ax, fmt = '%m/%Y', which = 'x'):
         ax.xaxis.set_major_formatter(myFmt)
     else:
         ax.yaxis.set_major_formatter(myFmt)
+
+def create_folder(des):
+    # exist_ok = False: DO NOT make if the directory exists!
+    try:
+        des.mkdir(mode = 0o777, parents = True, exist_ok = False)
+        print(f'Directory made: {des} ')
+    except FileExistsError as e:
+        print('Not creating, target directory exists!')
+        # FileExistsError
+
+def nrow_x_ncols(acnt):
+    # auto nrows and ncols
+    nc = int(np.ceil(np.sqrt(acnt)))
+    if nc*(nc-1) >= acnt:
+        nr = nc - 1
+    else:
+        nr = nc
+    return nr, nc
+
+def drop_duplicated_row_cols(df, axis):
+    df = df.copy()
+    if axis == 0:
+        # drop rows with duplicated index
+        df = df[~df.index.duplicated(keep='first')]
+    else:
+        df = df.loc[:,~df.columns.duplicated()]
+    return df
