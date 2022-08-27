@@ -31,3 +31,16 @@ def download_file(src, filename, **kwargs):
         with open(filename, "wb") as f:
             pickle.dump(src, f)
     files.download(filename)
+
+def check_colab_gpu():
+    import os
+    if int(os.environ["COLAB_GPU"]) > 0:
+        print("A GPU is connected.")
+        gpu = 1
+    elif "COLAB_TPU_ADDR" in os.environ and os.environ["COLAB_TPU_ADDR"]:
+        print("A TPU is connected.")
+        gpu = 2
+    else:
+        print("No accelerator is connected.")
+        gpu = 0
+    return gpu
