@@ -378,3 +378,7 @@ def reorder_labels(handles, labels, ncol):
     # # handles_new = np.unique(handles_new.ravel())
     
     return handles_new, labels_new
+
+def get_quantile_index(s, q):
+    # OR: s[s == s.quantile(.5, interpolation='lower')]
+    return (s.sort_values()[::-1] <= s.quantile(.5)).idxmax()
