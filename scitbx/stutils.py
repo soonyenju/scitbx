@@ -144,8 +144,8 @@ def stats_measures_df(df, name1, name2, return_dict = False):
     else:
         return [r2, slope, rmse, mbe]
 
-def load_csv(p, fmt = 'yearfirst', index_col = 0, strip_cols = True, duplicated_time = True, missing = -9999., columns = None):
-    df = pd.read_csv(p, index_col = index_col)
+def load_csv(p, fmt = 'yearfirst', index_col = 0, strip_cols = True, duplicated_time = True, missing = -9999., columns = None, **kwargs):
+    df = pd.read_csv(p, index_col = index_col, **kwargs)
     if strip_cols:
         df.columns = [c.strip() for c in df.columns]
     if fmt: 
@@ -296,15 +296,6 @@ def format_axis_datetime(ax, fmt = '%m/%Y', which = 'x'):
         ax.xaxis.set_major_formatter(myFmt)
     else:
         ax.yaxis.set_major_formatter(myFmt)
-
-def create_folder(des):
-    # exist_ok = False: DO NOT make if the directory exists!
-    try:
-        des.mkdir(mode = 0o777, parents = True, exist_ok = False)
-        print(f'Directory made: {des} ')
-    except FileExistsError as e:
-        print('Not creating, target directory exists!')
-        # FileExistsError
 
 def nrow_x_ncols(acnt):
     # auto nrows and ncols
