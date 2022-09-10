@@ -509,3 +509,7 @@ else:
     nr = nc
 
 fig, axes = setup_canvas(nr,nc, figsize = (5 * nc, 3 * nr))#, wspace = 0.2, hspace = 0.2)
+
+# =======================================================================================================================
+# interp nc to sites
+df = nc['o3'].interp(longitude = meta['longitude'].to_xarray(), latitude = meta['latitude'].to_xarray()).to_dataframe()
