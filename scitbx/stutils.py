@@ -219,8 +219,8 @@ def sort_list_by(lista, listb):
     lista = [i for _, i in sorted(zip(listb, lista))]
     return lista
 
-def add_text(ax, x, y, text):
-    ax.text(x, y, text, transform = ax.transAxes)
+def add_text(ax, x, y, text, horizontalalignment = 'center', verticalalignment = 'center'):
+    ax.text(x, y, text, transform = ax.transAxes, horizontalalignment = horizontalalignment, verticalalignment = verticalalignment)
 
 def add_line(ax, loc, linestyle = '--', color = 'k', alpha = 0.5, direction = 'h', bmin = 0, bmax = 1):
     if direction.lower() in ['h', 'horizontal']:
