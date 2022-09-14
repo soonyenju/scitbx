@@ -513,3 +513,17 @@ fig, axes = setup_canvas(nr,nc, figsize = (5 * nc, 3 * nr))#, wspace = 0.2, hspa
 # =======================================================================================================================
 # interp nc to sites
 df = nc['o3'].interp(longitude = meta['longitude'].to_xarray(), latitude = meta['latitude'].to_xarray()).to_dataframe()
+
+# =======================================================================================================================
+# Smooth 2D array
+from scipy.ndimage.filters import gaussian_filter
+from scipy.ndimage import uniform_filter, convolve1d
+
+klen = 2
+kernel = np.ones(klen)
+
+arr2Df = arr2D
+arr2Df = convolve1d(arr2Df, kernel)
+arr2Df = convolve1d(arr2Df.T, kernel).T
+
+nc = nc.coarsen(longitude=2, boundary = 'pad').mean().coarsen(latitude=2, boundary = 'pad').mean()
