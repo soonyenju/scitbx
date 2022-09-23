@@ -142,22 +142,3 @@ def vpd_calc(airtemp, rh):
     # Calculate vapour pressure deficit
     vpd = es - eact
     return vpd # in hPa
-
-def saturation_vapor_pressure(T, es0 = 6.112):
-    """
-    Input:
-    ------
-    T(degC):
-        Temperature
-    es0 (hPa):
-        saturation_vapor_pressure at 0 degC
-    Output:
-    -------
-    saturation_vapor_pressure(hPa)
-    math:
-    -----
-    Tetens formula
-    6.112 e^((17.67 * T) / (T + 243.5)
-    """
-    es = 6.112 * np.e ** ((17.67 * T) / (T + 243.5))
-    return es
