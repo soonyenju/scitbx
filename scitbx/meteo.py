@@ -250,6 +250,35 @@ def specific_humidity(e, P):
     q = (622 * e) / (P - 0.378 * e)   
     return q
 
+def specific_humidity2vapor_pressure(q, P):
+    # Added 27/09/2022
+    # Example: specific_humidity2vapor_pressure(6.06, 1013.25) => 9.83563457971213
+    """
+    Input:
+    ------
+    q(g/kg):
+        Specific humidity
+    P(hPa):
+        atmospheric pressure
+    Output:
+    -------
+    e(hPa): 
+        vapor pressure
+    math:
+    -----
+    q = mv / (mv + md) = mv/m = rhov / rho = (622 * e) / (p - 0.378 * e) g/Kg = (0.622 * e) / (P - 0.378 * e) g/g
+    e = P / (622/q + 0.378)
+    where
+        mv: mass of vapor
+        md: mass of dry air
+        m: mass of wet air
+        rhov: mass density of vapor
+        rho: mass density of wet air
+        P: atmospheric pressure (hPa)
+    """
+    e = P / (622/q + 0.378) 
+    return e
+
 def mixing_ratio(e, P):
     """
     Input:
