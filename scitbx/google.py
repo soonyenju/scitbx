@@ -33,11 +33,12 @@ def download_file(src, filename, **kwargs):
     files.download(filename)
 
 def check_colab_gpu():
+    # This function is deprecated on 25/10/2022
     import os
-    if int(os.environ["COLAB_GPU"]) > 0:
+    if int(os.environ["COLAB_GPU"]) > 0: # TF_FORCE_GPU_ALLOW_GROWTH: True
         print("A GPU is connected.")
         gpu = 1
-    elif "COLAB_TPU_ADDR" in os.environ and os.environ["COLAB_TPU_ADDR"]:
+    elif "COLAB_TPU_ADDR" in os.environ and os.environ["COLAB_TPU_ADDR"]: # XRT_TPU_CONFIG or COLAB_TPU_ADDR or TPU_NAME in os.environ
         print("A TPU is connected.")
         gpu = 2
     else:
