@@ -373,3 +373,10 @@ def reorder_labels(handles, labels, ncol):
 def get_quantile_index(s, q):
     # OR: s[s == s.quantile(.5, interpolation='lower')]
     return (s.sort_values()[::-1] <= s.quantile(.5)).idxmax()
+
+def unify_xylim(ax):
+    xylim = np.vstack([ax.get_xlim(), ax.get_ylim()])
+    vmin = xylim[:, 0].min()
+    vmax = xylim[:, 1].max()
+    ax.set_xlim(vmin, vmax)
+    ax.set_ylim(vmin, vmax)
