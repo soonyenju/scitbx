@@ -380,3 +380,13 @@ def unify_xylim(ax):
     vmax = xylim[:, 1].max()
     ax.set_xlim(vmin, vmax)
     ax.set_ylim(vmin, vmax)
+
+def df_sort_user_order(df, order, columns, user_col):
+    df = df.copy()
+    target_idx = columns.index(user_col)
+    columns[target_idx] = 'temp'
+    order = dict(zip(order, np.arange(len(order))))
+    df['temp'] = df['timestep'].map(order)
+    df = df.sort_values(by = columns)
+    df = df.drop('temp', axis = 1)
+    return df
