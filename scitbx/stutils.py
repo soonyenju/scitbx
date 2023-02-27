@@ -386,7 +386,7 @@ def df_sort_user_order(df, order, columns, user_col):
     target_idx = columns.index(user_col)
     columns[target_idx] = 'temp'
     order = dict(zip(order, np.arange(len(order))))
-    df['temp'] = df['timestep'].map(order)
+    df['temp'] = df[user_col].map(order)
     df = df.sort_values(by = columns)
     df = df.drop('temp', axis = 1)
     return df
