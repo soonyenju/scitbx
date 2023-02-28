@@ -380,6 +380,7 @@ def unify_xylim(ax):
     vmax = xylim[:, 1].max()
     ax.set_xlim(vmin, vmax)
     ax.set_ylim(vmin, vmax)
+    return vmin, vmax
 
 def df_sort_user_order(df, order, columns, user_col):
     df = df.copy()
