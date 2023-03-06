@@ -6,6 +6,10 @@ def mount_drive(force_remount = False):
     drive.mount('/content/drive', force_remount = force_remount)
     return Path.cwd().joinpath('drive/My Drive')
 
+def unmount_drive():
+    from google.colab import drive
+    drive.flush_and_unmount()
+
 # download from colab
 def download_file(src, filename, **kwargs):
     """
