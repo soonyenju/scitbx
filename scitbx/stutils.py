@@ -391,3 +391,99 @@ def df_sort_user_order(df, order, columns, user_col):
     df = df.sort_values(by = columns)
     df = df.drop('temp', axis = 1)
     return df
+
+from scipy.optimize import curve_fit
+
+def get_curve_fit_r2(func, parameters, x, y):
+    from sklearn.metrics import r2_score
+    y_pred = func(x, *parameters)
+    return r2_score(y, y_pred)
+
+
+def get_curve_fit_p_value(func, parameters, x, y):
+    import scipy.odr
+    import scipy.stats
+    def f_wrapper_for_odr(beta, x): # parameter order for odr
+        return func(x, *beta)
+
+    model = scipy.odr.odrpack.Model(f_wrapper_for_odr)
+    data = scipy.odr.odrpack.Data(x,y)
+    myodr = scipy.odr.odrpack.ODR(data, model, beta0=parameters,  maxit=0)
+    myodr.set_job(fit_type=2)
+    parameterStatistics = myodr.run()
+    df_e = len(x) - len(parameters) # degrees of freedom, error
+    cov_beta = parameterStatistics.cov_beta # parameter covariance matrix from ODR
+    sd_beta = parameterStatistics.sd_beta * parameterStatistics.sd_beta
+    ci = []
+    t_df = scipy.stats.t.ppf(0.975, df_e)
+    ci = []
+    for i in range(len(parameters)):
+        ci.append([parameters[i] - t_df * parameterStatistics.sd_beta[i], parameters[i] + t_df * parameterStatistics.sd_beta[i]])
+
+    tstat_beta = parameters / parameterStatistics.sd_beta # coeff t-statistics
+    pstat_beta = (1.0 - scipy.stats.t.cdf(np.abs(tstat_beta), df_e)) * 2.0    # coef. p-values
+
+    # for i in range(len(parameters)):
+    #     print('parameter:', parameters[i])
+    #     print('   conf interval:', ci[i][0], ci[i][1])
+    #     print('   tstat:', tstat_beta[i])
+    #     print('   pstat:', pstat_beta[i])
+    #     print()
+    df_fit_p = []
+    for i in range(len(parameters)):
+        df_fit_p.append([parameters[i], ci[i][0], ci[i][1], tstat_beta[i], pstat_beta[i]])
+    return pd.DataFrame(df_fit_p, columns = ['parameter', 'conf min', 'conf max', 'tstat', 'pstat'])
+
+def plot_curve(func_name, ax, x, y, precision = 2):
+    if func_name not in ['lin', 'exp', 'poly2']: raise Exception('func_name must be `lin`, `exp`, or `poly2`!')
+    def func_lin(x, a, b):
+        return a * x + b
+
+    def func_poly2(x, a, b, c):
+        # return a * np.e**(b * x) + c
+        return a * x**2 + b * x + c
+
+    def func_exp(x, a, b, c):
+        return a * np.exp(-b * x) + c
+
+    func_dict = {
+        'lin': func_lin,
+        'poly2': func_poly2,
+        'exp': func_exp
+    }
+    x = x.copy(); y = y.copy()
+    idx = (~x.isna()) & (~y.isna())
+    x = x[idx]; y = y[idx]
+
+    func = func_dict[func_name]
+    popt, pcov = curve_fit(func,  x,  y)
+    # +++++++++++++++++++++++++++++++++++++++++++++++
+    # Print fitting p-values and r2
+    fit_p = get_curve_fit_p_value(func, popt, x, y)
+    fit_r2 = get_curve_fit_r2(func, popt, x, y)
+    print(fit_p)
+    print(fit_r2)
+    # +++++++++++++++++++++++++++++++++++++++++++++++
+    # np.polyfit(x, y, 3)
+    ax.plot(x, func(x, *popt), color = 'k', label = 'Fitted')
+    if func_name == 'lin':
+        a, b = popt
+        a = roundit(a, precision); b = roundit(b, precision)
+        sign = '+' if b >= 0 else '-'
+        text = fr'y={a}$x$ {sign} {b}'
+    elif func_name == 'exp':
+        a, b, c = popt
+        a = roundit(a, precision); b = roundit(b, precision); c = roundit(c, precision)
+        sign = '+' if c >= 0 else '-'
+        # text = r'$y = {:.2f} e^{:.3f}x + {:.2f}$'.format(a, b, c)
+        text = fr'$y = {a} \times e^{{{b}x}} {sign} {np.abs(c)}$'
+    elif func_name == 'poly2':
+        a, b, c = popt
+        a = roundit(a, precision); b = roundit(b, precision); c = roundit(c, precision)
+        sign1 = '+' if b >= 0 else '-'
+        sign2 = '+' if c >= 0 else '-'
+        text = f'y={a}$x^2$ {sign1} {b}x {sign2} {c}'
+    else:
+        raise Exception('func_name must be `lin`, `exp`, or `poly2`!')
+
+    add_text(ax, 0.05, 0.05, text, horizontalalignment = 'left')
