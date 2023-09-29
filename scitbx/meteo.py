@@ -452,6 +452,22 @@ def vapor_pressure(RH, T):
     e = saturation_vapor_pressure(Td)
     return e 
 
+def temperature_to_vpd(Td, T):
+    """
+    2023-09-29
+    Vapour pressure deficit at dew temperature Td and air temperature T
+    Input:
+    ------
+    Td(degC):
+        dew temperature
+    T(degC):
+        temperature
+    Output:
+    -------
+    vpd(hPa): vapor pressure deficit
+    """
+    vpd = saturation_vapor_pressure(T) - saturation_vapor_pressure(Td)
+    return vpd
 
 # -------------------------------------------------------------------
 # Eddy Covariance meteo equations
