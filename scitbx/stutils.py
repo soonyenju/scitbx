@@ -143,6 +143,9 @@ def stats_measures_df(df, name1, name2, return_dict = False):
         }
     else:
         return [r2, slope, rmse, mbe]
+    
+def dateparse(dt, format = '%Y-%m-%d'):
+    return pd.to_datetime(dt, format = format)
 
 def load_csv(p, fmt = 'yearfirst', index_col = 0, strip_cols = True, duplicated_time = True, missing = -9999., columns = None, **kwargs):
     df = pd.read_csv(p, index_col = index_col, **kwargs)
