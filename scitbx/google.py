@@ -19,9 +19,13 @@ def download_file(src, filename, **kwargs):
     import pickle
     from google.colab import files
     # save figures:
-    if filename.split(".")[-1] in ["jpeg", "jpg", "png"]:
+    if filename.split(".")[-1] in ["jpeg", "jpg", "png", "pdf"]:
         fig = src
-        fig.savefig(filename, dpi = 300, bbox_inches = "tight", **kwargs)
+        if 'dpi' in kwargs:
+            dpi = kwargs['dpi']
+        else:
+            dpi = 300
+        fig.savefig(filename, dpi = dpi, bbox_inches = "tight", **kwargs)
     # csv
     elif filename.split(".")[-1] == "csv":
         df = src
