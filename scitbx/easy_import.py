@@ -14,6 +14,7 @@ def option_load(opt = 0):
     def install(package):
         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
     def geo_load():
+        global rio, gpd, xr, rxr
         try:
             import rasterio as rio
         except Exception as e:
@@ -41,6 +42,7 @@ def option_load(opt = 0):
             import rioxarray as rxr
 
     def plot_load():
+        global sns
         try:
             import seaborn as sns
         except Exception as e:
@@ -49,6 +51,7 @@ def option_load(opt = 0):
             import seaborn as sns
 
     def miscellaneous_load():
+        global pip, imod
         import pip
         from operator import imod
 
