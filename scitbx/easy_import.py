@@ -32,7 +32,7 @@ except Exception as e:
     install('xarray')
     import xarray as xr
 try:
-    import rioxarray as xr
+    import rioxarray as rxr
 except Exception as e:
     print(e)
     install('rioxarray')
@@ -72,7 +72,7 @@ from operator import imod
 #             install('xarray')
 #             import xarray as xr
 #         try:
-#             import rioxarray as xr
+#             import rioxarray as rxr
 #         except Exception as e:
 #             print(e)
 #             install('rioxarray')
