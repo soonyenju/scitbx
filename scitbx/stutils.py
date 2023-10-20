@@ -647,3 +647,7 @@ class ByteSize(int):
 # # Example:
 # folder_size = get_folder_size(target_directory)
 # print(folder_size)
+
+def quiet():
+    import warnings
+    warnings.simplefilter('ignore')
