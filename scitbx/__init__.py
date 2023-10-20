@@ -1,7 +1,7 @@
+from . import easy_import
 from . import google
 from . import stutils
 from . import bigleaf
-from . import easy_import
 # from .regress2 import regress2
 # from .lins_ccc_1989 import concordance_correlation_coefficient
 # from .manage_yaml import Yaml
