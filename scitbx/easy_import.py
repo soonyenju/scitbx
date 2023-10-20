@@ -10,6 +10,16 @@ from pathlib import Path
 from scipy import stats
 from datetime import datetime, timedelta
 
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+try:
+    import rasterio as rio
+except Exception as e:
+    print(e)
+    install('rasterio')
+    import rasterio as rio
+
 def option_load(opt = 0):
     def install(package):
         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
