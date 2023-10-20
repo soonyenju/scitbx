@@ -30,11 +30,7 @@ def download_file(src, filename, **kwargs):
     # save figures:
     if filename.split(".")[-1] in ["jpeg", "jpg", "png", "pdf"]:
         fig = src
-        if 'dpi' in kwargs:
-            dpi = kwargs['dpi']
-        else:
-            dpi = 300
-        fig.savefig(filename, dpi = dpi, bbox_inches = "tight", **kwargs)
+        fig.savefig(filename, bbox_inches = "tight", **kwargs)
     # csv
     elif filename.split(".")[-1] == "csv":
         df = src
