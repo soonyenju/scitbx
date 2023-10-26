@@ -21,3 +21,51 @@ def Rg_to_PPFD(Rg, J_to_mol = 4.6, frac_PAR = 0.5):
     '''
     PPFD = Rg * frac_PAR * J_to_mol
     return PPFD
+
+def light_response(NEE, PPFD, Reco):
+    from scipy.optimize import curve_fit
+    '''
+    mod <- nls(-NEE ~ alpha * PPFD / (1 - (PPFD / PPFD_ref) + (alpha * PPFD / GPP_ref)) - Reco,
+                start=list(alpha=0.05,GPP_ref=30),...)
+    NEE: umol CO2 m-2 s-1
+    Reco: umol CO2 m-2 s-1
+    PPFD: umol m-2 s-1
+    PPFD_ref = 2000 umol m-2 s-1; Falge et al. 2001
+    '''
+    X = [PPFD, Reco]
+    def func(X, alpha, GPP_ref, PPFD_ref = 2000):
+        PPFD = X[0]
+        Reco = X[1]
+        return alpha * PPFD / (1 - (PPFD / PPFD_ref) + (alpha * PPFD / GPP_ref)) - Reco
+    popt, pcov = curve_fit(func,  X,  -NEE) 
+    return popt, pcov
+
+def latent_heat_vaporization(Tair):
+    '''
+    Tair Air temperature (deg C)
+    λ is Latent heat of vaporization (J kg-1)
+    '''
+    lambda_ = (2.501 - 0.00237 * Tair) * 10e6
+    return lambda_
+
+def LE_to_ET(LE, Tair):
+    '''
+    LE: Latent heat flux (W m-2)
+    Tair: Air temperature (deg C)
+    ET: Evapotranspiration (kg m-2 s-1)
+    where λ is the latent heat of vaporization (J kg-1) as calculated by latent_heat_vaporization
+    '''
+    lambda_ = latent_heat_vaporization(Tair)
+    ET = LE / lambda_
+    return ET
+
+def ET_to_LE(ET, Tair):
+    '''
+    LE: Latent heat flux (W m-2)
+    Tair: Air temperature (deg C)
+    ET: Evapotranspiration (kg m-2 s-1)
+    where λ is the latent heat of vaporization (J kg-1) as calculated by latent_heat_vaporization
+    '''
+    lambda_ = latent_heat_vaporization(Tair)
+    LE = ET * lambda_
+    return LE
