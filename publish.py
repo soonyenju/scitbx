@@ -23,7 +23,8 @@ if __name__ == "__main__":
     os.system("python setup.py sdist bdist_wheel")
     print("package is built...")
     # push
-    os.system("twine upload --repository-url https://upload.pypi.org/legacy/ dist/*")
+    # os.system("twine upload --repository-url https://upload.pypi.org/legacy/ dist/*")
+    os.system("twine upload dist/*")
     print("package is publised...")
     if args.clean:
         print("clearing up...")
