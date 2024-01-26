@@ -651,3 +651,36 @@ class ByteSize(int):
 def quiet():
     import warnings
     warnings.simplefilter('ignore')
+
+
+from scipy.stats import gaussian_kde
+
+def kde_scatter(ax, dfp, x_name, y_name, v_scale = 0.1):
+    dfp = dfp[[x_name, y_name]].dropna().sample(frac = 0.3).reset_index(drop = True)
+    x = dfp[x_name]
+    y = dfp[y_name]
+
+    # Calculate the point density
+    xy = np.vstack([x,y])
+    z = gaussian_kde(xy)(xy)
+
+    # Sort the points by density, so that the densest points are plotted last
+    idx = z.argsort()
+    x, y, z = x[idx], y[idx], z[idx]
+
+    # fig, ax = plt.subplots(1, 1, figsize = (9, 9))
+    ax.scatter(x, y, c=z, s=50, cmap = 'RdYlBu_r')
+
+    xl = np.arange(np.floor(x.min()), np.ceil(x.max()))
+    ax.plot(xl, xl, ls = '-.', color = 'k')
+
+    x_min = ax.get_xlim()[0]
+    x_max = ax.get_xlim()[1]
+    y_min = ax.get_ylim()[0]
+    y_max = ax.get_ylim()[1]
+    v_min = np.min([x_min, y_min])
+    v_max = np.max([x_max, y_max])
+    v_ran = v_max - v_min
+
+    ax.set_xlim(v_min - v_ran * v_scale, v_max +  v_ran * v_scale)
+    ax.set_ylim(v_min - v_ran * v_scale, v_max +  v_ran * v_scale)
