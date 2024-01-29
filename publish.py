@@ -24,8 +24,11 @@ if __name__ == "__main__":
     print("package is built...")
     # push
     # os.system("twine upload --repository-url https://upload.pypi.org/legacy/ dist/*")
-    os.system("twine upload dist/*")
-    print("package is publised...")
+    try:
+        os.system("twine upload dist/*")
+        print("package is publised...")
+    except Exception as e:
+        print(e)
     if args.clean:
         print("clearing up...")
         new_dirs = [p for p in os.listdir() if p not in cur_dirs]
