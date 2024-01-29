@@ -655,8 +655,8 @@ def quiet():
 
 from scipy.stats import gaussian_kde
 
-def kde_scatter(ax, dfp, x_name, y_name, v_scale = 0.1):
-    dfp = dfp[[x_name, y_name]].dropna().sample(frac = 0.3).reset_index(drop = True)
+def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1):
+    dfp = dfp[[x_name, y_name]].dropna().sample(frac = frac).reset_index(drop = True)
     x = dfp[x_name]
     y = dfp[y_name]
 
