@@ -684,3 +684,7 @@ def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1):
 
     ax.set_xlim(v_min - v_ran * v_scale, v_max +  v_ran * v_scale)
     ax.set_ylim(v_min - v_ran * v_scale, v_max +  v_ran * v_scale)
+
+
+def get_rmse(observations, estimates):
+    return np.sqrt(((estimates - observations) ** 2).mean())
