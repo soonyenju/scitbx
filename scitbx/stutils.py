@@ -688,3 +688,14 @@ def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1):
 
 def get_rmse(observations, estimates):
     return np.sqrt(((estimates - observations) ** 2).mean())
+
+
+def load_tif(p, band_names, reproj = False, epsg = "EPSG:4326"):
+    import rioxarray as rxr
+    rnc = rxr.open_rasterio(p, band_as_variable = True)
+    if reproj:
+        rnc = rnc.rio.reproject(epsg)
+    name_dict = dict(zip(rnc.keys(), ['KOPPEN']))
+    name_dict.update({'x': 'longitude', 'y': 'latitude'})
+    rnc = rnc.rename(name_dict)
+    return rnc
