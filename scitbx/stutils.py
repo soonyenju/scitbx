@@ -695,7 +695,7 @@ def load_tif(p, band_names, reproj = False, epsg = "EPSG:4326"):
     rnc = rxr.open_rasterio(p, band_as_variable = True)
     if reproj:
         rnc = rnc.rio.reproject(epsg)
-    name_dict = dict(zip(rnc.keys(), ['KOPPEN']))
+    name_dict = dict(zip(rnc.keys(), band_names))
     name_dict.update({'x': 'longitude', 'y': 'latitude'})
     rnc = rnc.rename(name_dict)
     return rnc
