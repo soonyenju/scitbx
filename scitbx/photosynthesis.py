@@ -1,5 +1,9 @@
 import numpy as np
 
+'''
+Source: https://github.com/ImperialCollegeLondon/pyrealm
+'''
+
 def calc_co2_to_ca(co2, patm):
     r"""CO2 ppm to Pa"""
 
