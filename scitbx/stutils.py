@@ -206,12 +206,44 @@ def nticks_prune(ax, which = 'x', nbins = None, prune = None):
         ax.yaxis.set_major_locator(plt.MaxNLocator(nbins = nbins, prune = prune)) 
     return ax
 
-def upper_legend(ax, xloc = 0.5, yloc = 1.1, ncols = None):
-    # Python > 3.7
+# # deprecated
+# def upper_legend(ax, xloc = 0.5, yloc = 1.1, ncols = None):
+#     # Python > 3.7
+#     handles, labels = ax.get_legend_handles_labels()
+#     by_label = dict(zip(labels, handles))
+#     if not ncols: ncols = len(labels)
+#     ax.legend(by_label.values(), by_label.keys(), loc = "upper center", framealpha = 0.1, frameon = True, bbox_to_anchor=(xloc, yloc), ncol = ncols)
+#     return ax
+
+def upper_legend(ax, xloc = 0.5, yloc = 1.1, ncols = None, nrows = None, user_labels = [], loc = "upper center", framealpha = 0., frameon = False):
+    def reorder(list_in, nrows):
+        ncols = len(list_in) // nrows
+        if nrows * ncols != len(list_in): ncols += 1
+        list_out = []
+        for c in range(ncols):
+            for r in range(nrows):
+                if r * ncols + c >= len(list_in): continue
+                list_out.append(list_in[r * ncols + c])
+        assert len(list_in) == len(list_out), 'ERROR: len in != len out'
+        return list_out, ncols
     handles, labels = ax.get_legend_handles_labels()
+    if user_labels: labels = user_labels
+    if len(handles) != len(labels): print('WARNING: the lengths are unequal')
+    if nrows:
+        labels, ncols = reorder(labels, nrows)
+        handles, ncols = reorder(handles, nrows)
     by_label = dict(zip(labels, handles))
     if not ncols: ncols = len(labels)
-    ax.legend(by_label.values(), by_label.keys(), loc = "upper center", framealpha = 0.1, frameon = True, bbox_to_anchor=(xloc, yloc), ncol = ncols)
+
+    x0 = ax.get_position().x0
+    x1 = ax.get_position().x1
+    y0 = ax.get_position().y0
+    y1 = ax.get_position().y1
+
+    if xloc and yloc:
+        ax.legend(by_label.values(), by_label.keys(), loc = loc, framealpha = framealpha, frameon = frameon, bbox_to_anchor=(xloc, yloc), ncol=ncols)
+    else:
+        ax.legend(by_label.values(), by_label.keys(), loc = loc, framealpha = framealpha, frameon = frameon, ncol=ncols, bbox_to_anchor=(0., -0.05, 1., 0.), borderaxespad=0, mode='expand')
     return ax
 
 def rotate_ticks(ax, which, degree):
