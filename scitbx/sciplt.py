@@ -169,3 +169,54 @@ nature_colors_07 = ['#E64B35B2', '#4DBBD5B2', '#00A087B2', '#3C5488B2', '#F39B7F
 nature_colors_09 = ['#E64B35E5', '#4DBBD5E5', '#00A087E5', '#3C5488E5', '#F39B7FE5', '#8491B4E5', '#91D1C2E5', '#DC0000E5', '#7E6148E5', '#B09C85E5'] # alpha = 0.9
 nature_colors_10 = ['#E64B35FF', '#4DBBD5FF', '#00A087FF', '#3C5488FF', '#F39B7FFF', '#8491B4FF', '#91D1C2FF', '#DC0000FF', '#7E6148FF', '#B09C85FF'] # alpha = 1.0
 
+nature_colors_base = {
+    'Cinnabar': '#E64B35', 
+    'Shakespeare': '#4DBBD5', 
+    'PersianGreen': '#00A087',
+    'Chambray': '#3C5488',
+    'Apricot': '#F39B7F',
+    'WildBlueYonder': '#8491B4',
+    'MonteCarlo': '#91D1C2',
+    'Monza': '#DC0000',
+    'RomanCoffee': '#7E6148',
+    'Sandrift': '#B09C85',
+}
+
+
+def show_colors(colors, width = 1, height = 1, hspace = 0.05, wspace = 0.05, fontsize = 10):
+    import matplotlib.patches
+    import matplotlib.collections
+
+    ncolors = len(colors)
+    nrow = ncol = np.floor(np.sqrt(ncolors))
+    nrow = int(nrow); ncol = int(ncol)
+    while nrow * ncol < ncolors:
+        nrow = nrow + 1
+
+    xx = np.arange(0, ncol, (width + wspace))
+    yy = np.arange(0, nrow, (height + hspace))
+
+    fig, ax = setup_canvas(1, 1, figsize = (6, 6))
+
+    patches = []
+    for i, xi in enumerate(xx):
+        for j, yi in enumerate(yy):
+            cnt = i * nrow + j
+            if cnt < ncolors:
+                text = colors[cnt]
+                color = colors[cnt]
+            else:
+                text = None
+                color = 'None'
+            patch = matplotlib.patches.Rectangle((xi, yi), width, height, fill = True, color = color)
+            ax.add_patch(patch)
+            ax.text(xi + width / 2, yi  + height / 2, text, fontsize = fontsize, horizontalalignment = 'center', verticalalignment = 'center')
+
+    pc = matplotlib.collections.PatchCollection(patches)
+    ax.add_collection(pc)
+
+    ax.relim()
+    ax.autoscale_view()
+
+    ax.axis("off")
+    return fig, ax
