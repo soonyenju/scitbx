@@ -13,7 +13,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name = "scitbx",
-	version = "0.0.62",
+	version = "0.0.63",
 	keywords = ("atmos/geo science assitance"),
 	description = "draw and basic calculations/conversions",
 	long_description = "coming soon",
