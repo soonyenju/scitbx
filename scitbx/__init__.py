@@ -1,6 +1,7 @@
 from . import easy_import
 from . import google
 from . import stutils
+from . import sciplt
 from . import bigleaf
 # from .regress2 import regress2
 # from .lins_ccc_1989 import concordance_correlation_coefficient
@@ -11,5 +12,6 @@ __all__ = [
     "easy_import",
     "google",
     "stutils",
+    "sciplt",
     "bigleaf",
     ]
