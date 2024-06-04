@@ -687,7 +687,7 @@ def quiet():
 
 from scipy.stats import gaussian_kde
 
-def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1):
+def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1, cmap = 'RdYlBu_r'):
     dfp = dfp[[x_name, y_name]].dropna().sample(frac = frac).reset_index(drop = True)
     x = dfp[x_name]
     y = dfp[y_name]
@@ -701,7 +701,7 @@ def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1):
     x, y, z = x[idx], y[idx], z[idx]
 
     # fig, ax = plt.subplots(1, 1, figsize = (9, 9))
-    ax.scatter(x, y, c=z, s=50, cmap = 'RdYlBu_r')
+    ax.scatter(x, y, c=z, s=50, cmap = cmap)
 
     xl = np.arange(np.floor(x.min()), np.ceil(x.max()))
     ax.plot(xl, xl, ls = '-.', color = 'k')
