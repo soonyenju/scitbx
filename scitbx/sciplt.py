@@ -23,16 +23,7 @@ def setup_canvas(nx, ny, figsize = (10, 6), sharex = True, sharey = True, marker
     else:
         return fig, axes
 
-# # deprecated
-# def upper_legend(ax, xloc = 0.5, yloc = 1.1, ncols = None):
-#     # Python > 3.7
-#     handles, labels = ax.get_legend_handles_labels()
-#     by_label = dict(zip(labels, handles))
-#     if not ncols: ncols = len(labels)
-#     ax.legend(by_label.values(), by_label.keys(), loc = "upper center", framealpha = 0.1, frameon = True, bbox_to_anchor=(xloc, yloc), ncol = ncols)
-#     return ax
-
-def upper_legend(ax, xloc = 0.5, yloc = 1.1, ncols = None, nrows = None, user_labels = [], loc = "upper center", framealpha = 0., frameon = False):
+def upper_legend(ax, xloc = 0.5, yloc = 1.1, ncols = None, nrows = None, user_labels = [], user_labels_order = [], loc = "upper center", framealpha = 0., frameon = False):
     def reorder(list_in, nrows):
         ncols = len(list_in) // nrows
         if nrows * ncols != len(list_in): ncols += 1
@@ -45,6 +36,9 @@ def upper_legend(ax, xloc = 0.5, yloc = 1.1, ncols = None, nrows = None, user_la
         return list_out, ncols
     handles, labels = ax.get_legend_handles_labels()
     if user_labels: labels = user_labels
+    if user_labels_order:
+        handles = [dict(zip(labels, handles))[l] for l in user_labels_order]
+        labels = user_labels_order
     if len(handles) != len(labels): print('WARNING: the lengths are unequal')
     if nrows:
         labels, ncols = reorder(labels, nrows)
@@ -62,7 +56,6 @@ def upper_legend(ax, xloc = 0.5, yloc = 1.1, ncols = None, nrows = None, user_la
     else:
         ax.legend(by_label.values(), by_label.keys(), loc = loc, framealpha = framealpha, frameon = frameon, ncol=ncols, bbox_to_anchor=(0., -0.05, 1., 0.), borderaxespad=0, mode='expand')
     return ax
-
 
 def nticks_prune(ax, which = 'x', nbins = None, prune = None):
     # prune: can be upper
@@ -154,6 +147,13 @@ def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1, cmap = 'RdYl
 
     ax.set_xlim(v_min - v_ran * v_scale, v_max +  v_ran * v_scale)
     ax.set_ylim(v_min - v_ran * v_scale, v_max +  v_ran * v_scale)
+
+def line_dot(df, ax, colors = None, legend = True, markercolor = 'white', edgecolor = 'k', markersize = 20, zorder = 10):
+    if not colors: colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+    df.plot(ax = ax, style = '--', color = colors, legend = legend)
+    for c in df.columns:
+        ax.scatter(df.index, df[c], color = markercolor, edgecolor = edgecolor, s = markersize, zorder = zorder)
+    return ax
 
 def custom_cmap(clist, cname = 'custom_cmap', N = 256):
     import matplotlib.colors
