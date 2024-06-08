@@ -147,6 +147,25 @@ def stats_measures_df(df, name1, name2, return_dict = False):
 def dateparse(dt, format = '%Y-%m-%d'):
     return pd.to_datetime(dt, format = format)
 
+def get_pathtable(paths, dateformat = '', splitformat = '', indexloc = None, dateloc = None):
+    df_path = []
+    for p in paths:
+        if splitformat != '':
+            names = p.stem.split(splitformat)
+        else:
+            names = p.stem
+        if type(names) != list: names = [names]
+        df_path.append(names + [p])
+    colnames = [f'COL_{i}' for i in range(len(names))] + ['PATH']
+    if dateloc != None:
+        colnames[dateloc] = 'DATETIME'
+    df_path = pd.DataFrame(df_path, columns = colnames)
+    if dateformat != '':
+        df_path.iloc[:, dateloc] = pd.to_datetime(df_path.iloc[:, dateloc], format = dateformat)
+    if indexloc != None:
+        df_path = df_path.set_index(colnames[indexloc]).sort_index()
+    return df_path
+
 def load_csv(p, fmt = 'yearfirst', index_col = 0, strip_cols = True, duplicated_time = True, missing = -9999., columns = None, **kwargs):
     df = pd.read_csv(p, index_col = index_col, **kwargs)
     if strip_cols:
