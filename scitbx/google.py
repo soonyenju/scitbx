@@ -10,14 +10,14 @@ def unmount_drive():
     from google.colab import drive
     drive.flush_and_unmount()
 
-def init_gee(project_name):
-    import ee
+# def init_gee(project_name):
+#     import ee
 
-    # Trigger the authentication flow.
-    ee.Authenticate()
+#     # Trigger the authentication flow.
+#     ee.Authenticate()
 
-    # Initialize the library.
-    ee.Initialize(project = project_name)
+#     # Initialize the library.
+#     ee.Initialize(project = project_name)
 
 # download from colab
 def download_file(src, filename, **kwargs):
