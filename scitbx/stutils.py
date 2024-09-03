@@ -587,6 +587,15 @@ def quiet():
     warnings.simplefilter('ignore')
 
 
+def get_r2(x, y):
+    try:
+        x_bar = x.mean()
+    except:
+        x_bar = np.mean(x)
+
+    r2 = 1 - np.sum((x - y)**2) / np.sum((x - x_bar)**2)
+    return r2
+
 def get_rmse(observations, estimates):
     return np.sqrt(((estimates - observations) ** 2).mean())
 
