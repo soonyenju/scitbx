@@ -1,3 +1,5 @@
+import numpy as np
+
 def get_NDVI(r, nir):
     ndvi = (nir - r) / (nir + r)
     return ndvi
