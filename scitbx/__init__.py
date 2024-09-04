@@ -1,5 +1,3 @@
-import numpy as np
-import pandas as pd
 from . import easy_import
 from . import google
 from . import stutils
@@ -16,6 +14,4 @@ __all__ = [
     "stutils",
     "sciplt",
     "bigleaf",
-    "np",
-    "pd"
     ]
