@@ -1,3 +1,5 @@
+import numpy as np
+
 # Priestley_Taylor can be used for forests and grasslands for approximation, but with different scaling factor alpha
 def Priestley_Taylor(Ta, PA, R, G = 0, alpha = 1.26):
     '''
