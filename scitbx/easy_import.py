@@ -1,7 +1,7 @@
 '''
 Basic scientific computing import
 '''
-import os, sys, subprocess, shutil, warnings, pickle
+import os, sys, subprocess, shutil, warnings, pickle, time, gc
 from copy import deepcopy
 import numpy as np
 import pandas as pd
@@ -31,6 +31,7 @@ try:
 except Exception as e:
     print(e)
     install('xarray')
+    install('netCDF4')
     import xarray as xr
 try:
     import rioxarray as rxr
