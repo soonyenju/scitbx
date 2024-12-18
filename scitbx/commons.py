@@ -23,3 +23,6 @@ coef_TgC_gC = 1e12 # TgC => gC
 coef_umm2s1_gCm2d1 = 1.03772448 # um m-2 s-1 => gC m-2 d-1
 coef_ha_m2 = 1e4 # ha => m-2
 coef_Wm2_mmyr1 = 14 # W m-2 => mm yr-1 for evapotranspiration
+
+molar_mass_CO2 = 44.009 # g/mol
+molar_mass_H2O = 18.01528 # g/mol
