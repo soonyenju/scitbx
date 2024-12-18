@@ -13,10 +13,10 @@ from setuptools import setup, find_packages
 
 setup(
 	name = "scitbx",
-	version = "0.0.78",
-	keywords = ("atmos/geo science assitance"),
-	description = "draw and basic calculations/conversions",
-	long_description = "coming soon",
+	version = "0.0.79",
+	keywords = ("Geosciences, geospatial, data science"),
+	description = "For academic data processing and plotting etc.",
+	long_description = "Processing academic data and drawing figures for geosciences researchers.",
 	license = "MIT Licence",
 
 	url="https://github.com/soonyenju/scitbx",
