@@ -13,7 +13,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name = "scitbx",
-	version = "0.0.80",
+	version = "0.0.81",
 	keywords = ("Geosciences, geospatial, data science"),
 	description = "For academic data processing and plotting etc.",
 	long_description = "Processing academic data and drawing figures for geosciences researchers.",
