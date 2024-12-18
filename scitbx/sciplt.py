@@ -118,7 +118,7 @@ def savefig(fig, savefile, dpi = 600, bbox_inches = "tight", transparent = False
 
 from scipy.stats import gaussian_kde
 
-def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1, cmap = 'RdYlBu_r'):
+def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1, vmin = None, vmax = None, cmap = 'RdYlBu_r'):
     dfp = dfp[[x_name, y_name]].dropna().sample(frac = frac).reset_index(drop = True)
     x = dfp[x_name]
     y = dfp[y_name]
@@ -132,9 +132,9 @@ def kde_scatter(ax, dfp, x_name, y_name, frac = 0.3, v_scale = 0.1, cmap = 'RdYl
     x, y, z = x[idx], y[idx], z[idx]
 
     # fig, ax = plt.subplots(1, 1, figsize = (9, 9))
-    ax.scatter(x, y, c=z, s=50, cmap = cmap)
+    ax.scatter(x, y, c=z, s=50, vmin = vmin, vmax = vmax, cmap = cmap)
 
-    xl = np.arange(np.floor(x.min()), np.ceil(x.max()))
+    xl = np.linspace(np.floor(x.min()), np.ceil(x.max()), 1000)
     ax.plot(xl, xl, ls = '-.', color = 'k')
 
     x_min = ax.get_xlim()[0]
