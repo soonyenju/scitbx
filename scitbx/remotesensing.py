@@ -32,3 +32,12 @@ def convert_gCm2d1_PgCyr_025deg():
     '''
     coef = 365 * 0.25 * 0.25 * 1e5 * 1e5 / 1e15
     return coef
+
+def deg2m(longitude, latitude, scale_lon, scale_lat):
+    # deg x deg => m2
+    # Length in km of 1° of latitude = always 111.32 km
+    # Length in km of 1° of longitude = 40075 km * cos( latitude ) / 360
+    _, lats = np.meshgrid(longitude, latitude)
+    coef_mat = 40075 * np.cos(np.deg2rad(np.abs(lats))) / 360 * 111.32 * 1e3 * 1e3
+    coef_mat = coef_mat * scale_lon * scale_lat
+    return coef_mat
