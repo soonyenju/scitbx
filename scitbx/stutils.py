@@ -609,3 +609,27 @@ def load_tif(p, band_names, reproj = False, epsg = "EPSG:4326"):
     name_dict.update({'x': 'longitude', 'y': 'latitude'})
     rnc = rnc.rename(name_dict)
     return rnc
+
+def calculate_R2(y_true, y_pred):
+    """
+    Calculate the R^2 (coefficient of determination).
+
+    Args:
+        y_true (array-like): Actual values of the dependent variable.
+        y_pred (array-like): Predicted values of the dependent variable.
+
+    Returns:
+        float: The R^2 value.
+    """
+    y_true = np.array(y_true)
+    y_pred = np.array(y_pred)
+
+    # Residual sum of squares
+    ss_res = np.sum((y_true - y_pred) ** 2)
+
+    # Total sum of squares
+    ss_tot = np.sum((y_true - np.mean(y_true)) ** 2)
+
+    # R^2 calculation
+    R2 = 1 - (ss_res / ss_tot)
+    return R2
