@@ -45,6 +45,20 @@ def download_file(src, filename, **kwargs):
             pickle.dump(src, f)
     files.download(filename)
 
+def clear_temp_storage(ignore_folders = []):
+    import shutil
+    from pathlib import Path
+    from google.colab import files
+    
+    for p in Path('/content').glob('*'):
+        if p.is_dir():
+            if p.name in ['.config', 'drive', '.ipynb_checkpoints', 'sample_data'] + ignore_folders: continue
+            shutil.rmtree(p, ignore_errors = True)
+        elif p.is_file():
+            p.unlink()
+        else:
+            raise ValueError(f'It must be a file or directory: {p}')
+
 def check_colab_gpu():
     # This function is deprecated on 25/10/2022
     import os
