@@ -59,6 +59,27 @@ def clear_temp_storage(ignore_folders = []):
         else:
             raise ValueError(f'It must be a file or directory: {p}')
 
+def download_temp_storage(ignore_folders = [], target_folder = ''):
+    import shutil
+    from pathlib import Path
+    from google.colab import files
+
+    if target_folder:
+        for p in Path('/content').joinpath(target_folder).rglob('*'):
+            files.download(p)
+    else:
+        for p in Path('/content').glob('*'):
+            if p.is_dir():
+                if p.name in ['.config', 'drive', '.ipynb_checkpoints', 'sample_data'] + ignore_folders:
+                    continue
+                else:
+                    for pp in p.rglob('*'):
+                        if pp.is_file(): files.download(pp)
+            elif p.is_file():
+                files.download(p)
+            else:
+                raise ValueError(f'It must be a file or directory: {p}')
+
 def check_colab_gpu():
     # This function is deprecated on 25/10/2022
     import os
