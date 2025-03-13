@@ -1,0 +1,699 @@
+Site ID,Name,Data Use Policy ,AmeriFlux BASE Data ,AmeriFlux FLUXNET Data ,Lat,Long,Elev (m),Veg,Clim,MAT (°C),MAP (mm),AmeriFlux BASE Start,AmeriFlux BASE End
+AR-Bal,Balcarce BA,CC-BY-4.0,,,-37.7596,-58.3024,130.0,CRO,Cfb,14.0,926.0,2012.0,2013.0
+AR-CCa,Carlos Casares agriculture,CC-BY-4.0,,,-35.621,-61.3181,83.0,CRO,Cfa,16.1,1060.0,2012.0,2020.0
+AR-CCg,Carlos Casares grassland,CC-BY-4.0,,,-35.9244,-61.1855,84.0,GRA,Cfa,16.1,1060.0,2018.0,2023.0
+AR-Cel,CELPA Mar Chiquita BA,Legacy,,,-37.7028,-57.4192,1.0,WET,Cfb,14.0,926.0,2018.0,2018.0
+AR-Rom,Romano Mar Chiquita BA,Legacy,,,-37.5508,-57.2972,1.0,WET,Cfb,14.0,926.0,2014.0,2015.0
+AR-TF1,Rio Moat bog,CC-BY-4.0,,,-54.9733,-66.7335,40.0,WET,,,,2016.0,2018.0
+AR-TF2,Rio Pipo bog,CC-BY-4.0,,,-54.8269,-68.4549,60.0,WET,,5.5,530.0,2016.0,2018.0
+BR-BNT,BIONTE,Legacy,,,-2.6334,-60.1505,116.0,EBF,,27.4,2300.0,,
+BR-Cax,"CAX, FLONA Caxiuanã micromet tower",CC-BY-4.0,,,-1.7185,-51.4583,48.4,EBF,Af,26.0,2500.0,,
+BR-CMT,Capuaba farm Mato Grosso,Legacy,,,-13.2875,-56.0882,427.0,CRO,Aw,26.8,1566.0,,
+BR-CST,Caatinga Serra Talhada,CC-BY-4.0,,,-7.9682,-38.3842,468.0,DNF,Bsh,25.2,642.0,2014.0,2015.0
+BR-Cui,Micrometeorological studies project in Amazonian mangroves,Legacy,,,-0.6661,-47.2833,21.0,WET,Am,26.4,457.2,,
+BR-CUP,Cupari Tapajos National Forest,CC-BY-4.0,,,-3.7874,-55.3664,15.0,DBF,Af,25.0,1900.0,,
+BR-IAB,Instituto Arruda Botelho - Wooded Cerrado and Mixed Agriculture,Legacy,,,-22.171,-47.871,763.0,WSA,Cwa,21.6,1486.0,,
+BR-Ji1,Fazenda Nossa Senhora (FNS),CC-BY-4.0,,,-10.7618,-62.3572,260.0,GRA,Af,,,,
+BR-Ji3,Ji-Paraná/RO - Reserva Biológica do Jaru (RBJ),CC-BY-4.0,,,-10.1866,-61.8725,160.0,EBF,Am,21.0,,,
+BR-Ma2,Manaus - ZF2 K34,CC-BY-4.0,,,-2.6091,-60.2093,130.0,EBF,Af,26.68,2252.0,,
+BR-Ma3,"ZF3, Colosso farm",CC-BY-4.0,,,-2.3907,-59.8835,147.0,CVM,Af,29.0,2792.0,,
+BR-Moj,"Moju/PA, Commercial oil palm plantation",CC-BY-4.0,,,-1.9787,-48.6147,26.0,CVM,Af,25.5,2500.0,,
+BR-Npw,Northern Pantanal Wetland,CC-BY-4.0,,,-16.498,-56.412,120.0,WSA,Aw,24.9,1486.0,2013.0,2017.0
+BR-PRS,Paraíso do Sul,Legacy,,,-29.744,-53.1503,,CRO,Cfa,21.0,1500.0,,
+BR-Sa1,Santarem-Km67-Primary Forest,CC-BY-4.0,,,-2.8567,-54.9589,88.0,EBF,Am,26.13,2074.79,2002.0,2011.0
+BR-Sa3,Santarem-Km83-Logged Forest,CC-BY-4.0,,,-3.018,-54.9714,100.0,EBF,Am,26.12,2043.77,2000.0,2004.0
+BR-SGC,"São Gabriel da Cachoeira (Balaio Indigenous Reserve, Pico da Neblina National Park)",CC-BY-4.0,,,0.2101,-66.7529,100.0,EBF,Af,27.0,3000.0,,
+BR-SP1,Southern Pantanal Wetland,Legacy,,,-19.565,-57.018,90.0,WSA,Aw,25.0,850.0,,
+BR-Xpw,XomanoFlux,CC-BY-4.0,,,-16.373,-56.461,124.0,GRA,Aw,24.9,1490.0,,
+CA-AF1,Acadia Research Forest,CC-BY-4.0,,,46.0092,-66.3627,78.0,MF,Dfb,5.6,1078.0,2023.0,2024.0
+CA-ARB,Attawapiskat River Bog,CC-BY-4.0,,,52.695,-83.9452,90.0,WET,Dfb,-1.3,700.0,2011.0,2015.0
+CA-ARF,Attawapiskat River Fen,CC-BY-4.0,,,52.7008,-83.955,88.0,WET,Dfb,-1.3,700.0,2011.0,2015.0
+CA-BCW,Big Creek Watershed,CC-BY-4.0,,,42.6206,-80.5516,201.0,WET,Dfb,7.8,1009.8,,
+CA-BOU,Bouleau Peatland,CC-BY-4.0,,,50.5244,-63.2064,108.0,WET,Cwc,1.5,1011.0,2018.0,2020.0
+CA-Ca1,British Columbia - 1949 Douglas-fir stand,CC-BY-4.0,,,49.8673,-125.3336,300.0,ENF,Cfb,9.93,1369.0,1996.0,2010.0
+CA-Ca2,British Columbia - Clearcut Douglas-fir stand (harvested winter 1999/2000),CC-BY-4.0,,,49.8705,-125.2909,300.0,ENF,Cfb,9.86,1474.0,1999.0,2010.0
+CA-Ca3,British Columbia - Pole sapling Douglas-fir stand,CC-BY-4.0,,,49.5346,-124.9004,,ENF,Cfb,9.94,1676.0,2001.0,2022.0
+CA-Cbo,"Ontario - Mixed Deciduous, Borden Forest Site",CC-BY-4.0,,,44.3167,-79.9333,120.0,DBF,Dfb,6.66,876.34,1994.0,2020.0
+CA-CF1,Churchill Fen Site 1,CC-BY-4.0,,,58.6658,-93.83,16.5,WET,Dfc,-6.5,452.0,2007.0,2008.0
+CA-CF2,Churchill Fen Site 2,CC-BY-4.0,,,58.6658,-93.83,16.5,WET,Dfc,-6.5,452.0,2008.0,2011.0
+CA-CF3,Churchill Fen Site 3,CC-BY-4.0,,,58.6658,-93.8304,25.0,WET,Dfc,,,2022.0,2023.0
+CA-Cha,New Brunswick - Charlie Lake site 01 (immature balsam fir forest to be thinned in year 3),CC-BY-4.0,,,45.8847,-67.3569,341.0,MF,Dfb,3.46,971.68,2004.0,2005.0
+CA-CQ1,Québec. Carbonique1 - Lac Saint-Pierre Disturbed Marsh,CC-BY-4.0,,,46.1645,-72.685,6.0,CRO,Dfb,5.9,872.8,,
+CA-DB2,Delta Burns Bog 2,CC-BY-4.0,,,49.119,-122.9951,4.0,WET,,,,2019.0,2020.0
+CA-DBB,Delta Burns Bog,CC-BY-4.0,,,49.1293,-122.9849,4.0,WET,Csb,10.0,1128.0,2014.0,2020.0
+CA-DL1,Daring Lake - Mixed Tundra,CC-BY-4.0,,,64.8689,-111.5748,425.0,OSH,Dfc,-9.0,250.0,,
+CA-DL2,Daring Lake - Fen,CC-BY-4.0,,,64.8648,-111.5677,416.0,WET,Dfc,-9.0,250.0,,
+CA-DSM,Delta Salt Marsh,CC-BY-4.0,,,49.0887,-122.8954,,WET,Csb,10.6,1077.8,2022.0,2022.0
+CA-EM1,Newdale Manitoba,CC-BY-4.0,,,50.3623,-100.2024,607.9,WET,Dfb,1.3,504.8,2021.0,2023.0
+CA-EM2,Shoal Lake Manitoba,CC-BY-4.0,,,50.3706,-100.5339,554.3,WET,Dfb,1.5,473.4,2021.0,2023.0
+CA-EM3,Oak Hammock Marsh Manitoba,CC-BY-4.0,,,50.1738,-97.1231,255.0,WET,Dfb,3.0,521.1,,
+CA-ER1,Elora Research Station,CC-BY-4.0,,,43.6405,-80.4123,370.0,CRO,Dfb,6.7,946.0,2015.0,2021.0
+CA-ER2,Elora Research Station,CC-BY-4.0,,,43.6419,-80.414,370.0,CRO,Dfb,6.7,946.0,,
+CA-Gro,"Ontario - Groundhog River, Boreal Mixedwood Forest",CC-BY-4.0,,,48.2167,-82.1556,340.0,MF,Dfb,1.3,831.0,2003.0,2014.0
+CA-HPC,Havikpak Creek,CC-BY-4.0,,,68.3203,-133.5188,80.0,ENF,Dfc,-8.2,240.6,2018.0,2018.0
+CA-KLP,Kinoje Lake Peatland,CC-BY-4.0,,,51.5902,-81.7684,71.0,WET,Dfb,-1.1,680.0,,
+CA-Let,Alberta - Mixed Grass Prairie,Legacy,,,49.7093,-112.9402,960.0,GRA,Dfb,5.36,398.4,1998.0,2008.0
+CA-LP1,British Columbia - Mountain pine beetle-attacked lodgepole pine stand,CC-BY-4.0,,,55.1119,-122.8414,751.0,ENF,Csa,2.0,570.0,2007.0,2022.0
+CA-LuM,Luther Marsh Wildlife Management Area,Legacy,,,43.9201,-80.4052,485.0,WET,Dfb,6.6,905.0,,
+CA-MA1,Manitoba Agricultural Site 1,CC-BY-4.0,,,50.1645,-97.8762,261.0,CRO,Dfb,2.6,514.0,2009.0,2011.0
+CA-MA2,Manitoba Agricultural Site 2,CC-BY-4.0,,,50.171,-97.8762,261.0,CRO,Dfb,2.6,514.0,2009.0,2011.0
+CA-MA3,Manitoba Agricultural Site 3,CC-BY-4.0,,,50.1774,-97.8686,261.0,GRA,Dfb,2.6,514.0,2009.0,2011.0
+CA-Man,Manitoba - Northern Old Black Spruce (former BOREAS Northern Study Area),CC-BY-4.0,,,55.8796,-98.4808,259.0,ENF,Dfc,-3.2,520.0,1994.0,2008.0
+CA-Mer,"Ontario - Eastern Peatland, Mer Bleue",CC-BY-4.0,,,45.4094,-75.5186,70.0,WET,Dfb,6.0,943.0,1998.0,2020.0
+CA-MR3,Mattheis Ranch - E3 South,Legacy,,,50.8671,-111.9045,712.0,GRA,Dwd,,325.0,2012.0,2016.0
+CA-MR5,Mattheis Ranch - E5 North,Legacy,,,50.9056,-111.8823,700.0,GRA,Dwd,,325.0,2012.0,2016.0
+CA-Mtk,Mittimatalik (Pond Inlet) Tundra,CC-BY-4.0,,,72.6695,-77.9981,15.0,GRA,ET,-14.5,173.0,,
+CA-Na1,New Brunswick - 1967 Balsam Fir - Nashwaak Lake Site 01 (Mature balsam fir forest),CC-BY-4.0,,,46.4722,-67.1,341.0,ENF,Dfb,7.09,1102.7,2003.0,2005.0
+CA-NS1,UCI-1850 burn site,CC-BY-4.0,,,55.8792,-98.4839,260.0,ENF,Dfc,-2.89,500.29,2001.0,2005.0
+CA-NS2,UCI-1930 burn site,CC-BY-4.0,,,55.9058,-98.5247,260.0,ENF,Dfc,-2.88,499.82,2001.0,2005.0
+CA-NS3,UCI-1964 burn site,CC-BY-4.0,,,55.9117,-98.3822,260.0,ENF,Dfc,-2.87,502.22,2001.0,2005.0
+CA-NS4,UCI-1964 burn site wet,CC-BY-4.0,,,55.9144,-98.3806,260.0,ENF,Dfc,-2.87,502.22,2001.0,2005.0
+CA-NS5,UCI-1981 burn site,CC-BY-4.0,,,55.8631,-98.485,260.0,ENF,Dfc,-2.86,500.34,2001.0,2005.0
+CA-NS6,UCI-1989 burn site,CC-BY-4.0,,,55.9167,-98.9644,244.0,OSH,Dfc,-3.08,495.37,2001.0,2005.0
+CA-NS7,UCI-1998 burn site,CC-BY-4.0,,,56.6358,-99.9483,297.0,OSH,Dfc,-3.52,483.27,2001.0,2005.0
+CA-NS8,UCI-2003 burn site,Legacy,,,55.8981,-98.2161,274.0,ENF,Dfc,-2.71,506.69,2001.0,2005.0
+CA-Oas,"Saskatchewan - Western Boreal, Mature Aspen",CC-BY-4.0,,,53.6289,-106.1978,530.0,DBF,Dfc,0.34,428.53,1996.0,2010.0
+CA-Obs,"Saskatchewan - Western Boreal, Mature Black Spruce",CC-BY-4.0,,,53.9872,-105.1178,628.94,ENF,Dfc,0.79,405.6,1997.0,2010.0
+CA-Ojp,"Saskatchewan - Western Boreal, Mature Jack Pine",CC-BY-4.0,,,53.9163,-104.692,579.0,ENF,Dfc,0.12,430.5,1996.0,2010.0
+CA-Qc2,Quebec - 1975 Harvested Black Spruce (HBS75),CC-BY-4.0,,,49.7598,-74.5711,,MF,,,,2007.0,2010.0
+CA-Qcu,"Quebec - Eastern Boreal, Black Spruce/Jack Pine Cutover",Legacy,,,49.2671,-74.0365,392.3,ENF,Dfc,0.13,949.78,2001.0,2010.0
+CA-Qfo,"Quebec - Eastern Boreal, Mature Black Spruce",CC-BY-4.0,,,49.6925,-74.3421,382.0,ENF,Dfc,-0.36,962.32,2003.0,2010.0
+CA-RBM,Richmond Brackish Marsh,CC-BY-4.0,,,49.1313,-123.1964,,WET,Csb,10.4,1152.0,,
+CA-RPn,Robinsons_Natural_Bog_NL,Legacy,,,48.2604,-58.6632,150.0,OSH,Dfb,5.0,1340.4,,
+CA-RPp,Robinsons_Peatland_Pasture_NL,Legacy,,,48.2632,-58.667,162.0,OSH,Dfb,5.0,1340.4,,
+CA-RSB,Resolute Bay Polar Desert,CC-BY-4.0,,,74.7279,-94.8985,119.0,BSV,ET,-15.0,199.0,,
+CA-SCB,Scotty Creek Bog,CC-BY-4.0,,,61.3089,-121.2984,280.0,WET,Dfc,-2.8,388.0,2014.0,2019.0
+CA-SCC,Scotty Creek Landscape,CC-BY-4.0,,,61.3079,-121.2992,285.0,ENF,Dfc,-2.8,387.6,2013.0,2016.0
+CA-SF1,"Saskatchewan - Western Boreal, forest burned in 1977",CC-BY-4.0,,,54.485,-105.8176,536.0,ENF,Dfc,0.4,470.0,2003.0,2006.0
+CA-SF2,"Saskatchewan - Western Boreal, forest burned in 1989",CC-BY-4.0,,,54.2539,-105.8775,520.0,ENF,Dfc,0.4,470.0,2001.0,2006.0
+CA-SF3,"Saskatchewan - Western Boreal, forest burned in 1998",CC-BY-4.0,,,54.0916,-106.0053,540.0,OSH,Dfc,0.4,470.0,2001.0,2006.0
+CA-SJ1,"Saskatchewan - Western Boreal, Jack Pine forest harvested in 1994",CC-BY-4.0,,,53.908,-104.656,580.0,ENF,Dfc,0.13,430.23,2000.0,2010.0
+CA-SJ2,"Saskatchewan - Western Boreal, Jack Pine forest harvested in 2002",CC-BY-4.0,,,53.945,-104.649,580.0,ENF,Dfc,0.11,430.03,2002.0,2010.0
+CA-SJ3,"Saskatchewan - Western Boreal, Jack Pine forest harvested in 1975 (BOREAS Young Jack Pine)",Legacy,,,53.8758,-104.6453,,ENF,Dfc,0.13,433.33,2002.0,2010.0
+CA-SMC,Smith Creek,CC-BY-4.0,,,63.1534,-123.2522,150.0,ENF,Dfc,-2.8,388.0,2018.0,2018.0
+CA-TP1,Ontario - Turkey Point 2002 Plantation White Pine,CC-BY-4.0,,,42.6609,-80.5595,265.0,ENF,Dfb,8.0,1036.0,2002.0,2017.0
+CA-TP2,Ontario - Turkey Point 1989 Plantation White Pine,CC-BY-4.0,,,42.7744,-80.4588,212.0,ENF,Dfb,8.0,1036.0,2002.0,2008.0
+CA-TP3,Ontario - Turkey Point 1974 Plantation White Pine,CC-BY-4.0,,,42.7068,-80.3483,184.0,ENF,Dfb,8.0,1036.0,2002.0,2017.0
+CA-TP4,Ontario - Turkey Point 1939 Plantation White Pine,CC-BY-4.0,,,42.7102,-80.3574,184.0,ENF,Dfb,8.0,1036.0,2002.0,2017.0
+CA-TPA,Ontario Turkey Point Observatory Agricultural Site,CC-BY-4.0,,,42.6947,-80.3487,200.0,CRO,,8.4,956.0,,
+CA-TPD,Ontario - Turkey Point Mature Deciduous,CC-BY-4.0,,,42.6353,-80.5577,260.0,DBF,Dfb,8.0,1036.0,2012.0,2017.0
+CA-TVC,Trail Valley Creek,CC-BY-4.0,,,68.7462,-133.5017,85.0,OSH,Dfc,-8.2,240.6,2017.0,2017.0
+CA-WP1,"Alberta - Western Peatland - LaBiche River,Black Spruce/Larch Fen",Legacy,,,54.9538,-112.467,540.0,WET,Dfc,1.1,461.07,2003.0,2009.0
+CA-WP2,Alberta - Western Peatland - Poor Fen (Sphagnum moss),Legacy,,,55.5375,-112.3343,,WET,Dfc,,,2004.0,2006.0
+CA-WP3,Alberta - Western Peatland - Rich Fen (Carex),Legacy,,,54.47,-113.32,,WET,Dfc,,,2004.0,2006.0
+CA-WRF,White River Fen,CC-BY-4.0,,,48.3513,-85.3571,485.0,WET,Dfb,2.1,969.7,,
+CL-ACF,Alerce Costero Forest,CC-BY-4.0,,,-40.1726,-73.4439,822.0,ENF,Cfb,7.3,4500.0,,
+CL-SDF,Senda Darwin Forest,CC-BY-4.0,,,-41.883,-73.676,50.0,EBF,Cfb,10.0,2110.0,2014.0,2022.0
+CL-SDP,Senda Darwin Peatland,CC-BY-4.0,,,-41.879,-73.666,50.0,WET,Cfb,10.0,2110.0,2014.0,2022.0
+CO-GV1,Guatavita Station 1,Legacy,,,4.9139,-73.7365,3001.0,WET,,,,,
+CO-GV2,Guatavita Station 2,Legacy,,,4.9168,-73.7429,3002.0,WET,,,,,
+CR-Dos,La Selva T2,Legacy,,,10.4322,-84.0106,40.0,EBF,Af,25.8,4200.0,,
+CR-Fsc,Filadelfia sugar cane cropland,CC-BY-4.0,,,10.4189,-85.4732,18.0,CRO,Aw,,,2015.0,2018.0
+CR-Lse,La Selva,Legacy,,,10.4233,-84.0211,100.0,EBF,Am,25.9,3965.57,1997.0,1999.0
+CR-Nmr,Nicoya melon-rice cropland,Legacy,,,10.0829,-85.4694,166.0,CRO,Aw,,,,
+CR-SoC,Soltis Center,CC-BY-4.0,,,10.3827,-84.621,538.0,EBF,Af,23.1,4200.0,2014.0,2018.0
+MX-Aog,Alamos Old-Growth tropical dry forest,CC-BY-4.0,,,26.9968,-108.7892,367.284,DBF,Bsh,24.2,732.0,2015.0,2018.0
+MX-Asf,Alamos Mid-Secondary tropical dry forest,Legacy,,,27.0046,-108.7795,384.0,DBF,Bsh,24.2,732.0,,
+MX-BRN,Bernal,Legacy,,,20.7168,-99.9413,2050.0,OSH,Bsk,17.1,476.0,,
+MX-CLS,"Coastal Lagoon, Gulf of California",Legacy,,,27.9541,-110.9726,0.0,WAT,Bwh,23.0,260.0,,
+MX-EMg,El Mogor,Legacy,,,32.0298,-116.6045,409.0,CSH,Bsh,17.0,281.0,2015.0,2017.0
+MX-Iit,Instituto de Ingenieria y Tecnologia - UACJ,Legacy,,,31.7434,-106.4316,1123.0,URB,Bwk,27.0,457.2,,
+MX-ISD,San Isidro,Legacy,,,25.3004,-101.3924,1702.0,OSH,Bsh,17.5,493.0,,
+MX-Lpa,La Paz,Legacy,,,24.1292,-110.438,21.0,OSH,Bwh,23.6,182.0,2004.0,2008.0
+MX-Oak,"Encino, North American monsoon oak savanna",Legacy,,,29.9591,-110.4615,1314.0,WSA,Bsh,18.9,496.0,,
+MX-PMm,Puerto Morelos mangrove,CC-BY-4.0,,,20.8462,-86.8992,10.0,WET,Aw,26.2,1222.0,2017.0,2018.0
+MX-Ray,"Rayon, monsoon subtropical shrubland",Legacy,,,29.7446,-110.5306,632.0,WSA,Bsh,21.4,487.0,2007.0,2012.0
+MX-Sgt,Sonoran short arid Mangrove,Legacy,,,29.3408,-112.2796,0.0,WET,Bwh,20.0,126.0,,
+MX-Tes,"Tesopaco, secondary tropical dry forest",CC-BY-4.0,,,27.8446,-109.2977,460.0,DBF,Bsh,24.3,647.0,2004.0,2008.0
+PA-Bar,Barro Colorado Island,CC-BY-4.0,,,9.1568,-79.8486,150.0,EBF,Am,26.0,2650.0,,
+PA-Bas,Barro Colorado Island,CC-BY-4.0,,,9.1565,-79.8482,150.0,EBF,Am,26.0,2650.0,,
+PE-AMG,Los Amigos,CC-BY-4.0,,,-12.5598,-70.1018,290.0,EBF,Af,25.5,2335.0,,
+PE-BRE,El Breo,CC-BY-4.0,,,-7.1026,-77.1619,755.0,EBF,Af,,,,
+PE-PAN,Panguana,CC-BY-4.0,,,-9.6237,-74.9315,220.0,EBF,Af,25.5,2335.0,,
+PE-QFR,Quistococha Forest Reserve,CC-BY-4.0,,,-3.8344,-73.319,104.0,WET,Af,,,2018.0,2022.0
+PE-TNR,Tambopata,Legacy,,,-12.8314,-69.2836,214.0,MF,Af,25.5,2335.0,,
+PR-xGU,NEON Guanica Forest (GUAN),CC-BY-4.0,,,17.9696,-66.8687,143.0,EBF,Am,25.0,1168.0,2018.0,2023.0
+PR-xLA,NEON Lajas Experimental Station (LAJA),CC-BY-4.0,,,18.0212,-67.0769,24.0,GRA,Am,25.0,1168.0,2018.0,2023.0
+US-A03,ARM-AMF3-Oliktok,CC-BY-4.0,,,70.4953,-149.8823,5.0,BSV,ET,-11.2,115.1,2014.0,2021.0
+US-A10,ARM-NSA-Barrow,CC-BY-4.0,,,71.3242,-156.6149,4.0,BSV,ET,-11.2,115.1,2011.0,2020.0
+US-A12,ARM-SGP-Pawhuska,CC-BY-4.0,,,36.841,-96.427,331.0,CVM,Cfa,,,,
+US-A14,ARM-SGP-Lamont,CC-BY-4.0,,,36.607,-97.488,315.0,CVM,Cfa,,,,
+US-A32,ARM-SGP Medford hay pasture,CC-BY-4.0,,,36.8193,-97.8198,335.0,GRA,Cfa,33.9,889.0,2015.0,2017.0
+US-A33,ARM-SGP-Newkirk,CC-BY-4.0,,,36.9255,-97.0817,357.0,CVM,Cfa,,,,
+US-A37,ARM-SGP-Waukomis,CC-BY-4.0,,,36.3106,-97.928,378.9,CVM,Cfa,,,,
+US-A39,ARM-SGP-Morrison,CC-BY-4.0,,,36.3776,-96.069,306.0,CRO,Csa,14.95,965.0,,
+US-A74,ARM SGP milo field,CC-BY-4.0,,,36.8085,-97.5489,337.0,CRO,Cfa,33.9,889.0,2015.0,2017.0
+US-AaG,Arkansas Grassland,CC-BY-4.0,,,33.1105,-91.6282,33.0,GRA,Cfa,17.4,1410.0,,
+US-Act,Acton Lake Flux Tower Site,CC-BY-4.0,,,39.582,-84.755,263.0,WAT,Cfa,11.1,907.0,2017.0,2018.0
+US-ADR,Amargosa Desert Research Site (ADRS),CC-BY-4.0,,,36.7653,-116.6933,842.0,BSV,Bwh,17.5,110.0,2011.0,2017.0
+US-AF1,MPG - Apricot Lane Farms,CC-BY-4.0,,,34.3108,-118.9244,300.0,CVM,Csb,15.9,376.4,,
+US-Akn,Savannah River Site,CC-BY-4.0,,,33.3825,-81.5653,93.0,MF,,,,2011.0,2022.0
+US-ALQ,Allequash Creek Site,CC-BY-4.0,,,46.0308,-89.6067,,WET,Dfb,,,2015.0,2024.0
+US-AMS,Argonne Testbed for Multiscale Observational Science (ATMOS),CC-BY-4.0,,,41.7018,-87.9963,232.0,GRA,Cfa,11.7,940.0,,
+US-An1,Anaktuvuk River Severe Burn,CC-BY-4.0,,,68.99,-150.28,600.0,OSH,,,,2008.0,2019.0
+US-An2,Anaktuvuk River Moderate Burn,CC-BY-4.0,,,68.95,-150.21,600.0,OSH,,,,2008.0,2019.0
+US-An3,Anaktuvuk River Unburned,CC-BY-4.0,,,68.93,-150.27,600.0,OSH,,,,2008.0,2019.0
+US-AoL,Low Density Apple Orchard,CC-BY-4.0,,,43.2513,-85.7648,270.4,MF,Dfb,9.7,2.794,,
+US-AR1,ARM USDA UNL OSU Woodward Switchgrass 1,CC-BY-4.0,,,36.4267,-99.42,611.0,GRA,Dsa,,,2009.0,2012.0
+US-AR2,ARM USDA UNL OSU Woodward Switchgrass 2,CC-BY-4.0,,,36.6358,-99.5975,646.0,GRA,Dsa,,,2009.0,2012.0
+US-ARb,ARM Southern Great Plains burn site- Lamont,CC-BY-4.0,,,35.5497,-98.0402,424.0,GRA,Cfa,,,2005.0,2006.0
+US-ARc,ARM Southern Great Plains control site- Lamont,CC-BY-4.0,,,35.5465,-98.04,424.0,GRA,Cfa,,,2005.0,2006.0
+US-ARM,ARM Southern Great Plains site- Lamont,CC-BY-4.0,,,36.6058,-97.4888,314.0,CRO,Cfa,14.76,843.0,2003.0,2024.0
+US-ASH,USSL San Joaquin Valley Almond High Salinity,CC-BY-4.0,,,36.1697,-120.201,147.0,DBF,Bwk,18.1,210.0,2016.0,2017.0
+US-ASL,USSL San Joaquin Valley Almond Low Salinity,CC-BY-4.0,,,36.9466,-120.1024,78.0,DBF,Bwk,16.7,311.0,2016.0,2017.0
+US-ASM,USSL San Joaquin Valley Almond Medium Salinity,CC-BY-4.0,,,36.1777,-120.2026,147.0,DBF,Bwk,18.1,210.0,2016.0,2017.0
+US-Atq,Atqasuk,Legacy,,,70.4696,-157.4089,15.0,WET,ET,-9.7,93.0,1999.0,2006.0
+US-Aud,Audubon Research Ranch,Legacy,,,31.5907,-110.5104,1469.0,GRA,Bsk,14.85,438.35,2002.0,2011.0
+US-Bar,Bartlett Experimental Forest,CC-BY-4.0,,,44.0646,-71.2881,272.0,DBF,Dfb,5.61,1245.77,2004.0,2024.0
+US-BCM,Blue Cypress Marsh,CC-BY-4.0,,,27.6953,-80.7114,23.0,WET,Cwa,22.6,1142.0,,
+US-Bd4,Burdette Farm Rice Field - 4N,CC-BY-4.0,,,35.8139,-89.9862,70.0,CRO,Cfa,,,,
+US-Bd5,Burdette Farm Rice Field - Seagraves South,CC-BY-4.0,,,35.8105,-90.0194,70.0,CRO,Cfa,,,,
+US-Bd6,Burdette Farm Rice - Seagraves North,CC-BY-4.0,,,35.814,-90.0194,70.0,CRO,Cfa,,,,
+US-BdA,Burdette Farm Rice Field - AWD,CC-BY-4.0,,,35.8089,-90.0327,,CRO,Cfa,,,,
+US-BdC,Burdette Farm Rice Field - conventional,CC-BY-4.0,,,35.8089,-90.0284,,CRO,Cfa,,,,
+US-Beo,Barrow Environmental Observatory (BEO) tower,Legacy,,,71.281,-156.6123,,WET,ET,-11.3,72.0,,
+US-Bes,Barrow-Bes (Biocomplexity Experiment South tower),Legacy,,,71.2809,-156.5965,4.6,WET,ET,-12.0,173.0,,
+US-BFS,Robert J. Bernard Biological Field Station,Legacy,,,34.1128,-117.7119,410.0,OSH,Csa,17.22,188.0,,
+US-BgC,Big Chico Creek,CC-BY-4.0,,,39.8125,-121.8135,135.0,WSA,Csa,16.5,650.0,,
+US-Bi1,Bouldin Island Alfalfa,CC-BY-4.0,,,38.0992,-121.4993,-2.7,CRO,Csa,16.0,338.0,2016.0,2024.0
+US-Bi2,Bouldin Island corn,CC-BY-4.0,,,38.1091,-121.5351,-5.0,CRO,Csa,16.0,338.0,2017.0,2024.0
+US-Bkg,Brookings,Legacy,,,44.3453,-96.8362,510.0,GRA,Dfa,6.03,585.76,2004.0,2010.0
+US-Blk,Black Hills,Legacy,,,44.158,-103.65,1718.0,ENF,Dfb,6.23,573.79,2004.0,2008.0
+US-Blo,Blodgett Forest,CC-BY-4.0,,,38.8953,-120.6328,1315.0,ENF,Csa,11.09,1226.0,1997.0,2007.0
+US-BMM,Bangtail Mountain Meadow,CC-BY-4.0,,,45.783,-110.7776,2324.0,GRA,Dfc,,,2016.0,2019.0
+US-Bn1,"Bonanza Creek, 1920 Burn site near Delta Junction",Legacy,,,63.9198,-145.3782,518.0,ENF,Dsc,,,2002.0,2004.0
+US-Bn2,"Bonanza Creek, 1987 Burn site near Delta Junction",Legacy,,,63.9198,-145.3782,410.0,DBF,Dsc,,,2002.0,2004.0
+US-Bn3,"Bonanza Creek, 1999 Burn site near Delta Junction",Legacy,,,63.9227,-145.7442,469.0,OSH,Dsc,,,2002.0,2004.0
+US-Bo1,Bondville,CC-BY-4.0,,,40.0062,-88.2904,219.0,CRO,Dfa,11.02,991.29,1996.0,2008.0
+US-Bo2,Bondville (companion site),CC-BY-4.0,,,40.009,-88.29,219.0,CRO,Dfa,11.02,991.29,2004.0,2008.0
+US-Br1,Brooks Field Site 10- Ames,Legacy,,,41.9749,-93.6906,313.0,CRO,Dfa,8.95,842.33,2005.0,2011.0
+US-Br2,Brooks Field Site 1011- Ames,Legacy,,,41.9757,-93.6925,314.0,CRO,Dfa,8.89,846.74,,
+US-Br3,Brooks Field Site 11- Ames,Legacy,,,41.9747,-93.6936,313.0,CRO,Dfa,8.9,846.6,2005.0,2011.0
+US-BRG,Bayles Road Grassland Tower,CC-BY-4.0,,,39.2167,-86.5406,180.0,GRA,Cfa,11.8,1200.0,2016.0,2020.0
+US-Brw,Barrow,Legacy,,,71.3225,-156.6092,1.0,WET,ET,-12.6,85.0,1998.0,2007.0
+US-Bsg,Burns Sagebrush,CC-BY-4.0,,,43.4712,-119.6909,1398.0,OSH,Bsk,7.36,289.0,2014.0,2015.0
+US-BSM,Barnstable Great Marsh,Legacy,,,41.7297,-70.3644,0.5,WET,Dfb,9.9,1195.0,,
+US-BWa,INFLUX - NIST Turfgrass Site,CC-BY-4.0,,,39.1389,-77.2175,,URB,Cfa,,,2021.0,2023.0
+US-BWb,INFLUX - Montgomery County pasture site,CC-BY-4.0,,,39.1955,-77.4509,,GRA,Cfa,,,2022.0,2023.0
+US-BZB,Bonanza Creek Thermokarst Bog,CC-BY-4.0,,,64.6955,-148.3208,100.0,WET,Dfd,-2.4,274.0,2011.0,2024.0
+US-BZF,Bonanza Creek Rich Fen,CC-BY-4.0,,,64.7013,-148.3121,95.0,WET,Dfd,-2.4,274.0,2011.0,2024.0
+US-BZL,Goldstream Valley Thermokarst Lake,CC-BY-4.0,,,64.9194,-147.8222,188.0,WET,Dfd,-2.4,274.0,,
+US-BZo,Bonanza Creek Old Thermokarst Bog,CC-BY-4.0,,,64.6936,-148.33,100.0,WET,Dfd,-2.4,274.0,2018.0,2024.0
+US-BZS,Bonanza Creek Black Spruce,CC-BY-4.0,,,64.6963,-148.3235,100.0,ENF,Dfd,-2.4,274.0,2010.0,2024.0
+US-CAK,Council Alaska Tundra,CC-BY-4.0,,,64.8618,-163.7002,35.0,GRA,ET,,,,
+US-CaV,Canaan Valley,Legacy,,,39.0633,-79.4208,994.0,GRA,Cfb,7.97,1317.0,2004.0,2010.0
+US-CC1,Coloma Corn 1,CC-BY-4.0,,,44.0732,-89.6787,314.0,CRO,Dfb,7.5,906.5,2021.0,2021.0
+US-CC2,Coloma Corn 2,CC-BY-4.0,,,44.1039,-89.6196,320.0,CRO,Dfb,7.5,906.5,2021.0,2021.0
+US-CdM,Cedar Mesa,CC-BY-4.0,,,37.5241,-109.7471,1860.0,WSA,Bsk,11.3,348.0,2019.0,2023.0
+US-Ced,Cedar Bridge,CC-BY-4.0,,,39.8379,-74.3791,58.0,CSH,Cfa,11.04,1138.0,2005.0,2014.0
+US-CF1,CAF-LTAR Cook East,CC-BY-4.0,,,46.7815,-117.0821,794.0,CRO,Dsb,9.0,550.0,2017.0,2021.0
+US-CF2,CAF-LTAR Cook West,CC-BY-4.0,,,46.784,-117.0908,807.0,CRO,Dsb,9.0,550.0,2017.0,2021.0
+US-CF3,CAF-LTAR Boyd North,CC-BY-4.0,,,46.7551,-117.1261,795.0,CRO,Dsb,9.0,550.0,2017.0,2021.0
+US-CF4,CAF-LTAR Boyd South,CC-BY-4.0,,,46.7518,-117.1285,795.0,CRO,Dsb,9.0,550.0,2017.0,2021.0
+US-CGG,Concord Grazed Grassland,CC-BY-4.0,,,37.938,-121.9761,119.5,GRA,Csa,16.0,419.0,2019.0,2022.0
+US-ChR,Chestnut Ridge,Legacy,,,35.9311,-84.3324,286.0,DBF,Cfa,13.91,1358.85,2005.0,2010.0
+US-CLF,Cole Farm,CC-BY-4.0,,,40.6366,-77.9424,244.0,CVM,Dfb,9.5,1050.0,2017.0,2020.0
+US-Cms,Central Marsh,CC-BY-4.0,,,71.3202,-156.6223,6.0,WET,ET,-12.6,274.0,1999.0,2000.0
+US-CMW,Charleston Mesquite Woodland,CC-BY-4.0,,,31.6637,-110.1777,1199.0,DBF,Bsh,17.0,288.0,2000.0,2021.0
+US-CN1,Coleman Cattle Farm,CC-BY-4.0,,,38.7466,-94.3967,309.0,GRA,Cfa,12.8,1143.0,,
+US-CN2,Parrot Farm,CC-BY-4.0,,,38.7554,-94.3963,309.0,GRA,Cfa,12.8,1143.0,,
+US-Cop,Corral Pocket,CC-BY-4.0,,,38.09,-109.39,1520.0,GRA,,,,2001.0,2007.0
+US-CPk,Chimney Park,CC-BY-4.0,,,41.068,-106.1187,2750.0,ENF,Dfc,6.1,545.0,2009.0,2013.0
+US-CRE,Clark Rice East,CC-BY-4.0,,,35.7635,-90.773,77.0,CRO,Cfa,16.4,1150.0,,
+US-CRK,Davy Crockett National Forest,CC-BY-4.0,,,31.4629,-95.3415,151.0,ENF,Cfa,19.0,1148.0,2022.0,2023.0
+US-CRT,Curtice Walter-Berger cropland,CC-BY-4.0,,,41.6285,-83.3471,180.0,CRO,Dfa,10.1,849.0,2011.0,2013.0
+US-CRW,Clark Rice West,CC-BY-4.0,,,35.7635,-90.773,77.0,CRO,Cfa,16.4,1150.0,,
+US-CS1,Central Sands Irrigated Agricultural Field,CC-BY-4.0,,,44.1031,-89.5379,328.0,CRO,Dfa,7.0,830.0,2018.0,2019.0
+US-CS2,Tri county school Pine Forest,CC-BY-4.0,,,44.1467,-89.5002,328.0,ENF,Dfa,7.0,830.0,2018.0,2022.0
+US-CS3,Central Sands Irrigated Agricultural Field,CC-BY-4.0,,,44.1394,-89.5727,328.0,CRO,Dfa,7.0,830.0,2019.0,2020.0
+US-CS4,Central Sands Irrigated Agricultural Field,CC-BY-4.0,,,44.1597,-89.5475,328.0,CRO,Dfa,7.0,830.0,2020.0,2021.0
+US-CS5,Central Sands Irrigated Agricultural Field,CC-BY-4.0,,,44.1095,-89.5377,328.0,CRO,Dfa,7.0,830.0,2021.0,2021.0
+US-CS6,Central Sands Irrigated Agricultural Field,CC-BY-4.0,,,44.4297,-89.544,328.0,CRO,Dfa,7.0,830.0,2022.0,2023.0
+US-CS7,Central Sands Forest,CC-BY-4.0,,,44.4375,-89.5443,328.0,ENF,Dfa,7.0,830.0,,
+US-CS8,Central Sands Irrigated Agricultural Field,CC-BY-4.0,,,44.4338,-89.5364,328.0,CRO,Dfa,7.0,830.0,2023.0,2023.0
+US-Cst,Crossett Experimental Forest,CC-BY-4.0,,,33.0442,-91.9204,50.0,ENF,Cfa,17.4,1410.0,2013.0,2017.0
+US-Ctn,Cottonwood,Legacy,,,43.95,-101.8466,744.0,GRA,,,,2006.0,2009.0
+US-CU1,UIC Plant Research Laboratory Chicago,CC-BY-4.0,,,41.8694,-87.6459,183.4,URB,Dfa,10.6,937.0,,
+US-CwG,Coweeta Grassland,CC-BY-4.0,,,34.9682,-83.3951,657.0,GRA,Dfb,12.9,1495.0,,
+US-Cwt,Coweeta,CC-BY-4.0,,,35.0592,-83.4275,690.0,DBF,Dfb,13.0,1800.0,2011.0,2015.0
+US-CX1,"Central Plains Experimental Range 1, Nunn, Colorado",Legacy,,,40.833,-104.76,1600.0,GRA,,8.4,340.0,,
+US-CX2,"Central Plains Experimental Range 2, Nunn, Colorado",Legacy,,,40.8402,-104.7672,1600.0,GRA,,8.4,340.0,,
+US-CZ1,"Sierra Critical Zone, Sierra Transect, Oak/Pine Woodland, San Joaquin Experimental Range",Legacy,,,37.1088,-119.7313,400.0,SAV,,,,,
+US-CZ2,"Sierra Critical Zone, Sierra Transect, Ponderosa Pine Forest, Soaproot Saddle",Legacy,,,37.0311,-119.2566,1160.0,ENF,,,,2010.0,2016.0
+US-CZ3,"Sierra Critical Zone, Sierra Transect, Sierran Mixed Conifer, P301",Legacy,,,37.0674,-119.1951,2015.0,ENF,,,,2008.0,2016.0
+US-CZ4,"Sierra Critical Zone, Sierra Transect, Subalpine Forest, Shorthair",Legacy,,,37.0675,-118.9867,2710.0,ENF,,,,2009.0,2016.0
+US-DBk,Berkeley Way West,CC-BY-4.0,,,37.8736,-122.2684,,URB,Csa,,,,
+US-DCS,Dwarf Cypress Swamp,CC-BY-4.0,,,25.7626,-80.9078,2.05,WET,Cwa,23.1,1312.0,,
+US-Dea,California UC ANR Desert Research and Extension Center Alfalfa,Legacy,,,32.8136,-115.4423,-53.0,CRO,Dsa,20.5,131.0,,
+US-Deu,California UC ANR Desert Research and Extension Center Urban Farm Tower,Legacy,,,32.8056,-115.4456,-53.0,URB,Dsa,20.5,131.0,,
+US-DFC,"US Dairy Forage Research Center, Prairie du Sac",CC-BY-4.0,,,43.3448,-89.7117,264.9,CRO,Dfb,7.65,787.0,2018.0,2022.0
+US-DFK,Dairy Forage Research Center - Kernza,CC-BY-4.0,,,43.3453,-89.7154,210.0,CRO,Dfb,7.65,787.0,2018.0,2021.0
+US-Dia,Diablo,CC-BY-4.0,,,37.6773,-121.5296,323.0,GRA,Csa,15.6,265.0,2010.0,2012.0
+US-Dix,Fort Dix,CC-BY-4.0,,,39.9712,-74.4346,48.0,MF,Cfa,11.07,1126.63,2005.0,2008.0
+US-Dk1,Duke Forest-open field,CC-BY-4.0,,,35.9712,-79.0934,168.0,GRA,Cfa,14.36,1169.75,2001.0,2008.0
+US-Dk2,Duke Forest-hardwoods,CC-BY-4.0,,,35.9736,-79.1004,168.0,DBF,Cfa,14.36,1168.69,2001.0,2008.0
+US-Dk3,Duke Forest - loblolly pine,CC-BY-4.0,,,35.9782,-79.0942,163.0,ENF,Cfa,14.36,1169.69,2001.0,2008.0
+US-Dmg,Dutch Slough Marsh Gilbert Tract,CC-BY-4.0,,,38.0015,-121.6691,1.0,WET,Csa,16.1,365.0,2021.0,2024.0
+US-DPP,Disney Wilderness Preserve Pine Flatwoods,CC-BY-4.0,,,28.1046,-81.419,23.0,ENF,Cwa,22.6,1142.0,,
+US-DPW,Disney Wilderness Preserve Wetland,CC-BY-4.0,,,28.0521,-81.4361,23.0,WET,Cwa,22.6,1142.0,2013.0,2017.0
+US-DS1,Staten Corn 1,CC-BY-4.0,,,38.1335,-121.539,-6.0,CRO,Csa,16.0,432.0,2018.0,2020.0
+US-DS2,Staten Corn 2,CC-BY-4.0,,,38.1375,-121.514,-6.0,CRO,Csa,16.0,432.0,2020.0,2023.0
+US-DS3,Staten Rice 1,CC-BY-4.0,,,38.1235,-121.549,-7.0,CRO,Csa,16.0,432.0,2021.0,2023.0
+US-EA4,EAA Field Research Park Woodland,CC-BY-4.0,,,29.6633,-98.3816,297.0,MF,Cfa,20.3,836.0,2021.0,2024.0
+US-EA5,Uvalde Ranch Mesquite Woodland,CC-BY-4.0,,,29.3584,-99.9576,322.0,CSH,Cfa,20.9,632.0,2021.0,2023.0
+US-EA6,Camp Wood Shield Ranch Oak Savannah,CC-BY-4.0,,,29.6561,-99.9588,480.0,WSA,Cfa,19.4,703.0,2023.0,2024.0
+US-EDN,Eden Landing Ecological Reserve,CC-BY-4.0,,,37.6156,-122.114,,WET,Csa,,,2018.0,2021.0
+US-EKH,Elkhorn Slough Hester Marsh,CC-BY-4.0,,,36.8094,-121.7523,0.5,WET,Csb,10.0,894.0,2022.0,2024.0
+US-EKN,Elkhorn Slough North Marsh,CC-BY-4.0,,,36.8357,-121.7328,0.0,WET,Cfc,10.0,894.0,,
+US-EKP,Elkhorn Slough Porter Marsh,CC-BY-4.0,,,36.8558,-121.7488,0.0,WET,Csb,10.0,894.0,2022.0,2024.0
+US-EKY,Elkhorn Slough Yampah Marsh,CC-BY-4.0,,,36.8105,-121.7487,0.0,WET,Csb,10.0,894.0,,
+US-Elm,Everglades (long hydroperiod marsh),CC-BY-4.0,,,25.5519,-80.7826,0.77,WET,,,,2008.0,2023.0
+US-EML,"Eight Mile Lake Permafrost thaw gradient, Healy Alaska.",CC-BY-4.0,,,63.8784,-149.2536,662.0,OSH,ET,-1.0,378.0,2008.0,2020.0
+US-EPM,Edwards Plateau Martin,CC-BY-4.0,,,30.8167,-99.8619,,SAV,Cfa,19.0,600.0,,
+US-Esm,Everglades (short hydroperiod marsh),CC-BY-4.0,,,25.4379,-80.5946,1.07,WET,,,,2008.0,2023.0
+US-EvM,Everglades Saltwater intrusion marsh,CC-BY-4.0,,,25.3539,-80.381,0.332,WET,,24.2,1200.0,2020.0,2023.0
+US-FBE,Bob Allen Key LTER East,CC-BY-4.0,,,25.0266,-80.6814,0.0,WAT,Cfa,25.5,1525.0,,
+US-Fcr,Cascaden Ridge Fire Scar,CC-BY-4.0,,,65.3968,-148.9348,265.0,OSH,Dwc,-2.4,,2011.0,2014.0
+US-Fmf,Flagstaff - Managed Forest,CC-BY-4.0,,,35.1426,-111.7273,2160.0,ENF,Csb,9.5,546.0,2005.0,2010.0
+US-Fo1,Flux Observations of Carbon from an Airborne Laboratory (FOCAL) Campaign Site 1,Legacy,,,70.085,-148.5671,28.0,WET,Dsc,,,,
+US-Fo2,Flux Observations of Carbon from an Airborne Laboratory (FOCAL) Campaign Site 2,Legacy,,,70.0229,-148.6598,41.0,WET,Dsc,,,,
+US-FPe,Fort Peck,Legacy,,,48.3077,-105.1019,634.0,GRA,Bsk,5.48,334.8,2000.0,2008.0
+US-FR1,Freeman Ranch- Grassland,Legacy,,,29.93,-98.01,230.0,GRA,Cfa,19.56,866.65,,
+US-FR2,Freeman Ranch- Mesquite Juniper,Legacy,,,29.9495,-97.9962,271.9,WSA,Cfa,19.48,864.0,2005.0,2008.0
+US-FR3,Freeman Ranch- Woodland,Legacy,,,29.94,-97.99,232.0,CSH,Cfa,19.59,869.23,2004.0,2012.0
+US-Fuf,Flagstaff - Unmanaged Forest,CC-BY-4.0,,,35.089,-111.762,2180.0,ENF,Csb,8.7,562.0,2005.0,2010.0
+US-Fwf,Flagstaff - Wildfire,CC-BY-4.0,,,35.4454,-111.7718,2270.0,GRA,Csb,8.4,557.0,2005.0,2010.0
+US-GBT,GLEES Brooklyn Tower,CC-BY-4.0,,,41.3658,-106.2397,3191.0,ENF,Dfc,0.8,1200.0,1999.0,2006.0
+US-GCE,Georgia Coastal Ecosystems LTER Flux Tower,Legacy,,,31.4441,-81.2835,0.625,WET,Cfa,19.83,1284.0,,
+US-GL1,Stannard Rock,CC-BY-4.0,,,47.1835,-87.2251,183.0,WAT,Dfb,5.4,,2008.0,2022.0
+US-GL2,Granite Island,CC-BY-4.0,,,46.7167,-87.4,183.0,WAT,Dfb,6.6,762.0,,
+US-GLE,GLEES,CC-BY-4.0,,,41.3665,-106.2399,3197.0,ENF,Dfc,0.8,1200.0,1999.0,2020.0
+US-GMF,Great Mountain Forest,Legacy,,,41.9667,-73.2333,380.0,MF,Dfb,6.08,1258.79,1999.0,2004.0
+US-Goo,Goodwin Creek,Legacy,,,34.2547,-89.8735,87.0,GRA,Cfa,15.89,1425.77,2002.0,2006.0
+US-GR8,Greenfield Rice Northeast 18,CC-BY-4.0,,,35.6647,-90.7153,75.0,CRO,Cfa,16.2,1100.0,,
+US-GR9,Greenfield Rice Northwest 19,CC-BY-4.0,,,35.6648,-90.7198,75.0,CRO,Cfa,16.2,1100.0,,
+US-GZ1,"Genesee, ID On-farm site Zone 1",Legacy,,,46.5008,-116.8068,746.0,CRO,Csb,11.4,294.1,,
+US-GZ2,"Genesee, ID On-farm site Zone 2",Legacy,,,46.4978,-116.8047,731.0,CRO,Csb,11.4,294.1,,
+US-GZ3,"Genesee, ID On-farm site Zone 3",Legacy,,,46.4949,-116.8019,713.0,CRO,Csb,11.4,294.1,,
+US-Ha1,Harvard Forest EMS Tower (HFR1),CC-BY-4.0,,,42.5378,-72.1715,340.0,DBF,Dfb,6.62,1071.0,1991.0,2024.0
+US-Ha2,Harvard Forest Hemlock Site,CC-BY-4.0,,,42.5393,-72.1779,360.0,ENF,Dfb,6.56,1071.0,2004.0,2024.0
+US-HB1,North Inlet Crab Haul Creek,CC-BY-4.0,,,33.3455,-79.1957,0.1,WET,Cfa,18.3,1429.0,2019.0,2022.0
+US-HB2,Hobcaw Barony Mature Longleaf Pine,CC-BY-4.0,,,33.3242,-79.244,4.7,ENF,Cfa,18.3,1429.0,2019.0,2019.0
+US-HB3,Hobcaw Barony Longleaf Pine Restoration,CC-BY-4.0,,,33.3482,-79.2322,7.3,ENF,Cfa,18.3,1429.0,2019.0,2022.0
+US-HB4,Minim Creek Brackish Impoundment,CC-BY-4.0,,,33.2015,-79.2975,1.0,WET,Cfa,18.3,1429.0,2022.0,2022.0
+US-HBK,Hubbard Brook Experimental Forest,CC-BY-4.0,,,43.9397,-71.7181,367.0,DBF,Dfb,6.0,1400.0,2016.0,2022.0
+US-Hn1,Hanford 300 Area,CC-BY-4.0,,,46.4089,-119.275,118.58,OSH,Bsk,12.8,197.0,,
+US-Hn2,Hanford 100H grassland,CC-BY-4.0,,,46.6889,-119.4641,117.5,GRA,Bsk,12.8,197.0,2015.0,2018.0
+US-Hn3,Hanford 100H sagebrush,CC-BY-4.0,,,46.6878,-119.4614,120.9,OSH,Bsk,12.8,197.0,2017.0,2018.0
+US-Ho1,Howland Forest (main tower),CC-BY-4.0,,,45.2041,-68.7402,60.0,ENF,Dfb,5.27,1070.0,1996.0,2024.0
+US-Ho2,Howland Forest (west tower),CC-BY-4.0,,,45.2091,-68.747,61.0,ENF,Dfb,5.13,1064.0,1999.0,2024.0
+US-Ho3,Howland Forest (harvest site),CC-BY-4.0,,,45.2072,-68.725,61.0,ENF,Dfb,5.31,1072.0,2003.0,2009.0
+US-HPY,Hawk Property,Legacy,,,40.7692,-74.0853,1.0,WET,Cfa,11.5,1120.0,,
+US-HRA,Humnoke Farm Rice Field – Field A,CC-BY-4.0,,,34.5852,-91.7517,,CRO,Cfa,16.7,1250.0,2015.0,2017.0
+US-HRC,Humnoke Farm Rice Field – Field C,CC-BY-4.0,,,34.5888,-91.7517,,CRO,Cfa,16.7,1250.0,2015.0,2017.0
+US-HRN,Humnoke Carr North Rice Field,Legacy,,,34.5955,-91.7132,61.0,CRO,Cfa,16.7,1250.0,,
+US-HRP,Herring River Phragmites,CC-BY-4.0,,,41.938,-70.0552,0.5,WET,Dfb,9.9,1195.0,,
+US-HRS,Humnoke Carr South Rice Field,Legacy,,,34.5922,-91.7138,61.0,CRO,Cfa,16.78,1250.3,,
+US-Hsm,Hill Slough Marsh,CC-BY-4.0,,,38.2368,-122.0212,1.113,WET,Csa,15.6,450.0,2021.0,2024.0
+US-HVa,Happy Valley,Legacy,,,69.1423,-148.8412,298.0,WET,Dfc,-10.29,217.0,1994.0,1995.0
+US-HVs,Happy Valley Wet Sedge Tundra,CC-BY-4.0,,,69.1672,-148.8569,320.0,WET,ET,-10.29,217.0,1995.0,1995.0
+US-HWB,USDA ARS Pasture Sytems and Watershed Management Research Unit- Hawbecker Site,CC-BY-4.0,,,40.8608,-77.8488,378.0,CVM,Dfb,10.1,1006.35,2015.0,2018.0
+US-IB1,Fermi National Accelerator Laboratory- Batavia (Agricultural site),CC-BY-4.0,,,41.8593,-88.2227,226.5,CRO,Dfa,9.18,929.23,2005.0,2018.0
+US-IB2,Fermi National Accelerator Laboratory- Batavia (Prairie site),CC-BY-4.0,,,41.8406,-88.241,226.5,GRA,Dfa,9.04,930.25,2004.0,2018.0
+US-ICh,Imnavait Creek Watershed Heath Tundra,CC-BY-4.0,,,68.6068,-149.2958,940.0,OSH,ET,-7.4,318.0,2007.0,2024.0
+US-ICs,Imnavait Creek Watershed Wet Sedge Tundra,CC-BY-4.0,,,68.6058,-149.311,920.0,WET,ET,-7.4,318.0,2007.0,2024.0
+US-ICt,Imnavait Creek Watershed Tussock Tundra,CC-BY-4.0,,,68.6063,-149.3041,930.0,OSH,ET,-7.4,318.0,2007.0,2024.0
+US-IL1,Paspalum notatum long rotational grazing,CC-BY-4.0,,,27.1879,-81.1996,14.7,GRA,Cfa,22.5,1300.0,,
+US-INa,INFLUX - Cemetery Turfgrass Tower,CC-BY-4.0,,,39.8273,-86.179,,URB,Cfa,,,2017.0,2019.0
+US-INb,INFLUX - Golf Course,CC-BY-4.0,,,39.8706,-86.0024,,URB,Cfa,,,2018.0,2019.0
+US-INc,INFLUX - Downtown Indianapolis (Site-3),CC-BY-4.0,,,39.7833,-86.1652,,URB,Cfa,,,2020.0,2023.0
+US-INd,INFLUX - Agricultural Site East near Pittsboro,CC-BY-4.0,,,39.8645,-86.5005,,CRO,Cfa,,,2017.0,2018.0
+US-INe,INFLUX - Agricultural Site West near Pittsboro,CC-BY-4.0,,,39.8632,-86.5083,,CRO,Cfa,,,2017.0,2019.0
+US-INf,INFLUX - East 21st St (Site 2),CC-BY-4.0,,,39.7978,-86.0183,,URB,Cfa,,,2013.0,2013.0
+US-INg,INFLUX - Wayne Twp Comm (Site-7),CC-BY-4.0,,,39.7739,-86.2724,,URB,Cfa,,,2019.0,2023.0
+US-INi,INFLUX - Agricultural Site East of Indianapolis (Site-9a),CC-BY-4.0,,,39.8167,-85.7005,,CRO,Cfa,,,2019.0,2022.0
+US-INj,INFLUX - Agricultural Site East of Indianapolis (Site-9b),CC-BY-4.0,,,39.8766,-85.7066,,CRO,Cfa,,,2020.0,2023.0
+US-INn,INFLUX - Agricultural Site West of Indianapolis (Site-14a),CC-BY-4.0,,,39.9468,-86.788,,CRO,Cfa,,,2019.0,2021.0
+US-INp,INFLUX - Agricultural Site West of Indianapolis (Site-14b),CC-BY-4.0,,,39.9477,-86.7821,,CRO,Cfa,,,2020.0,2021.0
+US-Ivo,Ivotuk,Legacy,,,68.4865,-155.7503,568.0,WET,ET,-8.28,304.0,2003.0,2016.0
+US-JLN,Jackson Lane - natural,Legacy,,,39.0574,-75.7531,17.0,WET,Cfa,13.1,1120.0,,
+US-JLR,Jackson Lane - restored,Legacy,,,39.0543,-75.7531,17.0,WET,Cfa,13.1,1120.0,,
+US-Jo1,Jornada Experimental Range Bajada Site,CC-BY-4.0,,,32.582,-106.635,1188.0,OSH,Bwk,14.7,245.1,2010.0,2022.0
+US-Jo2,Jornada Experimental Range Mixed Shrubland,CC-BY-4.0,,,32.5849,-106.6032,1469.0,OSH,Bwk,17.5,282.3,2010.0,2020.0
+US-Jo3,Jornada Experimental Range Red Lake Playa,CC-BY-4.0,,,32.7123,-106.8303,,BSV,Bwk,14.7,245.1,,
+US-JRn,WV Jacks Run,CC-BY-4.0,,,39.6789,-80.1646,384.048,GRA,Cfa,13.2,1095.5,2017.0,2019.0
+US-KCM,KCMP Tall Tower,Legacy,,,44.6886,-93.0728,290.0,CRO,Dfa,6.4,879.0,,
+US-KFB,Konza Prairie LTER (4B),CC-BY-4.0,,,39.0745,-96.5951,330.0,GRA,Cfa,12.77,867.0,,
+US-KFS,Kansas Field Station,CC-BY-4.0,,,39.0561,-95.1907,310.0,GRA,Cfa,12.0,1014.0,2007.0,2019.0
+US-KGF,Kingman Farm,Legacy,,,43.1717,-70.9259,35.0,GRA,Dfb,8.9,1170.0,,
+US-KL1,KBS Lux Arbor Reserve Corn,CC-BY-4.0,,,42.4847,-85.4422,264.6,CRO,Dfa,9.9,1027.0,2009.0,2021.0
+US-KL2,KBS Lux Arbor Reserve Switchgrass,CC-BY-4.0,,,42.4768,-85.4468,258.3,GRA,Dfa,9.9,1027.0,2009.0,2021.0
+US-KL3,KBS Lux Arbor Reserve Prairie,CC-BY-4.0,,,42.4735,-85.4473,264.7,GRA,Dfa,9.9,1027.0,2009.0,2021.0
+US-KLS,Kansas Land Institute,CC-BY-4.0,,,38.7745,-97.5684,373.0,GRA,Cfa,12.0,812.0,2012.0,2019.0
+US-KM1,KBS Marshall Farms Corn,CC-BY-4.0,,,42.4376,-85.3287,258.1,CRO,Dfa,9.9,1027.0,2009.0,2021.0
+US-KM2,KBS Marshall Farms Prairie,CC-BY-4.0,,,42.4441,-85.3098,259.1,GRA,Dfa,9.9,1027.0,2009.0,2021.0
+US-KM3,KBS Marshall Farms Switchgrass,CC-BY-4.0,,,42.4464,-85.3105,262.1,GRA,Dfa,9.9,1027.0,2009.0,2021.0
+US-KM4,KBS Marshall Farms Smooth Brome Grass (Ref),CC-BY-4.0,,,42.4423,-85.3301,246.3,GRA,Dfa,9.9,1027.0,2009.0,2021.0
+US-Kon,Konza Prairie LTER (KNZ),CC-BY-4.0,,,39.0824,-96.5603,417.0,GRA,Cfa,12.77,867.0,2004.0,2019.0
+US-KPL,Lily Lake Fen,CC-BY-4.0,,,60.5382,-150.5061,100.6,WET,Dfc,1.76,375.8,2021.0,2022.0
+US-KS1,Kennedy Space Center (slash pine),CC-BY-4.0,,,28.4583,-80.6709,1.0,ENF,Cwa,21.9,1266.0,2002.0,2003.0
+US-KS2,Kennedy Space Center (scrub oak),CC-BY-4.0,,,28.6086,-80.6715,3.0,CSH,Cwa,21.66,1294.0,1999.0,2006.0
+US-KS3,Kennedy Space Center (salt marsh),CC-BY-4.0,,,28.7084,-80.7427,0.0,WET,Cfa,22.3,1340.0,2018.0,2019.0
+US-KS4,Kennedy Space Center (Spartina marsh),Legacy,,,28.6,-80.7207,0.5,WET,Cwa,22.3,1340.0,2017.0,2022.0
+US-KUO,KUOM tower,CC-BY-4.0,,,44.9984,-93.1884,301.0,URB,Dfa,7.9,777.0,,
+US-KUT,KUOM Turfgrass Field,CC-BY-4.0,,,44.995,-93.1863,301.0,GRA,Dfa,7.9,777.0,2005.0,2009.0
+US-Kyv,Apple Orchard ARS Kearneysville WV,CC-BY-4.0,,,39.3447,-77.8859,185.0,CRO,Cfa,11.78,964.0,,
+US-LA1,Pointe-aux-Chenes Brackish Marsh,CC-BY-4.0,,,29.5013,-90.4449,0.0,WET,Cfa,20.7,1625.0,2011.0,2012.0
+US-LA2,Salvador WMA Freshwater Marsh,CC-BY-4.0,,,29.8587,-90.2869,0.0,WET,Cfa,20.2,1655.0,2011.0,2023.0
+US-LA3,Barataria Bay Saline Marsh,CC-BY-4.0,,,29.4936,-89.9153,0.2,WET,Cfa,20.9,1623.0,2019.0,2023.0
+US-LGr,Lockney Grassland,Legacy,,,34.1377,-101.4787,1026.0,GRA,Bsh,15.0,450.0,,
+US-Lin,Lindcove Orange Orchard,CC-BY-4.0,,,36.3566,-119.0922,131.0,CRO,,,,2009.0,2010.0
+US-LL1,Longleaf Pine - Baker (Mesic site),CC-BY-4.0,,,31.2792,-84.5329,165.0,SAV,Cfa,20.0,1310.0,2009.0,2020.0
+US-LL2,Longleaf Pine - Dubignion (Intermediate site),CC-BY-4.0,,,31.201,-84.4449,155.0,SAV,Cfa,20.0,1310.0,2009.0,2017.0
+US-LL3,Longleaf Pine - Red Dirt (Xeric site),CC-BY-4.0,,,31.2688,-84.4787,159.5,SAV,Cfa,20.0,1310.0,2009.0,2017.0
+US-LMS,LMRB LTAR Schmidt Farm,Legacy,,,34.1431,-90.6591,56.2,CRO,Cfa,15.79,1371.6,,
+US-Los,Lost Creek,CC-BY-4.0,,,46.0827,-89.9792,480.0,WET,Dfb,4.08,828.0,2000.0,2024.0
+US-LPH,Little Prospect Hill,Legacy,,,42.5419,-72.185,377.5,DBF,Dfb,6.73,1071.0,2002.0,2005.0
+US-LS1,San Pedro River Lewis Springs Sacaton Grassland,CC-BY-4.0,,,31.5615,-110.1403,1230.0,GRA,Bwh,17.0,288.0,2002.0,2007.0
+US-LS2,San Pedro River Lewis Springs Savanna,CC-BY-4.0,,,31.5659,-110.1344,1240.0,SAV,Bwh,17.0,288.0,2002.0,2007.0
+US-LU1,Missouri-Moreau River Basin USDA Certified Organic Farm,CC-BY-4.0,,,38.5048,-92.2487,187.0,CVM,Cfa,13.5,973.0,,
+US-LWW,Little Washita Watershed,Legacy,,,34.9604,-97.9789,365.0,GRA,Cfa,16.09,805.12,1997.0,1998.0
+US-MAC,MacArthur Agro-Ecology,Legacy,,,27.1632,-81.1873,,WET,Cwa,,,,
+US-MBP,Marcell Bog Lake Peatland,CC-BY-4.0,,,47.5051,-93.4893,416.0,WET,,3.4,780.0,2009.0,2023.0
+US-MC1,"Creston, Montana pivot-irrigated spring wheat",CC-BY-4.0,,,48.1873,-114.1548,900.0,CRO,Dfb,6.25,432.0,2015.0,2015.0
+US-MC2,"Creston, Montana pivot-irrigated spring wheat 2",CC-BY-4.0,,,48.1802,-114.2051,900.0,CRO,Dfb,6.25,432.0,2016.0,2016.0
+US-MCP,"Moro Cojo Slough, PG&E Treatment Wetland",CC-BY-4.0,,,36.783,-121.769,0.0,WET,Cfc,10.0,894.0,,
+US-Me1,Metolius - Eyerly burn,CC-BY-4.0,,,44.5794,-121.5,896.0,ENF,Csb,7.88,704.61,2004.0,2005.0
+US-Me2,Metolius mature ponderosa pine,CC-BY-4.0,,,44.4526,-121.5589,1253.0,ENF,Csb,6.28,523.0,2002.0,2024.0
+US-Me3,Metolius-second young aged pine,CC-BY-4.0,,,44.3154,-121.6078,1005.0,ENF,Csb,7.07,719.0,2004.0,2009.0
+US-Me4,Metolius-old aged ponderosa pine,CC-BY-4.0,,,44.4992,-121.6224,922.0,ENF,Csb,7.61,1038.82,1996.0,2024.0
+US-Me5,Metolius-first young aged pine,CC-BY-4.0,,,44.4372,-121.5668,1188.0,ENF,Csb,6.47,590.81,1999.0,2002.0
+US-Me6,Metolius Young Pine Burn,CC-BY-4.0,,,44.3233,-121.6078,998.0,ENF,Csb,7.59,494.0,2010.0,2024.0
+US-Me7,Metolius Low Burn Severity Subcanopy,CC-BY-4.0,,,44.4534,-121.5619,1253.0,ENF,Csb,6.28,523.0,2022.0,2023.0
+US-MEF,Manitou Experimental Forest,CC-BY-4.0,,,39.1006,-105.1024,2367.0,ENF,Dfb,5.0,368.47,,
+US-Men,"Lake Mendota, Center for Limnology Site",CC-BY-4.0,,,43.0772,-89.403,260.0,WAT,Dfa,7.94,875.0,2012.0,2018.0
+US-MFs,Moore Fields,Legacy,,,43.1385,-70.961,20.0,CRO,Dfb,8.9,1170.0,,
+US-MG1,MPG Ranch Rangeland Restoration,CC-BY-4.0,,,46.6996,-114.0353,1043.0,GRA,Dwb,7.06,317.8,,
+US-MH1,"Huntley, Montana irrigated barley site 1",CC-BY-4.0,,,45.9206,-108.2414,919.6,CRO,Bsk,8.9,347.0,2015.0,2015.0
+US-MH2,"Huntley, Montana irrigated barley site 2",CC-BY-4.0,,,45.9699,-108.1978,891.0,CRO,Bsk,8.9,347.0,2016.0,2016.0
+US-Mi1,LTAR UCB (Upper Chesapeake Bay) Miscanthus 1,CC-BY-4.0,,,41.7727,-80.6313,290.0,CVM,Dfb,10.5,1012.7,2015.0,2019.0
+US-Mi2,LTAR UCB (Upper Chesapeake Bay) Miscanthus 2,CC-BY-4.0,,,41.5479,-80.855,280.0,CVM,Dfb,10.5,1012.7,2015.0,2017.0
+US-Mi3,LTAR UCB (Upper Chesapeake Bay) Miscanthus 3,CC-BY-4.0,,,41.8222,-80.637,270.0,CVM,Dfb,10.5,1012.7,2015.0,2019.0
+US-Mj1,Montana Judith Basin wheat field,CC-BY-4.0,,,46.9948,-109.6137,1285.0,CRO,Bsk,6.6,388.0,2013.0,2014.0
+US-Mj2,Montana Judith Basin summer fallow field,CC-BY-4.0,,,46.9957,-109.6295,1277.0,CRO,Bsk,6.6,388.0,2014.0,2014.0
+US-MMS,Morgan Monroe State Forest,CC-BY-4.0,,,39.3232,-86.4131,275.0,DBF,Cfa,10.85,1032.0,1999.0,2024.0
+US-MN1,"Morris: Corn-Soybean with Cover Crops, Strip Tillage",CC-BY-4.0,,,45.6168,-96.1269,339.0,CRO,Dwb,5.7,684.5,2017.0,2023.0
+US-MN2,"Morris: Corn-Soybean-Wheat with Cover Crops, Minimal Tillage",CC-BY-4.0,,,45.627,-96.1271,339.0,CRO,Dwb,5.7,684.5,2017.0,2023.0
+US-MN3,"Morris: Corn-Soybean, Conventional Tillage",CC-BY-4.0,,,45.6091,-96.1265,339.0,CRO,Dwb,5.7,684.5,2020.0,2023.0
+US-Mo1,LTAR CMRB Field 1 (CMRB ASP),CC-BY-4.0,,,39.2298,-92.1167,260.0,CRO,Cfa,12.0,981.0,2015.0,2023.0
+US-Mo2,LTAR CMRB Tucker Prairie (CMRB TP),CC-BY-4.0,,,38.9488,-91.9945,275.0,GRA,Cfa,12.0,981.0,2018.0,2023.0
+US-Mo3,LTAR CMRB Field 3 (CMRB BAU),CC-BY-4.0,,,39.2322,-92.1493,261.0,CRO,Cfa,12.0,981.0,2016.0,2023.0
+US-MOz,Missouri Ozark Site,CC-BY-4.0,,,38.7441,-92.2,219.4,DBF,Cfa,12.11,986.0,2004.0,2021.0
+US-Mpj,Mountainair Pinyon-Juniper Woodland,CC-BY-4.0,,,34.4385,-106.2377,2196.0,WSA,Bsk,10.5,385.0,2008.0,2024.0
+US-MRf,Mary's River (Fir) site,Legacy,,,44.6465,-123.5515,263.0,ENF,Csb,10.24,1819.59,2006.0,2011.0
+US-MRM,Marsh Resource Meadowlands Mitigation Bank,Legacy,,,40.8164,-74.0435,1.0,WET,Cfa,13.5,1120.0,,
+US-MSR,Montana Sun River winter wheat,CC-BY-4.0,,,47.4758,-111.7207,1110.0,CRO,Bsk,7.0,374.0,2016.0,2016.0
+US-MtB,Mt Bigelow,CC-BY-4.0,,,32.416,-110.7256,2573.0,ENF,Dwb,9.3,790.0,2009.0,2021.0
+US-MVF,Montana Vaughn Fallow,CC-BY-4.0,,,47.6867,-111.4659,1128.0,CRO,Bsk,7.0,374.0,2017.0,2017.0
+US-MVW,Montana Vaughn Wheat,CC-BY-4.0,,,47.6729,-111.4889,1134.0,CRO,Bsk,7.0,374.0,2017.0,2017.0
+US-MWA,Jackson Agricultural Field,Legacy,,,42.2143,-84.8539,290.0,CRO,Dfa,9.11,800.0,2018.0,2021.0
+US-MWF,Kellogg Experimental Forest,Legacy,,,42.366,-85.3526,256.0,MF,Dfa,9.0,842.0,2018.0,2021.0
+US-MWS,Michigan State University Campus Site - Spartans,Legacy,,,42.7293,-84.4737,261.0,URB,Dfa,9.1,807.0,2017.0,2021.0
+US-MWU,Battle Creek Area Mathematics and Science Center,Legacy,,,42.3228,-85.1871,256.0,URB,Dfa,9.0,842.0,2018.0,2021.0
+US-MWW,Allegan Wetland,Legacy,,,42.6689,-86.0229,209.0,WET,Dfa,10.0,926.0,2018.0,2021.0
+US-Myb,Mayberry Wetland,CC-BY-4.0,,,38.0499,-121.765,-4.0,WET,Csa,15.9,338.0,2010.0,2023.0
+US-NC1,NC_Clearcut,CC-BY-4.0,,,35.8118,-76.7119,5.0,ENF,Cfa,16.6,1320.0,2005.0,2012.0
+US-NC2,NC_Loblolly Plantation,CC-BY-4.0,,,35.803,-76.6685,5.0,ENF,Cfa,16.6,1320.0,2005.0,2024.0
+US-NC3,NC_Clearcut#3,CC-BY-4.0,,,35.799,-76.656,5.0,ENF,Cfa,16.6,1320.0,2013.0,2021.0
+US-NC4,NC_AlligatorRiver,CC-BY-4.0,,,35.7879,-75.9038,1.0,WET,Cfa,16.6,1311.0,2009.0,2021.0
+US-Ne1,Mead - irrigated continuous maize site,CC-BY-4.0,,,41.1651,-96.4766,361.0,CRO,Dfa,10.07,790.37,2001.0,2024.0
+US-Ne2,Mead - irrigated maize-soybean rotation site,CC-BY-4.0,,,41.1649,-96.4701,362.0,CRO,Dfa,10.08,788.89,2001.0,2024.0
+US-Ne3,Mead - rainfed maize-soybean rotation site,CC-BY-4.0,,,41.1797,-96.4397,363.0,CRO,Dfa,10.11,783.68,2001.0,2024.0
+US-NGB,NGEE Arctic Barrow,CC-BY-4.0,,,71.28,-156.6092,5.273,SNO,ET,-11.27,171.0,2012.0,2023.0
+US-NGC,NGEE Arctic Council,CC-BY-4.0,,,64.8618,-163.7002,35.0,GRA,ET,,,2017.0,2023.0
+US-NMj,Northern Michigan Jack Pine Stand,CC-BY-4.0,,,46.6465,-88.5194,394.0,ENF,Dfb,4.73,854.01,2001.0,2003.0
+US-NP1,Business-As-Usual Management (mandanh5),CC-BY-4.0,,,46.7756,-100.951,593.0,CRO,Bsh,5.4,420.0,,
+US-NP2,ASPirational Management (mandani2),CC-BY-4.0,,,46.7613,-100.9257,590.0,CRO,Bsh,5.4,420.0,,
+US-NR1,Niwot Ridge Forest (LTER NWT1),CC-BY-4.0,,,40.0329,-105.5464,3050.0,ENF,Dfc,1.5,800.0,1998.0,2024.0
+US-NR2,Niwot Ridge Forest (USGS site),Legacy,,,40.0325,-105.5469,3030.0,ENF,Dfc,0.43,595.37,,
+US-NR3,Niwot Ridge Alpine (T-Van West),CC-BY-4.0,,,40.052,-105.5864,3504.0,GRA,ET,-2.2,884.0,2007.0,2023.0
+US-NR4,Niwot Ridge Alpine (T-Van East),CC-BY-4.0,,,40.052,-105.5859,3502.0,GRA,ET,-2.2,884.0,2007.0,2023.0
+US-Nrf,Nisqually reference,CC-BY-4.0,,,47.0935,-122.6927,8.0,WET,Csb,10.3,1269.0,,
+US-Nrs,Nisqually restoring,CC-BY-4.0,,,47.0936,-122.7079,8.0,WET,Csb,10.3,1269.0,,
+US-NSW,Newman Seasonal Wetlands,Legacy,,,37.3091,-121.0042,23.5,GRA,Csb,17.9,294.0,,
+US-OF1,Osceola Farm Rice Field - SW,CC-BY-4.0,,,35.7371,-90.0492,69.8,CRO,Cfa,16.3,1277.1,,
+US-OF2,Osceola Farm Rice Field - NW,CC-BY-4.0,,,35.7406,-90.0489,69.4,CRO,Cfa,16.3,1277.1,,
+US-Oho,Oak Openings,CC-BY-4.0,,,41.5545,-83.8438,230.0,DBF,Dfa,10.1,849.0,2004.0,2013.0
+US-OK1,ECB: Site A1 - North Field,Legacy,,,41.5348,-84.8068,274.93,CRO,Dfb,9.55,975.36,,
+US-OK2,ECB: Site A3 - South Field,Legacy,,,41.766,-111.855,274.015,CRO,Dfb,9.55,975.36,,
+US-ONA,Florida pine flatwoods,CC-BY-4.0,,,27.3836,-81.9509,25.0,GRA,Cfa,22.3,1268.0,2016.0,2022.0
+US-OPE,Optimizing Production Inputs for Economic and Environmental Enhancement (OPE3),Legacy,,,39.0293,-76.8457,40.0,CRO,Cfa,13.0,1192.0,2022.0,2022.0
+US-ORv,Olentangy River Wetland Research Park,CC-BY-4.0,,,40.0201,-83.0183,221.0,WET,Cfa,11.63,1499.1,2011.0,2016.0
+US-OWC,Old Woman Creek,CC-BY-4.0,,,41.3795,-82.5125,174.0,WET,Dfb,10.7,930.0,2015.0,2024.0
+US-PAS,"Florida, Paspalum notatum pasture",CC-BY-4.0,,,27.3944,-81.951,27.1,GRA,Cfa,22.3,1268.0,2021.0,2022.0
+US-PeA,5R Pecan Farm Above Canopy,CC-BY-4.0,,,31.4123,-106.0788,1092.0,DBF,Bwk,14.72,232.66,,
+US-PFa,Park Falls/WLEF,CC-BY-4.0,,,45.9459,-90.2723,470.0,MF,Dfb,4.33,823.0,1995.0,2024.0
+US-PFb,NW1 Pine-1 CHEESEHEAD 2019,CC-BY-4.0,,,45.972,-90.3232,474.0,ENF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFc,NW2 Aspen-1 CHEESEHEAD 2019,CC-BY-4.0,,,45.9677,-90.3088,473.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFd,NW3 Tussock-1 CHEESEHEAD 2019,CC-BY-4.0,,,45.9689,-90.301,473.0,WET,Dfb,4.33,823.0,2019.0,2019.0
+US-PFe,NW4 Lake-1 CHEESEHEAD 2019,CC-BY-4.0,,,45.9793,-90.3004,480.0,WAT,Dfb,4.33,823.0,2019.0,2019.0
+US-PFf,NW5 Grass-1 CHEESEHEAD 2019,CC-BY-4.0,,,45.9458,-90.2944,464.0,GRA,Dfb,4.33,823.0,2019.0,2019.0
+US-PFg,NE1 Pine-2 CHEESEHEAD 2019,CC-BY-4.0,,,45.9735,-90.2723,475.0,ENF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFh,NE2 Pine-3 CHEESEHEAD 2019,CC-BY-4.0,,,45.9557,-90.2406,463.0,ENF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFi,NE3 Hardwood-1 CHEESEHEAD 2019,CC-BY-4.0,,,45.9749,-90.2327,488.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFj,NE4 Maple-1 CHEESEHEAD 2019,CC-BY-4.0,,,45.9619,-90.227,484.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFk,SW1 Aspen-2 CHEESEHEAD 2019,CC-BY-4.0,,,45.9149,-90.3425,476.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFL,SW2 Aspen-3 CHEESEHEAD 2019,CC-BY-4.0,,,45.9409,-90.3177,464.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFm,SW3 Hardwood-2 CHEESEHEAD 2019,CC-BY-4.0,,,45.9207,-90.3099,484.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFn,SW4 Hardwood-3 CHEESEHEAD 2019,CC-BY-4.0,,,45.9392,-90.2823,478.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFo,SE1 Lake-2 CHEESEHEAD 2019,CC-BY-4.0,,,45.9229,-90.2728,476.0,WAT,Dfb,4.33,823.0,2019.0,2019.0
+US-PFp,SE2 Hardwood-4 CHEESEHEAD 2019,CC-BY-4.0,,,45.9365,-90.2641,497.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFq,SE3 Aspen-4 CHEESEHEAD 2019,CC-BY-4.0,,,45.9271,-90.2475,473.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFr,SE4 Tussock-2 CHEESEHEAD 2019,CC-BY-4.0,,,45.9245,-90.2475,490.0,WET,Dfb,4.33,823.0,2019.0,2019.0
+US-PFs,SE5 Aspen-5 CHEESEHEAD 2019,CC-BY-4.0,,,45.9381,-90.2382,489.0,DBF,Dfb,4.33,823.0,2019.0,2019.0
+US-PFt,SE6 Pine-4 CHEESEHEAD 2019,CC-BY-4.0,,,45.9197,-90.2288,466.0,ENF,Dfb,4.33,823.0,2019.0,2019.0
+US-PHM,Plum Island High Marsh,CC-BY-4.0,,,42.7423,-70.8301,1.4,WET,Dfa,7.2,1262.0,2013.0,2020.0
+US-PiU,Pine Upland,CC-BY-4.0,,,26.0004,-80.9261,3.04,WET,Cwa,23.1,1312.0,,
+US-PLM,Plum Island Low Marsh,CC-BY-4.0,,,42.7345,-70.8382,1.0,WET,Dfa,8.7,1262.0,,
+US-PLo,Plum Island Oligohaline Marsh,CC-BY-4.0,,,42.7496,-70.9157,1.4,WET,Dfa,8.7,1262.0,,
+US-Pnp,"Lake Mendota, Picnic Point Site",CC-BY-4.0,,,43.0896,-89.4158,260.0,WAT,Dfa,7.94,875.0,2016.0,2022.0
+US-Pon,Ponca City,Legacy,,,36.7667,-97.1333,310.0,CRO,Cfa,14.94,866.34,1997.0,2000.0
+US-Prr,Poker Flat Research Range Black Spruce Forest,CC-BY-4.0,,,65.1237,-147.4876,210.0,ENF,Dwc,-2.0,275.0,2010.0,2022.0
+US-PSH,USSL San Joaquin Valley Pistachio High,CC-BY-4.0,,,36.2347,-119.9247,70.0,DBF,Bsk,15.6,191.0,2016.0,2017.0
+US-PSL,USSL San Joaquin Valley Pistachio Low,CC-BY-4.0,,,36.8276,-120.1397,65.0,DBF,Bsk,16.7,311.0,2016.0,2017.0
+US-PVA,PVAMU Research Farm,Legacy,,,30.0958,-95.9695,86.5,CRO,Cfa,20.7,1118.0,,
+US-Px1,"Phoenix, Maryvale Neighborhood Site",CC-BY-4.0,,,33.4839,-112.1426,332.0,URB,Bwh,24.2,183.0,,
+US-Px2,"Phoenix, Encanto Golf Course",CC-BY-4.0,,,33.4785,-112.098,331.0,GRA,Bwh,24.2,203.0,,
+US-Px3,"Phoenix, Desert botanical garden site",CC-BY-4.0,,,33.4582,-111.9428,396.0,BSV,Bwh,24.0,172.0,,
+US-Px4,"Phoenix, Encanto Vehicle Lot",CC-BY-4.0,,,33.4734,-112.0985,331.0,URB,Bwh,24.2,203.0,,
+US-Px5,ASU Polytech Center for Bio-mediated and Bio-inspired Geotechnics (CBBG) Field Lab,CC-BY-4.0,,,33.3035,-111.6822,404.0,URB,Bwh,23.9,229.0,,
+US-RC1,Cook Agronomy Farm - No Till,CC-BY-4.0,,,46.7837,-117.0777,807.0,CRO,Dsb,9.0,550.0,2011.0,2016.0
+US-RC2,Cook Agronomy Farm - Conventional Till,CC-BY-4.0,,,46.7776,-117.0807,799.0,CRO,Dsb,9.0,550.0,2012.0,2016.0
+US-RC3,WSU Lind Dryland Research Station,CC-BY-4.0,,,46.991,-118.598,,CRO,Dsb,10.0,280.0,2011.0,2016.0
+US-RC4,Moscow Mountain on-farm site,CC-BY-4.0,,,46.758,-116.949,817.0,CRO,Dsb,9.0,680.0,2012.0,2016.0
+US-RC5,Moses Lake on-farm site,CC-BY-4.0,,,47.01,-119.248,349.0,CRO,Dsb,11.0,230.0,2013.0,2015.0
+US-RFE,RockyFlats - East site,Legacy,,,39.8771,-105.169,1725.0,GRA,Bsk,10.2,468.0,,
+US-RFW,RockyFlats - West site,Legacy,,,39.8751,-105.2184,1864.0,GRA,Bsk,10.2,468.0,,
+US-RGA,Arkansas Corn Farm,CC-BY-4.0,,,34.4159,-91.6733,61.0,CRO,Csa,16.7,1250.0,2021.0,2023.0
+US-RGB,Butte County Rice Farm,CC-BY-4.0,,,39.5782,-121.8579,33.0,CRO,Csa,16.0,737.0,2021.0,2023.0
+US-RGF,Stanislaus County Forage Farm,CC-BY-4.0,,,37.6995,-121.1369,16.0,CRO,Csa,17.2,31.0,2023.0,2024.0
+US-RGG,Glenn County Rice Farm,CC-BY-4.0,,,39.5944,-122.0253,36.0,CRO,Csa,16.0,610.0,,
+US-RGo,Glenn County Organic Rice Farm,CC-BY-4.0,,,39.6805,-122.0026,40.0,CRO,Csa,16.0,610.0,2021.0,2023.0
+US-RGW,Desha County Rice Farm,CC-BY-4.0,,,33.6216,-91.4306,41.0,CRO,Csa,16.7,1283.0,2022.0,2023.0
+US-Rls,RCEW Low Sagebrush,CC-BY-4.0,,,43.1439,-116.7356,1608.0,CSH,Bsh,8.4,333.0,2014.0,2023.0
+US-Rms,RCEW Mountain Big Sagebrush,CC-BY-4.0,,,43.0645,-116.7486,2111.0,CSH,Bsh,5.4,800.0,2014.0,2023.0
+US-Ro1,Rosemount- G21,CC-BY-4.0,,,44.7143,-93.0898,290.0,CRO,Dfa,6.4,879.0,2004.0,2016.0
+US-Ro2,Rosemount- C7,CC-BY-4.0,,,44.7288,-93.0888,292.0,CRO,Dfa,6.4,879.0,2008.0,2016.0
+US-Ro3,Rosemount- G19,CC-BY-4.0,,,44.7217,-93.0893,260.0,CRO,Dfa,6.4,879.0,2004.0,2007.0
+US-Ro4,Rosemount Prairie,CC-BY-4.0,,,44.6781,-93.0723,274.0,GRA,Dfa,6.4,879.0,2014.0,2024.0
+US-Ro5,Rosemount I18_South,CC-BY-4.0,,,44.691,-93.0576,283.0,CRO,Dfa,6.4,879.0,2017.0,2024.0
+US-Ro6,Rosemount I18_North,CC-BY-4.0,,,44.6946,-93.0578,282.0,CRO,Dfa,6.4,879.0,2017.0,2024.0
+US-Rpf,Poker Flat Research Range: Succession from fire scar to deciduous forest,CC-BY-4.0,,,65.1198,-147.429,497.0,DBF,Dwc,-0.8,450.0,2008.0,2023.0
+US-RRC,Rice Rivers Center Marsh,CC-BY-4.0,,,37.3344,-77.2065,0.1,WET,Dfa,15.4,1117.0,2022.0,2024.0
+US-Rwe,RCEW Reynolds Mountain East,CC-BY-4.0,,,43.0653,-116.7591,2098.0,CSH,Bsh,5.4,800.0,2003.0,2007.0
+US-Rwf,RCEW Upper Sheep Prescibed Fire,CC-BY-4.0,,,43.1207,-116.7231,1878.0,CSH,Bsh,6.5,505.0,2014.0,2023.0
+US-Rws,Reynolds Creek Wyoming big sagebrush,CC-BY-4.0,,,43.1675,-116.7132,1425.0,OSH,Bsk,8.9,290.0,2014.0,2023.0
+US-Sag,Sag River,CC-BY-4.0,,,69.5131,-148.5676,170.0,WET,Dfc,-8.0,121.0,1996.0,1996.0
+US-SB1,Sweet Briar Land-Atmosphere Research Station,Legacy,,,37.5734,-79.0848,242.0,ENF,Cfa,12.7,1016.0,,
+US-SB2,Sweet Briar Grass,Legacy,,,37.5607,-79.0883,240.0,CRO,Cfa,12.7,1016.0,,
+US-SB3,Sweet Briar Clearcut,Legacy,,,37.5752,-79.0872,253.0,BSV,Cfa,12.7,1016.0,,
+US-SCc,Southern California Climate Gradient - Desert Chaparral,Legacy,,,33.6094,-116.4505,1280.0,OSH,,,,,
+US-SCd,Southern California Climate Gradient - Sonoran Desert,Legacy,,,33.6518,-116.3721,275.0,BSV,,,,2006.0,2014.0
+US-SCf,Southern California Climate Gradient - Oak/Pine Forest,Legacy,,,33.8079,-116.7717,1770.0,MF,,,,2006.0,2015.0
+US-SCg,Southern California Climate Gradient - Grassland,Legacy,,,33.7365,-117.6946,465.0,GRA,,,,2006.0,2016.0
+US-SCs,Southern California Climate Gradient - Coastal Sage,Legacy,,,33.7343,-117.6959,470.0,OSH,,,,2006.0,2016.0
+US-SCw,Southern California Climate Gradient - Pinyon/Juniper Woodland,Legacy,,,33.6047,-116.4527,1281.0,OSH,,,,2006.0,2016.0
+US-SdH,Nebraska SandHills Dry Valley,CC-BY-4.0,,,42.0693,-101.4072,1081.0,GRA,Dsb,,,2004.0,2009.0
+US-SDU,South Denver Urban Tower,Legacy,,,39.6594,-105.0127,1618.0,URB,Bsk,10.04,406.0,,
+US-Seg,Sevilleta grassland,CC-BY-4.0,,,34.3623,-106.702,1596.0,GRA,Bsk,13.667,273.304,2007.0,2024.0
+US-Ses,Sevilleta shrubland,CC-BY-4.0,,,34.3349,-106.7442,1604.0,OSH,Bsk,13.722,275.082,2007.0,2024.0
+US-SFP,Sioux Falls Portable,Legacy,,,43.2408,-96.902,386.0,CRO,,,,2007.0,2009.0
+US-SHC,Sagehen Creek Field Station,Legacy,,,39.4315,-120.2398,1934.0,ENF,Dsb,5.3,827.0,,
+US-Shd,Shidler- Oklahoma,Legacy,,,36.9333,-96.6833,346.0,GRA,Cfa,14.32,897.91,1997.0,2000.0
+US-SHS,Secaucus High School Site,Legacy,,,40.8052,-74.0457,1.0,WET,Cfa,13.5,1120.0,,
+US-Si1,Staten Island Fallow,Legacy,,,38.1747,-121.5047,-3.8,CRO,Csb,15.0,328.1,,
+US-Si2,Staten Island Flooded,Legacy,,,38.1758,-121.5167,-3.8,CRO,Csb,15.0,328.1,,
+US-SJ1,San Joaquin (Freshwater Marsh Tower 1),Legacy,,,33.6623,-117.8514,3.0,WET,,,,,
+US-SJ2,San Joaquin (Freshwater Marsh Tower 2),Legacy,,,33.6596,-117.855,3.0,WET,,,,,
+US-Skr,Shark River Slough (Tower SRS-6) Everglades,Legacy,,,25.3629,-81.0776,0.0,EBF,Cwa,23.77,1259.0,2004.0,2023.0
+US-Slt,Silas Little- New Jersey,CC-BY-4.0,,,39.9138,-74.596,30.0,DBF,Dfa,11.04,1138.0,2005.0,2014.0
+US-SM1,Texas SmartFarm Project,Legacy,,,36.3934,-100.9537,897.0,CRO,Bsk,12.9,559.0,,
+US-Snd,Sherman Island,CC-BY-4.0,,,38.0366,-121.754,-5.0,GRA,Csa,15.6,358.0,2007.0,2014.0
+US-Sne,Sherman Island Restored Wetland,CC-BY-4.0,,,38.0369,-121.7547,-5.0,GRA,Csa,16.09,311.0,2016.0,2020.0
+US-Snf,Sherman Barn,CC-BY-4.0,,,38.0402,-121.7272,-4.0,GRA,Csa,,,2018.0,2020.0
+US-SO2,Sky Oaks- Old Stand,Legacy,,,33.3738,-116.6228,1394.0,CSH,Csa,13.63,553.0,1997.0,2006.0
+US-SO3,Sky Oaks- Young Stand,Legacy,,,33.3771,-116.6226,1429.0,CSH,Csa,13.29,576.0,1997.0,2006.0
+US-SO4,Sky Oaks- New Stand,Legacy,,,33.3845,-116.6406,1429.0,CSH,Csa,,,2004.0,2006.0
+US-SP1,Slashpine-Austin Cary- 65yrs nat regen,CC-BY-4.0,,,29.7381,-82.2188,50.0,ENF,Cfa,20.06,1309.77,2000.0,2020.0
+US-SP2,"Slashpine-Mize-clearcut-3yr,regen",CC-BY-4.0,,,29.7648,-82.2448,50.0,ENF,Cfa,20.07,1314.41,1999.0,2008.0
+US-SP3,Slashpine-Donaldson-mid-rot- 12yrs,CC-BY-4.0,,,29.7548,-82.1633,50.0,ENF,Cfa,20.25,1312.35,1999.0,2010.0
+US-SP4,Slashpine-Rayonier-mid-rot- 12yrs,CC-BY-4.0,,,29.8028,-82.2031,47.0,ENF,Cfa,20.0,1319.63,1998.0,1998.0
+US-SRC,Santa Rita Creosote,CC-BY-4.0,,,31.9083,-110.8395,950.0,OSH,Bwh,22.0,330.0,2008.0,2014.0
+US-SRG,Santa Rita Grassland,CC-BY-4.0,,,31.7894,-110.8277,1291.0,GRA,Bsk,17.0,420.0,2008.0,2024.0
+US-SRM,Santa Rita Mesquite,CC-BY-4.0,,,31.8214,-110.8661,1120.0,WSA,Bsk,17.92,380.0,2004.0,2024.0
+US-Srr,Suisun marsh - Rush Ranch,CC-BY-4.0,,,38.2006,-122.0264,8.0,WET,Csa,15.1,326.0,2014.0,2017.0
+US-SRS,Santa Rita Savanna,CC-BY-4.0,,,31.8173,-110.8508,1169.0,WSA,Bsk,19.4,388.0,2011.0,2018.0
+US-SSH,Susquehanna Shale Hills Critical Zone Observatory,CC-BY-4.0,,,40.6658,-77.9041,310.0,DBF,Dfb,9.5,1050.0,2016.0,2021.0
+US-Sta,Saratoga,CC-BY-4.0,,,41.3966,-106.8024,2069.0,OSH,Bsh,5.1,,2005.0,2009.0
+US-StJ,St Jones Reserve,CC-BY-4.0,,,39.0882,-75.4372,6.7,WET,Cfa,13.5,1121.0,2014.0,2017.0
+US-StS,Strawberry Swamp,CC-BY-4.0,,,33.3302,-79.2492,0.0,WET,Cfa,18.1,1300.0,,
+US-SuM,Maui Sugarcane Middle,CC-BY-4.0,,,20.7981,-156.454,21.0,CRO,Aw,24.1,287.0,2013.0,2014.0
+US-SuS,Maui Sugarcane Lee/Sheltered,CC-BY-4.0,,,20.7847,-156.4039,203.0,CRO,Aw,24.4,334.0,2011.0,2014.0
+US-SuW,Maui Sugarcane Windy,CC-BY-4.0,,,20.8246,-156.4913,44.0,CRO,Aw,24.4,366.0,2011.0,2013.0
+US-SVC,Savannah River Control,CC-BY-4.0,,,33.3504,-81.658,94.0,WSA,Cfa,17.94,1183.89,,
+US-SVP,Savannah River Prescribe Fire,CC-BY-4.0,,,33.3616,-81.673,103.0,WSA,Cfa,17.94,1183.89,,
+US-Syv,Sylvania Wilderness Area,CC-BY-4.0,,,46.242,-89.3477,540.0,MF,Dfb,3.81,826.0,2001.0,2024.0
+US-SZ1,"St. John, WA On-farm site Zone 1",Legacy,,,47.1245,-117.5306,657.0,CRO,Csb,9.5,437.4,,
+US-SZ2,"St. John, WA On-farm site Zone 2",Legacy,,,47.1226,-117.5271,664.0,CRO,Csb,9.5,437.4,,
+US-SZ3,"St. John, WA On-farm site Zone 3",Legacy,,,47.1261,-117.5267,687.0,CRO,Csb,9.5,437.4,,
+US-TaS,Taylor Slough/Panhandle,CC-BY-4.0,,,25.1908,-80.6391,3.0,WET,Cwa,23.7,986.8,2016.0,2023.0
+US-TCS,Tall Cypress Swamp,CC-BY-4.0,,,25.8221,-81.1017,1.2,WET,Cfa,23.6,1312.0,,
+US-TEF,Tenderfoot Creek Experimental Forest,CC-BY-4.0,,,46.9522,-110.8851,2280.0,ENF,Dfc,0.0,880.0,2010.0,2012.0
+US-TFF,Thompson Farm Forest,Legacy,,,43.1084,-70.9523,23.3,MF,Dfb,8.9,1170.0,,
+US-TLR,Timberlake Observatory for Wetland Restoration (TOWeR),CC-BY-4.0,,,35.9168,-76.1463,1.0,MF,Cfa,19.0,469.4,,
+US-Ton,Tonzi Ranch,CC-BY-4.0,,,38.4309,-120.966,177.0,WSA,Csa,15.8,559.0,2001.0,2024.0
+US-TrB,Trout Bog,CC-BY-4.0,,,46.0412,-89.6862,499.0,WAT,Dfb,3.8,787.0,2020.0,2020.0
+US-TrS,Trout Lake Area South Sparkling Bog,CC-BY-4.0,,,46.0034,-89.7053,495.0,WAT,Dfb,3.8,787.0,2020.0,2020.0
+US-Tur,Turner Ranch,CC-BY-4.0,,,45.5571,-111.2286,1530.0,GRA,Dfb,6.67,670.0,2017.0,2018.0
+US-Tw1,Twitchell Wetland West Pond,CC-BY-4.0,,,38.1074,-121.6469,-5.0,WET,Csa,15.5,421.0,2011.0,2023.0
+US-Tw2,Twitchell Corn,CC-BY-4.0,,,38.0969,-121.6365,-5.0,CRO,Csa,15.5,421.0,2012.0,2013.0
+US-Tw3,Twitchell Alfalfa,CC-BY-4.0,,,38.1152,-121.6469,-4.0,CRO,Csa,15.6,421.0,2013.0,2018.0
+US-Tw4,Twitchell East End Wetland,CC-BY-4.0,,,38.1027,-121.6413,-5.0,WET,Csa,15.6,421.0,2013.0,2023.0
+US-Tw5,East Pond Wetland,CC-BY-4.0,,,38.1072,-121.6426,-5.0,WET,Csa,15.5,421.0,2018.0,2020.0
+US-Twt,Twitchell Island,CC-BY-4.0,,,38.1087,-121.6531,-7.0,CRO,Csa,15.6,421.0,2009.0,2017.0
+US-Tx1,Stiles Farm Prairie,Legacy,,,30.6176,-97.2938,157.0,GRA,Cfa,25.6,889.0,,
+US-Tx2,Riesel Farm Native Prairie,Legacy,,,31.4802,-96.8827,162.0,GRA,Cfa,18.95,914.0,,
+US-Tx3,Riesel Farm Aspirational Agriculture,Legacy,,,31.4777,-96.8883,167.0,CRO,Cfa,18.95,914.0,,
+US-Tx4,Riesel Farm Traditional Agriculture,Legacy,,,31.4693,-96.8865,173.0,CRO,Cfa,18.95,914.0,,
+US-Tx5,Texas A&M University Farm,Legacy,,,30.5328,-96.4252,68.0,CVM,Cfa,19.95,991.0,,
+US-Tx6,La Copita Grassland - Savanna,Legacy,,,27.6666,-98.2089,82.0,GRA,Cfa,22.2,716.0,,
+US-Tx7,La Copita Shrubland - Savanna,Legacy,,,27.665,-98.2007,82.0,CSH,Cfa,22.2,716.0,,
+US-Tx8,Danciger Lowland Hardwood Forest,Legacy,,,29.1659,-95.829,16.0,DBF,Cfa,20.6,1143.0,,
+US-Tx9,Sargent Unit Salt Marsh,Legacy,,,28.7805,-95.6144,0.0,WET,Cfa,21.15,1245.0,,
+US-Uaf,"University of Alaska, Fairbanks",CC-BY-4.0,,,64.8663,-147.8555,155.0,ENF,Dwc,-2.9,263.0,2003.0,2023.0
+US-UC1,LTAR UCB (Upper Chesapeake Bay) EC1,CC-BY-4.0,,,40.7536,-78.0056,390.0,CVM,Dfb,10.1,1006.35,2019.0,2023.0
+US-UC2,LTAR UCB (Upper Chesapeake Bay) EC2,CC-BY-4.0,,,40.7559,-77.9998,396.0,CVM,Dfb,10.1,1006.35,2019.0,2023.0
+US-UG1,East River Riparian,CC-BY-4.0,,,38.923,-106.9524,2755.0,OSH,Dsc,8.0,750.0,,
+US-UiA,University of Illinois Switchgrass,CC-BY-4.0,,,40.0646,-88.1961,224.0,CRO,Dfa,10.9,1051.0,2008.0,2016.0
+US-UiB,University of Illinois Miscanthus,CC-BY-4.0,,,40.0628,-88.1984,224.0,CRO,Dfa,10.9,1051.0,2008.0,2021.0
+US-UiC,University of Illinois Maize-Soy,CC-BY-4.0,,,40.0628,-88.1961,224.0,CRO,Dfa,10.9,1051.0,2008.0,2016.0
+US-UiD,University of Illinois Restored Native Prairie,CC-BY-4.0,,,40.0646,-88.1985,224.0,GRA,,10.9,1051.0,2008.0,2016.0
+US-UiE,University of Illinois Sorghum-Soy,CC-BY-4.0,,,40.0629,-88.2033,217.0,CRO,Dfa,11.2,1021.0,,
+US-UiF,University of Illinois Miscanthus 2,CC-BY-4.0,,,40.0665,-88.2015,220.0,CRO,Dfa,11.2,1021.0,,
+US-UiG,University of Illinois Maize-Soy 2,CC-BY-4.0,,,40.0629,-88.2009,220.0,CRO,Dfa,11.2,1021.0,,
+US-ULM,ULM Flux Tower,Legacy,,,32.457,-91.9743,20.0,DBF,Cfa,18.77,1356.36,,
+US-UM3,Douglas Lake,CC-BY-4.0,,,45.5686,-84.6707,234.0,WAT,Dfb,5.83,803.0,2013.0,2014.0
+US-UMB,Univ. of Mich. Biological Station,CC-BY-4.0,,,45.5598,-84.7138,234.0,DBF,Dfb,5.83,803.0,2000.0,2024.0
+US-UMd,UMBS Disturbance,CC-BY-4.0,,,45.5625,-84.6975,239.0,DBF,Dfb,5.83,803.0,2007.0,2024.0
+US-Upa,Upad,Legacy,,,70.2815,-148.8848,5.0,WET,Dsc,-13.57,123.68,1994.0,1994.0
+US-UTB,UFLUX Bonneville Salt Flats,CC-BY-4.0,,,40.7848,-113.8299,1287.0,BSV,Bwk,10.6,138.59,2021.0,2024.0
+US-UTD,UFLUX Dugout Ranch,CC-BY-4.0,,,38.1038,-109.5952,1580.0,CRO,Bwk,12.0,215.65,,
+US-UTE,UFLUX Escalante,CC-BY-4.0,,,37.7353,-111.5708,1729.3,CRO,Bsk,10.83,258.318,,
+US-UTJ,UFLUX Bluff,CC-BY-4.0,,,37.2818,-109.5348,1281.0,CRO,Bsk,12.6,196.85,,
+US-UTM,UFLUX Matheson,CC-BY-4.0,,,38.5879,-109.5775,1207.0,WET,Bsk,13.0,240.03,2022.0,2024.0
+US-UTN,UFLUX Nephi,CC-BY-4.0,,,39.6896,-111.8814,1529.0,CRO,Dfa,10.2,396.0,2023.0,2023.0
+US-UTP,UFLUX Great Salt Lake Phragmites,CC-BY-4.0,,,41.0604,-112.1013,1281.0,WET,Bwk,11.2,419.0,,
+US-UTV,UFLUX Desert View,CC-BY-4.0,,,40.1266,-109.9546,1539.0,CRO,Bsk,16.7,177.0,,
+US-UTW,UFLUX Wellington,CC-BY-4.0,,,39.4453,-110.7288,1682.0,CRO,Dfa,9.6,225.22,2021.0,2024.0
+US-UUC,University of Utah Compass Minerals Flux,CC-BY-4.0,,,41.2961,-112.3074,1300.0,WAT,Dwa,11.0,420.0,,
+US-UUP,University of Utah Playa Flux,CC-BY-4.0,,,41.0303,-112.1175,1278.0,BSV,Dsa,11.0,420.0,,
+US-Var,Vaira Ranch- Ione,CC-BY-4.0,,,38.4133,-120.9508,129.0,GRA,Csa,15.8,559.0,2000.0,2024.0
+US-Vcm,Valles Caldera Mixed Conifer,CC-BY-4.0,,,35.8884,-106.5321,3030.0,ENF,Dfb,6.4,646.0,2007.0,2023.0
+US-Vcp,Valles Caldera Ponderosa Pine,CC-BY-4.0,,,35.8642,-106.5967,2500.0,ENF,Dfb,9.8,550.0,2007.0,2024.0
+US-Vcs,Valles Caldera Sulphur Springs Mixed Conifer,CC-BY-4.0,,,35.9193,-106.6142,2752.0,ENF,Dfb,4.6,550.93,2016.0,2024.0
+US-VFP,Virginia Coast Reserve Fowling Point,Legacy,,,37.4111,-75.8333,1.0,WET,Cfa,14.05,1023.3,,
+US-WBW,Walker Branch Watershed,Legacy,,,35.9588,-84.2874,283.0,DBF,Cfa,13.71,1372.05,1995.0,2007.0
+US-WCr,Willow Creek,CC-BY-4.0,,,45.8059,-90.0799,520.0,DBF,Dfb,4.02,787.0,1998.0,2024.0
+US-Wdn,Walden,Legacy,,,40.7838,-106.2618,2469.0,OSH,Bsh,3.3,,2006.0,2008.0
+US-WEP,West Edge Parking Lot,Legacy,,,43.1421,-70.9543,27.0,URB,Dfb,8.9,1170.0,,
+US-Wgr,Willamette Grass,Legacy,,,45.1129,-122.656,52.0,CRO,Csb,11.58,1194.0,2015.0,2015.0
+US-Whs,Walnut Gulch Lucky Hills Shrub,CC-BY-4.0,,,31.7438,-110.0522,1370.0,OSH,Bsk,17.6,320.0,2007.0,2024.0
+US-Wi0,Young red pine (YRP),CC-BY-4.0,,,46.6188,-91.0814,349.0,ENF,Dfb,,,2002.0,2002.0
+US-Wi1,Intermediate hardwood (IHW),CC-BY-4.0,,,46.7305,-91.2329,352.0,DBF,Dfb,,,2003.0,2003.0
+US-Wi2,Intermediate red pine (IRP),CC-BY-4.0,,,46.6869,-91.1528,395.0,ENF,Dfb,,,2003.0,2003.0
+US-Wi3,Mature hardwood (MHW),CC-BY-4.0,,,46.6347,-91.0987,411.0,DBF,Dfb,,,2002.0,2004.0
+US-Wi4,Mature red pine (MRP),CC-BY-4.0,,,46.7393,-91.1663,352.0,ENF,Dfb,,,2002.0,2005.0
+US-Wi5,Mixed young jack pine (MYJP),CC-BY-4.0,,,46.6531,-91.0858,353.0,ENF,Dfb,,,2004.0,2004.0
+US-Wi6,Pine barrens #1 (PB1),CC-BY-4.0,,,46.6249,-91.2982,371.0,OSH,Dfb,,,2002.0,2003.0
+US-Wi7,Red pine clearcut (RPCC),CC-BY-4.0,,,46.6491,-91.0693,335.0,OSH,Dfb,,,2005.0,2005.0
+US-Wi8,Young hardwood clearcut (YHW),CC-BY-4.0,,,46.7223,-91.2524,348.0,DBF,Dfb,,,2002.0,2002.0
+US-Wi9,Young Jack pine (YJP),CC-BY-4.0,,,46.7385,-91.0746,350.0,ENF,Dfb,,,2004.0,2005.0
+US-Wjs,Willard Juniper Savannah,CC-BY-4.0,,,34.4255,-105.8615,1931.0,SAV,Bsk,15.2,361.0,2007.0,2024.0
+US-Wkg,Walnut Gulch Kendall Grasslands,CC-BY-4.0,,,31.7365,-109.9419,1531.0,GRA,Bsk,15.64,407.0,2004.0,2024.0
+US-Wlr,Walnut River Watershed (Smileyburg),CC-BY-4.0,,,37.5208,-96.855,408.0,GRA,Cfa,13.52,881.0,2001.0,2004.0
+US-Wpp,Willamette Poplar,Legacy,,,44.1369,-123.1824,111.0,DBF,Csb,11.39,1293.0,2015.0,2015.0
+US-WPT,Winous Point North Marsh,CC-BY-4.0,,,41.4646,-82.9962,175.0,WET,Dfa,10.1,849.0,2011.0,2013.0
+US-Wrc,Wind River Crane Site,CC-BY-4.0,,,45.8205,-121.9519,371.0,ENF,Csb,8.8,2452.0,1998.0,2015.0
+US-WT1,"Kress, TX no-till cotton and grain sorghum production",CC-BY-4.0,,,34.3674,-101.8154,1058.0,CRO,Bsk,14.4,482.0,2023.0,2023.0
+US-Wwt,Willamette Wheat,Legacy,,,45.1089,-122.6664,52.0,CRO,Csb,11.58,1194.0,2014.0,2015.0
+US-xAB,NEON Abby Road (ABBY),CC-BY-4.0,,,45.7624,-122.3303,363.0,ENF,Csb,10.0,2450.59,2017.0,2023.0
+US-xAE,NEON Klemme Range Research Station (OAES),CC-BY-4.0,,,35.4106,-99.0588,516.0,GRA,Cfa,15.5,778.85,2017.0,2023.0
+US-xBA,NEON Barrow Environmental Observatory (BARR),CC-BY-4.0,,,71.2824,-156.6194,6.0,WET,ET,-12.0,110.0,2017.0,2023.0
+US-xBL,NEON Blandy Experimental Farm (BLAN),CC-BY-4.0,,,39.0603,-78.0716,183.0,DBF,Cfa,12.1,982.55,2017.0,2023.0
+US-xBN,NEON Caribou Creek - Poker Flats Watershed (BONA),CC-BY-4.0,,,65.154,-147.5026,263.0,ENF,Dwc,-2.0,275.0,2017.0,2023.0
+US-xBR,NEON Bartlett Experimental Forest (BART),CC-BY-4.0,,,44.0639,-71.2873,232.0,DBF,Dfb,5.6,1246.0,2017.0,2023.0
+US-xCL,NEON LBJ National Grassland (CLBJ),CC-BY-4.0,,,33.4012,-97.57,259.0,GRA,Cfa,17.5,925.61,2017.0,2023.0
+US-xCP,NEON Central Plains Experimental Range (CPER),CC-BY-4.0,,,40.8155,-104.7456,1654.0,GRA,Bsk,8.6,320.0,2016.0,2023.0
+US-xDC,NEON Dakota Coteau Field School (DCFS),CC-BY-4.0,,,47.1617,-99.1066,559.0,GRA,Dfb,4.9,489.74,2017.0,2023.0
+US-xDJ,NEON Delta Junction (DEJU),CC-BY-4.0,,,63.8811,-145.7514,529.0,ENF,Dfc,-2.0,300.0,2017.0,2023.0
+US-xDL,NEON Dead Lake (DELA),CC-BY-4.0,,,32.5417,-87.8039,22.0,MF,Cfa,17.6,1372.0,2017.0,2023.0
+US-xDS,NEON Disney Wilderness Preserve (DSNY),CC-BY-4.0,,,28.125,-81.4362,15.0,CVM,Cfa,22.5,1216.09,2017.0,2023.0
+US-xGR,"NEON Great Smoky Mountains National Park, Twin Creeks (GRSM)",CC-BY-4.0,,,35.689,-83.5019,579.0,DBF,Cfa,13.1,1375.0,2017.0,2023.0
+US-xHA,NEON Harvard Forest (HARV),CC-BY-4.0,,,42.5369,-72.1727,351.0,DBF,Dfb,6.62,1071.0,2017.0,2023.0
+US-xHE,NEON Healy (HEAL),CC-BY-4.0,,,63.8757,-149.2133,705.0,OSH,ET,-4.0,320.0,2017.0,2023.0
+US-xJE,NEON Jones Ecological Research Center (JERC),CC-BY-4.0,,,31.1948,-84.4686,44.0,ENF,Cfa,19.2,1307.97,2017.0,2023.0
+US-xJR,NEON Jornada LTER (JORN),CC-BY-4.0,,,32.5907,-106.8425,1329.0,OSH,Bsk,15.7,271.33,2017.0,2023.0
+US-xKA,NEON Konza Prairie Biological Station - Relocatable (KONA),CC-BY-4.0,,,39.1104,-96.6129,1329.0,GRA,Cfa,12.7,850.63,2017.0,2023.0
+US-xKZ,NEON Konza Prairie Biological Station (KONZ),CC-BY-4.0,,,39.1008,-96.5631,381.0,GRA,Cfa,12.4,870.38,2017.0,2023.0
+US-xLE,NEON Lenoir Landing (LENO),CC-BY-4.0,,,31.8539,-88.1612,20.0,DBF,Cfa,18.1,1386.24,2017.0,2023.0
+US-xMB,NEON Moab (MOAB),CC-BY-4.0,,,38.2483,-109.3883,1767.0,OSH,Bsk,10.1,319.46,2017.0,2023.0
+US-xML,NEON Mountain Lake Biological Station (MLBS),CC-BY-4.0,,,37.3783,-80.5248,1126.0,DBF,Dfb,8.8,1227.82,2017.0,2023.0
+US-xNG,NEON Northern Great Plains Research Laboratory (NOGP),CC-BY-4.0,,,46.7697,-100.9154,578.0,GRA,Dfb,5.9,456.51,2017.0,2023.0
+US-xNQ,NEON Onaqui-Ault (ONAQ),CC-BY-4.0,,,40.1776,-112.4524,1685.0,OSH,Dfb,9.0,288.31,2017.0,2023.0
+US-xNW,NEON Niwot Ridge Mountain Research Station (NIWO),CC-BY-4.0,,,40.0543,-105.5824,3513.0,ENF,Dfc,0.3,1004.54,2017.0,2023.0
+US-xPU,NEON Pu'u Maka'ala Natural Area Reserve (PUUM),CC-BY-4.0,,,19.5531,-155.3173,1685.0,EBF,Cfb,13.0,2685.0,2019.0,2023.0
+US-xRM,"NEON Rocky Mountain National Park, CASTNET (RMNP)",CC-BY-4.0,,,40.2759,-105.5459,2743.0,ENF,Dfc,2.9,730.59,2017.0,2023.0
+US-xRN,NEON Oak Ridge National Lab (ORNL),CC-BY-4.0,,,35.9641,-84.2826,334.0,DBF,Cfa,14.4,1340.32,2017.0,2023.0
+US-xSB,NEON Ordway-Swisher Biological Station (OSBS),CC-BY-4.0,,,29.6893,-81.9934,45.0,ENF,Cfa,20.9,1302.09,2017.0,2023.0
+US-xSC,NEON Smithsonian Conservation Biology Institute (SCBI),CC-BY-4.0,,,38.8929,-78.1395,361.0,DBF,Cfa,11.6,1125.5,2016.0,2023.0
+US-xSE,NEON Smithsonian Environmental Research Center (SERC),CC-BY-4.0,,,38.8901,-76.56,15.0,DBF,Cfa,13.6,1074.65,2017.0,2023.0
+US-xSJ,NEON San Joaquin Experimental Range (SJER),CC-BY-4.0,,,37.1088,-119.7323,368.0,SAV,Csa,16.4,539.62,2018.0,2023.0
+US-xSL,"NEON North Sterling, CO (STER)",CC-BY-4.0,,,40.4619,-103.0293,1364.0,CRO,Bsk,9.7,432.67,2017.0,2023.0
+US-xSP,NEON Soaproot Saddle (SOAP),CC-BY-4.0,,,37.0334,-119.2622,1160.0,ENF,Csa,13.4,900.35,2017.0,2023.0
+US-xSR,NEON Santa Rita Experimental Range (SRER),CC-BY-4.0,,,31.9107,-110.8355,983.0,OSH,Bsk,19.3,346.0,2017.0,2023.0
+US-xST,NEON Steigerwaldt Land Services (STEI),CC-BY-4.0,,,45.5089,-89.5864,481.0,DBF,Dfb,4.8,797.56,2017.0,2023.0
+US-xTA,NEON Talladega National Forest (TALL),CC-BY-4.0,,,32.9505,-87.3933,135.0,ENF,Cfa,17.2,1382.68,2017.0,2023.0
+US-xTE,NEON Lower Teakettle (TEAK),CC-BY-4.0,,,37.0058,-119.006,2147.0,ENF,Csa,8.0,1222.5,2018.0,2023.0
+US-xTL,NEON Toolik (TOOL),CC-BY-4.0,,,68.6611,-149.3705,843.0,WET,ET,-4.0,331.0,2017.0,2023.0
+US-xTR,NEON Treehaven (TREE),CC-BY-4.0,,,45.4937,-89.5857,472.0,DBF,Dfb,4.8,797.56,2017.0,2023.0
+US-xUK,NEON The University of Kansas Field Station (UKFS),CC-BY-4.0,,,39.0404,-95.1921,335.0,DBF,Cfa,12.7,990.63,2017.0,2023.0
+US-xUN,NEON University of Notre Dame Environmental Research Center (UNDE),CC-BY-4.0,,,46.2339,-89.5373,518.0,MF,Dfb,4.3,802.3,2017.0,2023.0
+US-xWD,NEON Woodworth (WOOD),CC-BY-4.0,,,47.1282,-99.2414,579.0,GRA,Dfb,4.9,493.76,2017.0,2023.0
+US-xWR,NEON Wind River Experimental Forest (WREF),CC-BY-4.0,,,45.8205,-121.9519,407.0,ENF,Csb,9.2,2225.01,2018.0,2023.0
+US-xYE,NEON Yellowstone Northern Range (Frog Rock) (YELL),CC-BY-4.0,,,44.9535,-110.5391,2116.0,ENF,Dfc,3.4,493.44,2018.0,2023.0
+US-YK1,"Yukon-Kuskokwim Delta, Izaviknek-Kingaglia uplands, Burned 2015",CC-BY-4.0,,,61.2723,-163.2228,15.0,WET,,,,2019.0,2022.0
+US-YK2,"Yukon-Kuskokwim Delta, Izaviknek-Kingaglia uplands, Unburned",CC-BY-4.0,,,61.2548,-163.259,15.0,WET,,,,2019.0,2022.0
+US-Ylw,Yellow Cab urban,Legacy,,,29.7894,-95.3536,14.0,URB,Cfa,20.0,1260.0,,
+US-YNS,North Star Yedoma,Legacy,,,64.8939,-147.6374,186.9,GRA,Dfc,-2.5,275.0,2021.0,2023.0
+US-ZF1,Zumwalt Farm Treatment,CC-BY-4.0,,,40.7976,-87.5355,202.0,CRO,Dfa,9.0,914.0,,
+US-ZF2,Zumwalt Farm Control,CC-BY-4.0,,,40.7939,-87.5355,202.0,CRO,Dfa,9.0,914.0,,
