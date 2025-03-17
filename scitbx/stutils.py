@@ -633,3 +633,22 @@ def calculate_R2(y_true, y_pred):
     # R^2 calculation
     R2 = 1 - (ss_res / ss_tot)
     return R2
+
+def get_github_file(url, target_directory):
+    import requests, zipfile, io
+    '''
+    Get zipped file from github and extract to target directory, while delete the zip file.
+    The URL needs to point to the raw file
+    Example url: url = "https://github.com/soonyenju/scitbx/raw/refs/heads/master/scitbx/data/Ameriflux_meta.zip"
+    '''
+    try:
+        # Download the file
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an error for bad responses
+        # Extract ZIP contents
+        with zipfile.ZipFile(io.BytesIO(response.content), "r") as zip_ref:
+            zip_ref.extractall(target_directory)  # Extract to a folder
+        return 'success'
+
+    except Exception as e:
+        return e
