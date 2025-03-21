@@ -19,33 +19,33 @@ def install(package):
 
 try:
     import rasterio as rio
-except Exception as e:
-    print(e)
+except ModuleNotFoundError as e:
+    print(f"{e}, so `scitbx` is installing it for you...")
     install('rasterio')
     import rasterio as rio
 try:
     import geopandas as gpd
-except Exception as e:
-    print(e)
+except ModuleNotFoundError as e:
+    print(f"{e}, so `scitbx` is installing it for you...")
     install('geopandas')
     import geopandas as gpd
 try:
     import xarray as xr
-except Exception as e:
-    print(e)
+except ModuleNotFoundError as e:
+    print(f"{e}, so `scitbx` is installing it for you...")
     install('xarray')
     install('netCDF4')
     import xarray as xr
 try:
     import rioxarray as rxr
-except Exception as e:
-    print(e)
+except ModuleNotFoundError as e:
+    print(f"{e}, so `scitbx` is installing it for you...")
     install('rioxarray')
     import rioxarray as rxr
 try:
     import seaborn as sns
-except Exception as e:
-    print(e)
+except ModuleNotFoundError as e:
+    print(f"{e}, so `scitbx` is installing it for you...")
     install('seaborn')
     import seaborn as sns
 import pip
