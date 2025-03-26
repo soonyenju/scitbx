@@ -652,3 +652,9 @@ def get_github_file(url, target_directory):
 
     except Exception as e:
         return e
+
+def unzip(zip_path, extract_path):
+    import zipfile
+    # Open and extract the ZIP file
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(extract_path)
