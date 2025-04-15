@@ -6,7 +6,7 @@ from scipy import stats
 
 def setup_canvas(
         nx, ny, 
-        figsize = (10, 6), sharex = True, sharey = True, 
+        figsize = (8, 5), sharex = True, sharey = True, 
         fontsize = 10, labelsize= 10, 
         markersize = 2, flatten = True, wspace = 0, hspace = 0, panels = False
     ):
