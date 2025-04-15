@@ -77,9 +77,18 @@ def sort_list_by(lista, listb):
     lista = [i for _, i in sorted(zip(listb, lista))]
     return lista
 
-def add_text(ax, x, y, text, color = 'k', horizontalalignment = 'center', verticalalignment = 'center', if_background = False, bg_facecolor = 'white', bg_alpha = 0.2, bg_edgecolor = 'None'):
-    t = ax.text(x, y, text, transform = ax.transAxes, color = color, horizontalalignment = horizontalalignment, verticalalignment = verticalalignment)
+def add_text(
+        ax, x, y, text, 
+        fontsize = None, color = 'k', 
+        horizontalalignment = 'left', verticalalignment = 'center', 
+        if_background = False, bg_facecolor = 'white', bg_alpha = 0.2, bg_edgecolor = 'None'
+    ):
+    t = ax.text(
+        x, y, text, 
+        transform = ax.transAxes, color = color, fontsize = fontsize, 
+        horizontalalignment = horizontalalignment, verticalalignment = verticalalignment)
     if if_background: t.set_bbox(dict(facecolor = bg_facecolor, alpha = bg_alpha, edgecolor = bg_edgecolor))
+    return t
 
 def add_line(ax, loc, linestyle = '--', color = 'k', alpha = 0.5, direction = 'h', bmin = 0, bmax = 1):
     if direction.lower() in ['h', 'horizontal']:
