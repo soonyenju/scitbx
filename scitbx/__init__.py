@@ -1,6 +1,6 @@
 from . import easy_import
 from . import google
-from . import stutils
+from . import utils
 from . import sciplt
 from . import bigleaf
 from . import commons
@@ -12,7 +12,7 @@ from . import commons
 __all__ = [
     "easy_import",
     "google",
-    "stutils",
+    "utils",
     "sciplt",
     "bigleaf",
     "commons",
