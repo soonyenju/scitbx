@@ -26,7 +26,7 @@ from tqdm import tqdm
 # Local application imports
 from .commons import *
 from .sciplt import *
-from .stutils import *
+from .utils import *
 
 
 def install(package):
