@@ -27,6 +27,7 @@ from tqdm import tqdm
 from .commons import *
 from .sciplt import *
 from .utils import *
+from .sciplt import *
 
 
 def install(package):
