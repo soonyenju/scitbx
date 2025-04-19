@@ -32,6 +32,10 @@ from .utils import *
 def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
+def install_github(package_url):
+    # Install using pip
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package_url])
+
 try:
     import rasterio as rio
 except ModuleNotFoundError as e:
@@ -64,7 +68,8 @@ except ModuleNotFoundError as e:
     install('seaborn')
     import seaborn as sns
 
-install('scigeo')
+# install('scigeo')
+install_github("git+https://github.com/soonyenju/scigeo.git")
 install('scieco')
 install('sciml')
 from sciml import pipelines
