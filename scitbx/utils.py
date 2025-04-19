@@ -175,7 +175,6 @@ def df_replace_dict(df, column, dict_):
     df[column] = df[column].map(dict_)
     return df
 
-
 def get_quantile_index(s, q):
     # OR: s[s == s.quantile(.5, interpolation='lower')]
     return (s.sort_values()[::-1] <= s.quantile(.5)).idxmax()
