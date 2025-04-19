@@ -69,7 +69,7 @@ except ModuleNotFoundError as e:
     import seaborn as sns
 
 # install('scigeo')
-# install_github("git+https://github.com/soonyenju/scigeo.git")
+install_github("git+https://github.com/soonyenju/scigeo.git")
 install('scieco')
 # install('sciml')
 install_github("git+https://github.com/soonyenju/sciml.git")
