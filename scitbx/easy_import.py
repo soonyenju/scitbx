@@ -70,7 +70,10 @@ except ModuleNotFoundError as e:
 
 # install('scigeo')
 install_github("git+https://github.com/soonyenju/scigeo.git")
-install('scieco')
+from scigeo import *
+# install('scieco')
+install_github("git+https://github.com/soonyenju/scieco.git")
+from scieco import *
 # install('sciml')
 install_github("git+https://github.com/soonyenju/sciml.git")
-from sciml import pipelines
+from sciml import *
