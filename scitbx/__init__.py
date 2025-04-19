@@ -1,1 +1,1 @@
-__all__ = ["easy_import", "google"]
+__all__ = ["easy_import", "google", "files"]
