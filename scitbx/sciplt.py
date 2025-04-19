@@ -2,7 +2,29 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
+from .utils import *
 
+colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+nature_colors = ['#E64B35B2', '#4DBBD5B2', '#00A087B2', '#3C5488B2', '#F39B7FB2', '#8491B4B2', '#91D1C2B2', '#DC0000B2', '#7E6148B2', '#B09C85B2'] # alpha = 0.7
+nature_colors_01 = ['#E64B3519', '#4DBBD519', '#00A08719', '#3C548819', '#F39B7F19', '#8491B419', '#91D1C219', '#DC000019', '#7E614819', '#B09C8519'] # alpha = 0.1
+nature_colors_03 = ['#E64B354C', '#4DBBD54C', '#00A0874C', '#3C54884C', '#F39B7F4C', '#8491B44C', '#91D1C24C', '#DC00004C', '#7E61484C', '#B09C854C'] # alpha = 0.3
+nature_colors_05 = ['#E64B357F', '#4DBBD57F', '#00A0877F', '#3C54887F', '#F39B7F7F', '#8491B47F', '#91D1C27F', '#DC00007F', '#7E61487F', '#B09C857F'] # alpha = 0.5
+nature_colors_07 = ['#E64B35B2', '#4DBBD5B2', '#00A087B2', '#3C5488B2', '#F39B7FB2', '#8491B4B2', '#91D1C2B2', '#DC0000B2', '#7E6148B2', '#B09C85B2'] # alpha = 0.7
+nature_colors_09 = ['#E64B35E5', '#4DBBD5E5', '#00A087E5', '#3C5488E5', '#F39B7FE5', '#8491B4E5', '#91D1C2E5', '#DC0000E5', '#7E6148E5', '#B09C85E5'] # alpha = 0.9
+nature_colors_10 = ['#E64B35FF', '#4DBBD5FF', '#00A087FF', '#3C5488FF', '#F39B7FFF', '#8491B4FF', '#91D1C2FF', '#DC0000FF', '#7E6148FF', '#B09C85FF'] # alpha = 1.0
+
+nature_colors_base = {
+    'Cinnabar': '#E64B35', 
+    'Shakespeare': '#4DBBD5', 
+    'PersianGreen': '#00A087',
+    'Chambray': '#3C5488',
+    'Apricot': '#F39B7F',
+    'WildBlueYonder': '#8491B4',
+    'MonteCarlo': '#91D1C2',
+    'Monza': '#DC0000',
+    'RomanCoffee': '#7E6148',
+    'Sandrift': '#B09C85',
+}
 
 def setup_canvas(
         nx, ny, 
@@ -175,29 +197,6 @@ def custom_cmap(clist, cname = 'custom_cmap', N = 256):
     cmap = matplotlib.colors.LinearSegmentedColormap.from_list(cname, clist, N=N)
     return cmap
 
-colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
-nature_colors = ['#E64B35B2', '#4DBBD5B2', '#00A087B2', '#3C5488B2', '#F39B7FB2', '#8491B4B2', '#91D1C2B2', '#DC0000B2', '#7E6148B2', '#B09C85B2'] # alpha = 0.7
-nature_colors_01 = ['#E64B3519', '#4DBBD519', '#00A08719', '#3C548819', '#F39B7F19', '#8491B419', '#91D1C219', '#DC000019', '#7E614819', '#B09C8519'] # alpha = 0.1
-nature_colors_03 = ['#E64B354C', '#4DBBD54C', '#00A0874C', '#3C54884C', '#F39B7F4C', '#8491B44C', '#91D1C24C', '#DC00004C', '#7E61484C', '#B09C854C'] # alpha = 0.3
-nature_colors_05 = ['#E64B357F', '#4DBBD57F', '#00A0877F', '#3C54887F', '#F39B7F7F', '#8491B47F', '#91D1C27F', '#DC00007F', '#7E61487F', '#B09C857F'] # alpha = 0.5
-nature_colors_07 = ['#E64B35B2', '#4DBBD5B2', '#00A087B2', '#3C5488B2', '#F39B7FB2', '#8491B4B2', '#91D1C2B2', '#DC0000B2', '#7E6148B2', '#B09C85B2'] # alpha = 0.7
-nature_colors_09 = ['#E64B35E5', '#4DBBD5E5', '#00A087E5', '#3C5488E5', '#F39B7FE5', '#8491B4E5', '#91D1C2E5', '#DC0000E5', '#7E6148E5', '#B09C85E5'] # alpha = 0.9
-nature_colors_10 = ['#E64B35FF', '#4DBBD5FF', '#00A087FF', '#3C5488FF', '#F39B7FFF', '#8491B4FF', '#91D1C2FF', '#DC0000FF', '#7E6148FF', '#B09C85FF'] # alpha = 1.0
-
-nature_colors_base = {
-    'Cinnabar': '#E64B35', 
-    'Shakespeare': '#4DBBD5', 
-    'PersianGreen': '#00A087',
-    'Chambray': '#3C5488',
-    'Apricot': '#F39B7F',
-    'WildBlueYonder': '#8491B4',
-    'MonteCarlo': '#91D1C2',
-    'Monza': '#DC0000',
-    'RomanCoffee': '#7E6148',
-    'Sandrift': '#B09C85',
-}
-
-
 def show_colors(colors, width = 1, height = 1, hspace = 0.05, wspace = 0.05, fontsize = 10):
     import matplotlib.patches
     import matplotlib.collections
@@ -235,3 +234,111 @@ def show_colors(colors, width = 1, height = 1, hspace = 0.05, wspace = 0.05, fon
 
     ax.axis("off")
     return fig, ax
+
+def format_axis_datetime(ax, fmt = '%m/%Y', which = 'x'):
+    import matplotlib.dates as mdates
+    myFmt = mdates.DateFormatter(fmt)
+    if which == 'x':
+        ax.xaxis.set_major_formatter(myFmt)
+    else:
+        ax.yaxis.set_major_formatter(myFmt)
+
+def nrow_x_ncols(acnt):
+    # auto nrows and ncols
+    nc = int(np.ceil(np.sqrt(acnt)))
+    if nc*(nc-1) >= acnt:
+        nr = nc - 1
+    else:
+        nr = nc
+    return nr, nc
+
+def get_handles_labels(ax):
+    handles, labels = ax.get_legend_handles_labels()
+    # by_label = dict(zip(labels, handles))
+    return handles, labels
+
+def reorder_labels(handles, labels, ncol):
+    leng = len(labels)
+    nrow = np.ceil(len(labels) / ncol).astype(int)
+    labels_new = labels + [0 for i in range(nrow * ncol - leng)]
+    labels_new[0: len(labels)] = labels
+    labels_new = np.array(labels_new).reshape(nrow, ncol).T.ravel()
+    idx = np.where(labels_new != '0')
+    labels_new = labels_new[idx]
+    
+    handles_new = handles + [0 for i in range(nrow * ncol - leng)]
+    handles_new[0: len(handles)] = handles
+    handles_new = np.array(handles_new).reshape(nrow, ncol).T.ravel()
+    
+    idx = np.where(handles_new != 0)
+    handles_new = handles_new[idx]
+    
+    # labels_new = np.resize(np.array(labels), (nrow, ncol)).T
+    # handles_new = np.resize(np.array(handles), (nrow, ncol)).T
+    # labels_new = np.unique(labels_new.ravel())
+    # # handles_new = np.unique(handles_new.ravel())
+    
+    return handles_new, labels_new
+
+def unify_xylim(ax):
+    xylim = np.vstack([ax.get_xlim(), ax.get_ylim()])
+    vmin = xylim[:, 0].min()
+    vmax = xylim[:, 1].max()
+    ax.set_xlim(vmin, vmax)
+    ax.set_ylim(vmin, vmax)
+    return vmin, vmax
+
+
+def plot_curve(func_name, ax, x, y, precision = 2):
+    if func_name not in ['lin', 'exp', 'poly2']: raise Exception('func_name must be `lin`, `exp`, or `poly2`!')
+    def func_lin(x, a, b):
+        return a * x + b
+
+    def func_poly2(x, a, b, c):
+        # return a * np.e**(b * x) + c
+        return a * x**2 + b * x + c
+
+    def func_exp(x, a, b, c):
+        return a * np.exp(-b * x) + c
+
+    func_dict = {
+        'lin': func_lin,
+        'poly2': func_poly2,
+        'exp': func_exp
+    }
+    x = x.copy(); y = y.copy()
+    idx = (~x.isna()) & (~y.isna())
+    x = x[idx]; y = y[idx]
+
+    func = func_dict[func_name]
+    popt, pcov = curve_fit(func,  x,  y)
+    # +++++++++++++++++++++++++++++++++++++++++++++++
+    # Print fitting p-values and r2
+    fit_p = get_curve_fit_p_value(func, popt, x, y)
+    fit_r2 = get_curve_fit_r2(func, popt, x, y)
+    print(fit_p)
+    print(fit_r2)
+    # +++++++++++++++++++++++++++++++++++++++++++++++
+    # np.polyfit(x, y, 3)
+    ax.plot(x, func(x, *popt), color = 'k', label = 'Fitted')
+    if func_name == 'lin':
+        a, b = popt
+        a = roundit(a, precision); b = roundit(b, precision)
+        sign = '+' if b >= 0 else '-'
+        text = fr'y={a}$x$ {sign} {b}'
+    elif func_name == 'exp':
+        a, b, c = popt
+        a = roundit(a, precision); b = roundit(b, precision); c = roundit(c, precision)
+        sign = '+' if c >= 0 else '-'
+        # text = r'$y = {:.2f} e^{:.3f}x + {:.2f}$'.format(a, b, c)
+        text = fr'$y = {a} \times e^{{{b}x}} {sign} {np.abs(c)}$'
+    elif func_name == 'poly2':
+        a, b, c = popt
+        a = roundit(a, precision); b = roundit(b, precision); c = roundit(c, precision)
+        sign1 = '+' if b >= 0 else '-'
+        sign2 = '+' if c >= 0 else '-'
+        text = f'y={a}$x^2$ {sign1} {b}x {sign2} {c}'
+    else:
+        raise Exception('func_name must be `lin`, `exp`, or `poly2`!')
+
+    add_text(ax, 0.05, 0.05, text, horizontalalignment = 'left')
