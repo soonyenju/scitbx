@@ -7,6 +7,22 @@ from scipy import stats
 from datetime import datetime, timedelta
 from sklearn.metrics import mean_squared_error
 
+def load_pickle(p):
+    with open(p, "rb") as f:
+        ds = pickle.load(f)
+    return ds
+
+def dump_pickle(ds, p, large = False):
+    with open(p, "wb") as f:
+        if large:
+            pickle.dump(ds, f, protocol=pickle.HIGHEST_PROTOCOL)
+        else:
+            pickle.dump(ds, f)
+
+def quiet():
+    import warnings
+    warnings.simplefilter('ignore')
+
 def pprint(values, p = 2):
     try:
         len(values)
@@ -100,18 +116,6 @@ def load_csv(p, fmt = 'yearfirst', index_col = 0, strip_cols = True, duplicated_
         df = df[columns]
     return df
 
-def load_pickle(p):
-    with open(p, "rb") as f:
-        ds = pickle.load(f)
-    return ds
-
-def dump_pickle(ds, p, large = False):
-    with open(p, "wb") as f:
-        if large:
-            pickle.dump(ds, f, protocol=pickle.HIGHEST_PROTOCOL)
-        else:
-            pickle.dump(ds, f)
-
 def str2date(str_, format):
     return datetime.strptime(str_, format)
 
@@ -134,23 +138,6 @@ def timedif(dt1, dt2, mode = 'None'):
         return dif.total_seconds() / 60 / 60 / 24 / 365
     else:
         return dif
-
-def format_axis_datetime(ax, fmt = '%m/%Y', which = 'x'):
-    import matplotlib.dates as mdates
-    myFmt = mdates.DateFormatter(fmt)
-    if which == 'x':
-        ax.xaxis.set_major_formatter(myFmt)
-    else:
-        ax.yaxis.set_major_formatter(myFmt)
-
-def nrow_x_ncols(acnt):
-    # auto nrows and ncols
-    nc = int(np.ceil(np.sqrt(acnt)))
-    if nc*(nc-1) >= acnt:
-        nr = nc - 1
-    else:
-        nr = nc
-    return nr, nc
 
 def drop_duplicated_row_cols(df, axis):
     df = df.copy()
@@ -188,45 +175,10 @@ def df_replace_dict(df, column, dict_):
     df[column] = df[column].map(dict_)
     return df
 
-def get_handles_labels(ax):
-    handles, labels = ax.get_legend_handles_labels()
-    # by_label = dict(zip(labels, handles))
-    return handles, labels
-
-def reorder_labels(handles, labels, ncol):
-    leng = len(labels)
-    nrow = np.ceil(len(labels) / ncol).astype(int)
-    labels_new = labels + [0 for i in range(nrow * ncol - leng)]
-    labels_new[0: len(labels)] = labels
-    labels_new = np.array(labels_new).reshape(nrow, ncol).T.ravel()
-    idx = np.where(labels_new != '0')
-    labels_new = labels_new[idx]
-    
-    handles_new = handles + [0 for i in range(nrow * ncol - leng)]
-    handles_new[0: len(handles)] = handles
-    handles_new = np.array(handles_new).reshape(nrow, ncol).T.ravel()
-    
-    idx = np.where(handles_new != 0)
-    handles_new = handles_new[idx]
-    
-    # labels_new = np.resize(np.array(labels), (nrow, ncol)).T
-    # handles_new = np.resize(np.array(handles), (nrow, ncol)).T
-    # labels_new = np.unique(labels_new.ravel())
-    # # handles_new = np.unique(handles_new.ravel())
-    
-    return handles_new, labels_new
 
 def get_quantile_index(s, q):
     # OR: s[s == s.quantile(.5, interpolation='lower')]
     return (s.sort_values()[::-1] <= s.quantile(.5)).idxmax()
-
-def unify_xylim(ax):
-    xylim = np.vstack([ax.get_xlim(), ax.get_ylim()])
-    vmin = xylim[:, 0].min()
-    vmax = xylim[:, 1].max()
-    ax.set_xlim(vmin, vmax)
-    ax.set_ylim(vmin, vmax)
-    return vmin, vmax
 
 def df_sort_user_order(df, order, columns, user_col):
     df = df.copy()
@@ -279,64 +231,6 @@ def get_curve_fit_p_value(func, parameters, x, y):
     for i in range(len(parameters)):
         df_fit_p.append([parameters[i], ci[i][0], ci[i][1], tstat_beta[i], pstat_beta[i]])
     return pd.DataFrame(df_fit_p, columns = ['parameter', 'conf min', 'conf max', 'tstat', 'pstat'])
-
-def plot_curve(func_name, ax, x, y, precision = 2):
-    if func_name not in ['lin', 'exp', 'poly2']: raise Exception('func_name must be `lin`, `exp`, or `poly2`!')
-    def func_lin(x, a, b):
-        return a * x + b
-
-    def func_poly2(x, a, b, c):
-        # return a * np.e**(b * x) + c
-        return a * x**2 + b * x + c
-
-    def func_exp(x, a, b, c):
-        return a * np.exp(-b * x) + c
-
-    func_dict = {
-        'lin': func_lin,
-        'poly2': func_poly2,
-        'exp': func_exp
-    }
-    x = x.copy(); y = y.copy()
-    idx = (~x.isna()) & (~y.isna())
-    x = x[idx]; y = y[idx]
-
-    func = func_dict[func_name]
-    popt, pcov = curve_fit(func,  x,  y)
-    # +++++++++++++++++++++++++++++++++++++++++++++++
-    # Print fitting p-values and r2
-    fit_p = get_curve_fit_p_value(func, popt, x, y)
-    fit_r2 = get_curve_fit_r2(func, popt, x, y)
-    print(fit_p)
-    print(fit_r2)
-    # +++++++++++++++++++++++++++++++++++++++++++++++
-    # np.polyfit(x, y, 3)
-    ax.plot(x, func(x, *popt), color = 'k', label = 'Fitted')
-    if func_name == 'lin':
-        a, b = popt
-        a = roundit(a, precision); b = roundit(b, precision)
-        sign = '+' if b >= 0 else '-'
-        text = fr'y={a}$x$ {sign} {b}'
-    elif func_name == 'exp':
-        a, b, c = popt
-        a = roundit(a, precision); b = roundit(b, precision); c = roundit(c, precision)
-        sign = '+' if c >= 0 else '-'
-        # text = r'$y = {:.2f} e^{:.3f}x + {:.2f}$'.format(a, b, c)
-        text = fr'$y = {a} \times e^{{{b}x}} {sign} {np.abs(c)}$'
-    elif func_name == 'poly2':
-        a, b, c = popt
-        a = roundit(a, precision); b = roundit(b, precision); c = roundit(c, precision)
-        sign1 = '+' if b >= 0 else '-'
-        sign2 = '+' if c >= 0 else '-'
-        text = f'y={a}$x^2$ {sign1} {b}x {sign2} {c}'
-    else:
-        raise Exception('func_name must be `lin`, `exp`, or `poly2`!')
-
-    add_text(ax, 0.05, 0.05, text, horizontalalignment = 'left')
-
-def quiet():
-    import warnings
-    warnings.simplefilter('ignore')
 
 def get_github_file(url, target_directory):
     import requests, zipfile, io
