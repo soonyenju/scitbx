@@ -26,6 +26,8 @@ nature_colors_base = {
     'Sandrift': '#B09C85',
 }
 
+colors_blindfriendly = ['#E69F00', '#56B4E9', '#009E73', '#F0E442', '#0072B2', '#D55E00', '#CC79A7'] # Paul Tol 7-color palette
+
 def cmap_colorblind_friendliness():
     '''
     # Example
