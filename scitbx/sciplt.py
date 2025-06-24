@@ -27,6 +27,22 @@ nature_colors_base = {
 }
 
 def cmap_colorblind_friendliness():
+    '''
+    # Example
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    cmap_okabe_ito = cmap_colorblind_friendliness()
+
+    # Example usage: plot points with these colors
+    x = np.arange(8)
+    y = np.ones_like(x)
+
+    plt.scatter(x, y, c=x, cmap=cmap_okabe_ito, s=300)
+    plt.title('Okabe-Ito Colorblind-Friendly Palette')
+    plt.gca().axes.get_yaxis().set_visible(False)
+    plt.show()
+    '''
     import matplotlib.colors as mcolors
     # Okabe-Ito 8-color palette (RGB tuples normalized 0-1)
     okabe_ito_colors = [
