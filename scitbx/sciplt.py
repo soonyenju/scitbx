@@ -28,7 +28,7 @@ nature_colors_base = {
 
 colors_blindfriendly = ['#E69F00', '#56B4E9', '#009E73', '#F0E442', '#0072B2', '#D55E00', '#CC79A7'] # Paul Tol 7-color palette
 
-def cmap_colorblind_friendliness():
+def cmap_colorblind_friendliness(option = 'paul_tol'):
     '''
     # Example
     import matplotlib.pyplot as plt
@@ -60,7 +60,19 @@ def cmap_colorblind_friendliness():
 
     # Create a ListedColormap
     cmap_okabe_ito = mcolors.ListedColormap(okabe_ito_colors, name='okabe_ito')
-    return cmap_okabe_ito
+
+    # Paul Tol 7 colors
+    paul_tol_colors = ['#E69F00', '#56B4E9', '#009E73', '#F0E442', '#0072B2', '#D55E00', '#CC79A7']
+
+    # Create a ListedColormap
+    cmap_paul_tol = mcolors.ListedColormap(paul_tol_colors, name='paul_tol')
+
+    if option == 'paul_tol':
+        return cmap_paul_tol
+    if option == 'okabe_ito':
+        return cmap_okabe_ito
+    else:
+        raise Exception('option must be `paul_tol` or `okabe_ito`!')
 
 def setup_canvas(
         nx, ny, 
