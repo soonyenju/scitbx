@@ -26,6 +26,24 @@ nature_colors_base = {
     'Sandrift': '#B09C85',
 }
 
+def cmap_colorblind_friendliness():
+    import matplotlib.colors as mcolors
+    # Okabe-Ito 8-color palette (RGB tuples normalized 0-1)
+    okabe_ito_colors = [
+        (0.902, 0.624, 0.0),   # orange
+        (0.0, 0.451, 0.698),   # blue
+        (0.835, 0.369, 0.0),   # vermillion
+        (0.0, 0.6, 0.5),       # bluish green
+        (0.8, 0.475, 0.655),   # reddish purple
+        (0.6, 0.6, 0.6),       # gray
+        (0.0, 0.0, 0.0),       # black
+        (0.941, 0.894, 0.259)  # yellow
+    ]
+
+    # Create a ListedColormap
+    cmap_okabe_ito = mcolors.ListedColormap(okabe_ito_colors, name='okabe_ito')
+    return cmap_okabe_ito
+
 def setup_canvas(
         nx, ny, 
         figsize = (8, 5), sharex = True, sharey = True, 
